@@ -62,7 +62,7 @@ class Connection_congestion:
 
 
     def __str__(self):
-        return f"Connection_congetion {self.smaller_op} <-> {self.greater_op}: " + str(self.congestion) + "\n"
+        return f"Connection_congestion {self.smaller_op} <-> {self.greater_op}: " + str(self.congestion) + "\n"
 
 
 class Data_extractor:
@@ -133,11 +133,16 @@ class Data_extractor:
                 'IL': incidence_list}
         """
 
-    def get_operation_points(self):
+    # returns a dict of Operation_point indexed by alphabetic op indices
+    def get_operation_points_dict(self):
         return self.points
 
-    # returns a list of Connection_congections
-    def get_connection_congestions(self):
+    # returns a list of Operation_point
+    def get_operation_points_list(self):
+        return list(self.points.values())
+
+    # returns a list of Connection_congestions
+    def get_connection_congestions_list(self):
 
         connection_congestions = {}
 
@@ -197,8 +202,8 @@ class Data_extractor:
                             trains = outbound_connection.trains
                             smaller_op = from_op if from_op <= to_op else to_op
                             greater_op = to_op if from_op <= to_op else from_op
-                            connection_congestions.setdefault((smaller_op, greate_op),
+                            connection_congestions.setdefault((smaller_op, greater_op),
                                                               Connection_congestion(smaller_op, greater_op))
                             connection_congestions[(smaller_op, greater_op)].congestion.increase_passenger_value(reduction_frac * trains)
 
-        return list(connection_congestion.values())
+        return list(connection_congestions.values())
