@@ -1,5 +1,6 @@
 import pandas as pd
 import math
+from datetime import date
 
 class Congestion:
     def __init__(self, passenger_congestion=0, freight_congestion=0, passenger_trains=0, freight_trains=0):
@@ -150,7 +151,10 @@ class Data_extractor:
         return list(self.points.values())
 
     # returns a list of Connection_congestions
-    def get_connection_congestions_list(self):
+    """
+    
+    """
+    def get_connection_congestions_list(self, range_date_start=date(2020, 1, 1), range_date_end=date(2050, 1, 1)):
 
         connection_congestions = {}
 
@@ -162,6 +166,19 @@ class Data_extractor:
             from_op = row['bp_from']
             to_op = row['bp_to']
 
+            # get date from cc
+            cc_date_start = row['date from']
+            cc_date_end = row['date to']
+            d_start = date(int(cc_date_start[0:4]), int(cc_date_start[5:7]), int(cc_date_start[8:10]))
+            d_end = date(int(cc_date_end[0:4]), int(cc_date_end[5:7]), int(cc_date_end[8:10]))
+
+            # check if in date range
+            if not((range_date_start <= d_start <= range_date_end)
+                    or (range_date_start <= d_end <= range_date_end)
+                    or (d_start <= range_date_start and range_date_end <= d_end)):
+                continue
+
+            # start adding cc
             if from_op not in self.points.keys() or to_op not in self.points.keys(): # location not known
                 continue
             if from_op == to_op: # op congestion
@@ -206,14 +223,16 @@ class Data_extractor:
                 for from_op in route:
                     for outbound_connection in self.points[from_op].connections_outbound:
                         to_op = outbound_connection.to_op
-                        if to_op in route and outbound_connection.train_type == 'PERSONENVERKEHR':
+                        if to_op in route :
                             trains = outbound_connection.trains
                             smaller_op = from_op if from_op <= to_op else to_op
                             greater_op = to_op if from_op <= to_op else from_op
-                            connection_congestions.setdefault((smaller_op, greater_op),
-                                                              Connection_congestion(smaller_op, greater_op))
-                            connection_congestion = connection_congestions[(smaller_op, greater_op)]
-                            connection_congestion.congestion.increase_passenger_trains(trains)
-                            connection_congestion.congestion.increase_passenger_congestion(reduction_frac * trains)
+                            if outbound_connection.train_type == 'PERSONENVERKEHR':
+                                connection_congestions.setdefault((smaller_op, greater_op),
+                                                                  Connection_congestion(smaller_op, greater_op))
+                                connection_congestion = connection_congestions[(smaller_op, greater_op)]
+                                connection_congestion.congestion.increase_passenger_trains(trains)
+                                connection_congestion.congestion.increase_passenger_congestion(reduction_frac * trains)
+                            
 
         return list(connection_congestions.values())
