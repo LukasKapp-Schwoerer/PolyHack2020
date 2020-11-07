@@ -1,6 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Slider, Button, RadioButtons
+import os
+print(os.getcwd())
+import transform
+
 
 class Map:
     """docstring for ."""
@@ -13,16 +17,30 @@ class Map:
         self.nodes = []
         self.edges = []
         self.timestamp = []
+        self.conv = transform.GPSConverter()
 
         axcolor = 'lightgoldenrodyellow'
         self.ax_date = plt.axes([0.1, 0.05, 0.75, 0.03], facecolor=axcolor)
         self.sl_date = Slider(self.ax_date, 'Days', 0, 100, valinit=0, valstep = 1)
         self.ax_daytime = plt.axes([0.01, 0.5, 0.06, 0.15], facecolor=axcolor)
         self.radio = RadioButtons(self.ax_daytime, ('day', 'night'), active=0)
+        self.ax.set_xlim([2450000,2850000])
+        self.ax.set_ylim([1050000,1300000])
+        self.im = plt.imread("ch.jpg")
 
-
+        ratio = 1582.0/974.0
+        scale = 0.926
+        width = scale*400000
+        height = width/ratio
+        shiftx = 2470000
+        shifty = 1074500
+        imext = [shiftx, shiftx+width, shifty, shifty+height]
+        print(imext)
+        #imext_y = [1050000,1300000]
+        self.ax.imshow(self.im, extent = imext)
 
     def plotgraph(self, ops):
+        x, y = self.conv.WGSlist2CH(ops['y'], ops['x'])
         self.nodes.append(self.ax.scatter(ops['x'], ops['y'], s=10, c = 'r'))
         plt.show(block=False)
 
@@ -38,7 +56,10 @@ class Map:
                 #plot line
                 xline = [ ops['x'][ops['ID'].index(startingpoint)], ops['x'][ops['ID'].index(target)] ]
                 yline = [ ops['y'][ops['ID'].index(startingpoint)], ops['y'][ops['ID'].index(target)] ]
-                self.edges.append(self.ax.plot(xline, yline, linewidth = 1, c = 'k'))
+                #x, y = self.conv.WGSlist2CH(yline, xline)
+
+                if(xline[0] != 0 and xline[1] != 0):
+                    self.edges.append(self.ax.plot(xline, yline, linewidth = 1, c = 'k'))
 
             #print("starting point idx", startingpoint, IL)
         plt.show(block=False)

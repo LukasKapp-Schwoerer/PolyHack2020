@@ -1,6 +1,9 @@
 import map
 import mappl
 import matplotlib.pyplot as plt
+import pickle
+import os
+
 # Create a list of x-coordinates
 x_coords = [47.3913594962,46.4757535389,47.1476699285,47.1442816883,47.13816883]
 y_coords = [ 8.05127371849, 8.15127371849 ,8.21849 , 8.349,  8.449]
@@ -10,12 +13,20 @@ ops = { 'ID': ID,
         'x': x_coords,
         'y': y_coords,
         'IL': IL }
+cwd = os.getcwd()
+
+filename = cwd[:-3]+"\\vis_data.pickle"
+print(filename)
+with open(filename, 'rb') as handle:
+        ops = pickle.load(handle)
+
 
 map = mappl.Map(ops, "test")
 map.plotgraph(ops)
 map.plotedges(ops)
 map.activatebuttons()
 plt.show()
+
 '''
 map = map.Map(ops, "test")
 map.plotnodes()
