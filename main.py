@@ -7,7 +7,7 @@ import os
 data_dir = 'data/'
 data_extractor = Data_extractor(data_dir)
 
-points = data_extractor.get_operation_points()
+points = data_extractor.get_operation_points_dict()
 
 x_coords = []
 y_coords = []
@@ -26,6 +26,9 @@ ops = {'ID': ids,
       'x': x_coords,
       'y': y_coords,
       'IL': incidence_list}  
+
+connection_congestions = data_extractor.get_connection_congestions_list()
+print(f"number of connection congestions: {len(connection_congestions)}")
 
 """
 # Create a list of x-coordinates
