@@ -1,8 +1,13 @@
-from bokeh.plotting import figure, save, show
+from bokeh.plotting import figure, save, show, gmap
+from bokeh.models import GMapOptions
+
+
 
 class Map:
     def __init__(self, ops, title):
-        self.p = figure(title=title)
+        map_options = GMapOptions(lat=46.204391, lng=6.143158, map_type="roadmap", zoom=6)
+        self.p = gmap("GOOGLE_API_KEY", map_options, title="Austin")
+        #self.p = figure(title=title)
         self.ops = ops
 
     def plotnodes(self,):
