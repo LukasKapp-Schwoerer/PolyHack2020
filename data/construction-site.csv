@@ -1,0 +1,508 @@
+Region;project;bp_from;bp_to;km from;km to;distance;Bemerkungen;date from;date to;amount of weeks;"Umsetzung / 
+Intervalltyp / Umleitung";reduction of capacity;bis_geopos;von Betriebspunkt
+RWT;La Plaine : prèparation nouvelle gare;LP;LP;;;;;2024-07-15;2024-07-28;2.0;Sperre Strecke 24 Std;1.0;46.1786654048,5.99999275337;La Plaine
+RWT;RIM Vernier Meyrin Cargo - Satgny;;;;;;;2026-07-01;2026-08-25;8.0;Sperre Strecke 24 Std;0.5;;
+RWT;Genève Aéroport : remise en conformité zone d'enraillement;GEAP;CHNE;65.5;65.5;;;2023-10-01;2024-03-30;26.0;Sperre Strecke 24 Std;0.5;46.2171294664,6.10260397474;Châtelaine (bif)
+RWT;Genéve : assainissement du PI de la Paix;GE;GE;58.75;58.75;;;2023-01-01;2024-12-28;104.0;Sperre Strecke Nacht;0.25;46.2102129079,6.14245160789;Genève
+RWT;Morges - St.Prex : FbE voie 309;MOR;STP;13.1;16.6;3.5;;2024-07-01;2024-07-28;4.0;Sperre Strecke 24 Std;0.5;46.4823168698,6.45590595285;St-Prex
+RWT;Lausanne : ZEB;LS;LS;;;;;2021-01-01;2027-11-25;360.0;Sperre Strecke 24 Std;0.25;46.5167918174,6.62909229044;Lausanne
+RWT;Rose : Wako lot 5.2;ROS;ROS;;;;;2024-01-01;2024-12-29;52.0;Sperre Bahnhof 24 Std;0.5;46.7826334225,7.06196863764;Rosé
+RWT;Fribourg : Wako lot 5.3;FRI;FRI;;;;;2024-01-01;2024-12-29;52.0;Sperre Bahnhof Nacht;0.25;46.8031481543,7.15104693583;Fribourg/Freiburg
+RWT;FbE23 Roche - Aigle V123;ROC;AIG;34.366;38.626;-4.26;;2023-07-03;2024-07-14;54.0;Sperre Strecke Nacht;0.5;46.3168554187,6.96368323783;Aigle
+RWT;St-Triphon, voie de dépassement;ST;AIG;42.695;41.065;1.63;EP en cours, Jacques Nicolier;2024-01-01;2027-12-26;208.0;Sperre Strecke Nacht;0.5;46.3168554187,6.96368323783;Aigle
+RWT;Tunnel des Epoisats & renouvellement VF Le Day Le Pont V319;PT;DAY;11.413;3.246;8.167;AP terminé;;1899-12-29;;;;46.7173763767,6.40066878869;Le Day
+RWT;Cornaux, FS23 renouvel LC + poste distribution;CORN;CORN;;;;pas de CPr;2023-01-01;2023-12-30;52.0;Sperre Bahnhof Nacht;0.25;47.0385720221,7.02336560983;Cornaux
+ROT;EdV: Furttal 320 m;ZSEB;WE;;;;Umsetzungszeitraum offen;2027-06-01;2029-04-30;100.0;Umsetzung;;47.4596382122,8.31600613226;Wettingen
+ROT;Ph 1: WUER + ZAF+OF;ZSEB;WUER;;;;Perronverlängerung;2028-01-01;2028-07-28;30.0;Sperre Strecke Nacht;0.25;47.4457594532,8.35766785904;Würenlos
+ROT;Verlängerung 750m Ausfahrt WUER;WUER;WUER;;;;Studie startet 2021 (Regio RaPla);2029-01-01;2034-10-01;300.0;Umsetzung;;47.4457594532,8.35766785904;Würenlos
+ROT;AS25 DT Regionalterminal;DT;DT;;;;;2024-01-01;2024-10-06;40.0;Umsetzung;;47.405783798,8.40498813474;Dietikon
+ROT;ZAS PU West;ZAS;ZAS;;;;;2025-01-01;2026-12-01;100.0;Umsetzung;;47.3914830997,8.48896269022;Zürich Altstetten
+ROT;Stw Ersatz WE;WE;WE;;;;Stw. Ersatz DO 55: 2024;2024-01-01;2024-12-29;52.0;Umsetzung;;47.4596382122,8.31600613226;Wettingen
+ROT;FbE20 KLW-WE Gl_611_711;KLW;WE;;;;Konzept aus 2020 kopiert;2025-06-01;2025-09-13;15.0;Sperre Strecke Tag;0.5;47.4596382122,8.31600613226;Wettingen
+ROT;Stw Ersatz TW,;TW;TW;;;;;2027-01-01;2028-11-30;100.0;Umsetzung;;47.2959813712,8.56476944831;Thalwil
+ROT;SIB-SCBU:Zubringer Wangen-Ost;SIB;SCBU;;;;Projekt Kt. Schwyz;2028-01-01;2029-11-30;100.0;Umsetzung;;47.1763898659,8.93878098816;Schübelbach-Buttikon
+ROT;FbE24 PF (SZ);PF;PF;;;1.3;Gl.2 + div. Weichen im Bereich Gl. 1+2, Voraussichtlich Gl.1+2 mit 8 Std. Nacht;2024-04-06;2024-05-03;4.0;Umsetzung;0.25;47.2029974431,8.77812981895;Pfäffikon SZ
+ROT;AS35 ZOER Nord Spurwechsel;ZOER;ZOER;;;0;Koo mit 320m Furttal;2025-01-01;2026-12-01;100.0;Umsetzung;0.25;47.4115300323,8.54413989655;Zürich Oerlikon
+ROT;AS35 ZFZ GLB-BUE;GLB;BUE;;;0;Start VS 06/21;2025-01-01;2026-05-05;70.0;Umsetzung;;47.5239499588,8.53620921292;Bülach
+ROT;AS35 LOT-JES DS + 2. Perronkante LOT;LOT;JE;;;0;Koo mit San. Fischerhölzlitunnel;2026-01-01;2029-06-13;180.0;Umsetzung;0.25;;
+ROT;BUE: Ausbau Freiverlad;BUE;BUE;;;0;Koo mit Passarelle BUE;2024-09-10;2025-06-16;40.0;Sperre Bahnhof Nacht;0.25;47.5239499588,8.53620921292;Bülach
+ROT;FbE24: RZ W 11 (ex FbE 22);RZ;RZ;;;0.232;Evtl. Umsetzung mit Gl.3;2024-09-01;2024-09-07;1.0;Sperre Bahnhof Nacht;0.25;47.6037967676,8.54345146419;Rafz
+ROT;UNT BehiG;UNT;UNT;;;0;;2023-01-01;2024-07-13;80.0;Umsetzung;0.25;47.1138568354,9.25501833667;Unterterzen
+ROT;FsE25 UNT - MH;UNT;MH;;;9.7;Konflikt Linie PF - SA;2025-01-01;2026-07-14;80.0;Umsetzung;0.25;47.1178402707,9.17301810587;Mühlehorn
+ROT;Flums BehiG;FMS;FMS;;;0;;2025-01-01;2025-12-16;50.0;Umsetzung;0.25;47.0966166348,9.34792927358;Flums
+ROT;FbE24 Chur;CH;CH;;;1.5;Weichen 29-37 / Gl. 62-64 Auswirkung Formation klären;2024-04-01;2024-05-05;5.0;Umsetzung;;46.853084163,9.52893771993;Chur
+ROT;ZSTH Stw Ersatz;ZSTH;ZSTH;;;0;integriert AS35 ZSTH 4. Gl?;2029-01-01;2030-12-01;100.0;Umsetzung;;47.3666097487,8.54848908807;Zürich Stadelhofen
+ROT;WS Stw Ersatz;WS;WS;;;0;im Projekt AS35 Brüttener;2029-01-01;2030-12-01;100.0;Umsetzung;;47.4127230589,8.59192822558;Wallisellen
+ROT;KL Ersatz Ue Schaffhauserstr.;KL;KL;;;0;Verschiebung von 21-23;2024-01-01;2027-10-31;200.0;Umsetzung;;47.4486073311,8.5838096454;Kloten
+ROT;AS35 ZFZ W-WF;W;WF;;;0;Studie mit 840-6;2028-01-01;2030-09-06;140.0;Umsetzung;;47.5662242454,9.10636820814;Weinfelden
+ROT;AS35 OWT neues Perrongleis 2;OWT;OWT;;;0;;2031-01-01;2034-10-31;200.0;Umsetzung;;47.5079223324,8.76038920944;Oberwinterthur
+ROT;AS35 WF Anlageanpassungen (Perronverlängerung,                           Ersatz Gl 2);WF;WF;;;0;Studie für 840-1,840-6, 840-7      Start VS 09/2020;2028-01-01;2029-11-30;100.0;Umsetzung;;47.5662242454,9.10636820814;Weinfelden
+ROT;;;;;;0;;;1899-12-29;;;;;
+ROT;FbE24 SLG - RH;SLG;RH;;;3.1;Voraussichtlich nach 2025 schieben. Einspur in Konflikt mit Rheintal Süd;2024-06-01;2024-08-09;10.0;Sperre Strecke Nacht;0.25;47.565522828,9.37937134408;Romanshorn
+ROT;WIL Leistungssteigerung;WIL;WIL;;;0;;2024-01-01;2024-12-15;50.0;Umsetzung;;47.4624132783,9.04099307807;Wil SG
+ROT;WIL Stw Ersatz;WIL;WIL;;;0;;2029-01-01;2030-12-01;100.0;Umsetzung;;47.4624132783,9.04099307807;Wil SG
+ROT;SGBR BehiG (Studie nötig);SGBR;SGBR;;;0;Studie mit Variante Verschiebung Haltestelle wird gestartet 08/20;2026-01-01;2026-10-07;40.0;Umsetzung;;47.4072028078,9.32965488682;St Gallen Bruggen
+ROT;AS35 SG Ostkopf (östliche Anbindung Gl. 7);SG;SG;;;0;;2027-01-01;2029-09-06;140.0;Umsetzung;;47.4231789578,9.36989672929;St Gallen
+ROT;SG Neubau Autobahnzubringer Güterbahnhof;SG;SG;;;0;;2034-01-01;2037-10-31;200.0;Umsetzung;;47.4231789578,9.36989672929;St Gallen
+ROT;ZEB WAKO W-SG;W;SG;;;0;;2025-01-01;2029-10-16;250.0;Umsetzung;;47.4231789578,9.36989672929;St Gallen
+ROT;AS35 RS Wendegleis;RS;RS;;;0;;2031-01-01;2032-11-30;100.0;Umsetzung;;47.4780019584,9.50514123365;Rorschach
+ROT;SMG Stw Ersatz;SMG;SMG;;;0;;2028-01-01;2029-11-30;100.0;Umsetzung;;47.4532159757,9.6382619195;St Margrethen
+ROT;AS25 WZ Güterverkehrsanlage Schöneich;WZ;WZ;;;0;min. Intervallbedarf  WZ - HI                     3x WE plus 3 Mt. Abend;2025-01-01;2026-09-29;91.0;Umsetzung;;47.3180315958,8.79228970642;Wetzikon
+ROT;OSS BehiG;OSS;OSS;;;0;08/20: ev Zusammenlegung BehiG 1159704 mit Ausbau;2025-01-01;2025-12-16;50.0;Umsetzung;;47.6146139832,8.72411652563;Ossingen
+ROT;SH-FT Sanierung Rheinbrücke;SH;FT;;;0;BFP 23.3.20, Cluster mit FbE Gl 643 SH-FT (2026) bilden;2025-01-01;2026-08-18;85.0;Umsetzung;;47.6921694419,8.645968468;Feuerthalen
+ROT;EZ BehiG;EZ;EZ;;;0;viele Arbeiten tagsüber ohne Sperrung möglich;2024-02-05;2024-04-28;12.0;Sperre Bahnhof Nacht;;47.6454121293,8.87656168183;Eschenz
+ROT;Neubau Brücke WIL-BRO km 1.4 (Zürcherstr.);WIL;BRO;;;0;externe Studie abgeschlossen 06/20;2024-01-01;2024-10-06;40.0;Umsetzung;;47.4754443436,9.03467784735;Bronschhofen
+ROT;FbE24_KRB_Gl 82_W_10 (ex FbE20);KRB;KRB;;;0;2020 Wochenendsperrung geplant, Gl 82 ursprünglich in 1158561 geplant;2024-11-23;2024-12-06;2.0;Sperre Strecke 24 Std;1.0;47.6421145154,9.16320415414;Kreuzlingen Bernrain
+ROT;FbE25 BERG-AHAU 728-730, 91 (ex FbE20);BERG;SHAU;;;0;Totalsperrung;2025-02-23;2025-04-19;8.0;Sperre Strecke 24 Std;1.0;47.6109170232,9.16826008543;Siegershausen
+ROT;Cluster SOB Ost 2024;HE;LSG;;;0;Verl. Nachtintervalle KW 17 - 27;2024-03-21;2024-07-03;15.0;Umsetzung;1.0;47.3196899626,9.08317001921;Lichtensteig
+RSD;Stabilität auf der  Gotthardachse 750M;BRU;BRU;19.7;20.6;0.9;Anlagen Manko;2025-04-07;2025-09-28;25.0;Sperre Bahnhof Nacht;0.25;46.9991749495,8.61006762236;Brunnen
+RSD;FbE25_ER_W_136-137-138_GL_A8-A9-A10-A68;ER;ER;41.6;42.6;0.333;FbE25;2025-06-01;2025-07-05;5.0;Sperre Bahnhof Nacht;0.5;46.8203393997,8.65045465313;Erstfeld
+RSD;FbE25_ER_W_57-58-59-60-61_GL_A73;ER;ER;41.6;42.6;0.333;FbE25;2025-07-06;2025-08-09;5.0;Sperre Bahnhof Nacht;0.5;46.8203393997,8.65045465313;Erstfeld
+RSD;FbE24_AP_AoE_W_11-12 und Gl1-61;AP;AP;92.5;93.5;1;FbE24;2024-06-24;2024-07-14;3.0;Sperre Bahnhof Tag;0.25;46.5107637997,8.689927873;Ambrì-Piotta
+RSD;BZU23 Ambrì;AP;AP;92.95;93.3;0.35;BZU23;2027-03-01;2027-11-28;39.0;Sperre Strecke Tag;0.5;46.5107637997,8.689927873;Ambrì-Piotta
+RSD;BEL-GIU, 3. Gleis/ Ind. (AS25);BEL;GIU;150.638;153.07;2.432;Anfragedossier;2024-01-01;2026-12-27;156.0;Umsetzung;;46.1738126869,9.00360006177;Giubiasco
+RSD;Phase A10;BEL;GIU;150.638;151.31;0.672;Bellinzona W660-831-1;2025-01-21;2025-09-01;32.0;Sperre Strecke Nacht;0.25;46.1738126869,9.00360006177;Giubiasco
+RSD;Phase A11;BEL;GIU;150.638;151.734;1.096;Bellinzona Sud 871 861-851;2025-09-11;2025-12-10;13.0;Sperre Strecke Nacht;0.25;46.1738126869,9.00360006177;Giubiasco
+RSD;Diverse Bauphasen in die Strecke;VEZB;CAP;178.278;195.442;;Noch nicht definiert (Risiken);2022-02-01;2023-12-25;99.0;Sperre Strecke Nacht;0.25;45.9028373055,8.97890520587;Capolago-Riva S Vitale
+RSD;FbE24_BAA-ZG_GL_327-92;BAA;ZG;27.339;28.264;1.925;FbE24;2024-04-01;2024-04-28;4.0;Sperre Strecke Nacht;0.5;47.1737069864,8.51504936752;Zug
+RME;"Münsingen, AS25
+Wendegleis";RUB;WCH;118.01;126.053;0.126053;"Koo mit Ausbau
+Lötschberg-Basistunel (BLS)";2023-06-30;2029-12-06;336.0;Sperre Bahnhof 24 Std;0.5;46.8416120861,7.56885575439;Wichtrach
+RME;"Gümligen Süd, AS25
+Entflechtung";OST;RUB;113.25;118.01;0.11801;"Koo mit Ausbau
+Lötschberg-Basistunel (BLS)";2023-06-30;2028-11-23;282.0;Sperre Strecke 24 Std;0.5;46.89916972,7.54536833414;Rubigen
+RME;FbE24 TH-UTI Gleis 424;UTI;TH;131.45;135.53;0.13553;Koo mit Gleis 420;2024-01-15;2024-12-15;48.0;Sperre Strecke Nacht;;46.7548527757,7.62960576339;Thun
+RME;;HAE;HAE;;;0;;2024-01-29;2024-05-26;17.0;Sperre Bahnhof Nacht;0.5;47.330267812,7.84381638329;Hägendorf
+RME;;SW;SW;74.879;74.664;0.074664;Vsl. Schiebung nach 24;2023-02-01;2023-08-01;26.0;Sperre Bahnhof Nacht;0.25;47.2067172615,7.53194908407;Solothurn West
+RME;Lengnau: Umbau Bahnhof (BehiG/LHand);LEN;LEN;87.676;88.119;0.088119;Zusätzlich Erneuerung Gl. 3;2025-01-01;2025-12-16;50.0;Sperre Bahnhof Nacht;0.5;47.1794313873,7.36655363682;Lengnau
+RME;"ZEB; Solothurn-Wanzwil:
+Leistungssteigerung ABS";SO;WANZ;79;68;0.068;"Unterbruch der Arbeiten wegen
+wegen STW Ersatz RBC / Flankenschutz Wanzwil «1.Teil im 2025 und 2 Teil ab 2028»";2025-01-01;2029-10-16;250.0;Sperre Strecke Nacht;0.25;47.1982449674,7.69921296101;Wanzwil (Abzw)
+RME;Langenthal Erweiterung PU;LTH;LTH;59.1;59.3;0.0593;;2022-01-01;2024-06-30;;Umsetzung;;47.2173029163,7.78471520185;Langenthal
+RME;BZ Mitte, Migration rcs95 auf RCI Zelle LTH;OL;LTH;41.5;59.8;0.0598;;2025-01-01;2025-12-02;48.0;Sperre Strecke Nacht;;47.2173029163,7.78471520185;Langenthal
+RME;Nacharbeiten Cluster SCHH_LN;LN;SCHH;38.1;59.7;0.0597;Div.;2025-08-02;2025-10-24;12.0;Sperre Strecke Nacht;0.25;46.9506473328,8.01515060209;Schüpfheim
+RME;Olten-Aarburg-Olten ZfZ;OL;ABO;39.3;44;0.044;;2026-01-01;2028-11-15;150.0;Sperre Bahnhof Nacht;0.5;47.3202684783,7.90822265971;Aarburg-Oftringen
+RME;ABO Perronverlängerung;ABO;ABO;42.75;43.1;0.0431;;2029-04-01;2029-12-01;35.0;Sperre Strecke Nacht;;47.3202684783,7.90822265971;Aarburg-Oftringen
+RME;Sursee: FbE Gl 71-81,72-82 & Weichen 40,63,64;SS;SS;69.7;70.1;0.0701;"Fahrbahnerneuerung zusammen mit 
+P55 Oberkirch D-12995 (ISP 1156484)";2024-08-18;2024-10-19;9.0;Sperre Strecke 24 Std;0.25;47.170795068,8.09789385181;Sursee
+RME;FMUE - EBR, FbE24 Gleis 91-291;FMUE;EBR;91.324;90.7;0.0907;;2024-01-15;2024-12-15;48.0;Sperre Strecke Nacht;;47.070601491,8.28256532837;Emmenbrücke
+RME;Bhf OL Gl. 2-4;OL;OL;39.11;39.51;0.03951;Wochenendsperrung;2024-01-01;2024-12-29;52.0;Sperre Bahnhof 24 Std;0.25;47.3519347412,7.90769966099;Olten
+RME;BS, W. 246, 330, Gl. L44, L64;BS;BS;;;0;;2024-01-01;2024-12-29;52.0;Sperre Bahnhof Nacht;0.25;47.547412091,7.58956277697;Basel SBB
+RME;"AS35 LB-HU: partielle
+Doppelspur";LB;HU;60.5;62.8;0.0628;;2026-01-01;2030-12-25;260.0;Sperre Strecke Nacht;0.25;47.3882858408,8.12569329661;Hunzenschwil
+RME;AS35 SCOE Neubau Wendegleisanlage;SCOE;SCOE;;;0;BZU-Projekt abgestimmt auf AS35;2026-06-01;2027-12-12;80.0;Sperre Bahnhof Nacht;0.5;47.3714238978,8.00015834607;Schönenwerd SO
+RME;UF Eppenberg;DK;AA;;;0;"Total 40 Sperrungen von 22.20-05.40.
+	10 Sperrungen, zusammenhängend ab So bis Fr je Quartal";2024-01-01;2024-12-29;52.0;Sperre Strecke Nacht;0.5;47.3913594962,8.05127371849;Aarau
+RME;"LZVH MEG KUE,
+Stellwerkersatz";FMUE;IM;4.38;17.1;0.0171;;2023-07-01;2025-12-26;130.0;Sperre Strecke Nacht;0.25;47.0916186586,8.46267208892;Immensee
+RME;Immensee, BZU23 und Instandsetzung U Kantonsstrasse;IM;IM;0.05;0.75;0.00075;Immensee: Koo BZU23 und Instandsetzung U Kantonsstrasse im 2025;2025-02-01;2025-10-31;39.0;Sperre Bahnhof 24 Std;0.25;47.0916186586,8.46267208892;Immensee
+RME;LB=RU, Gl. 23-333-22, 22-433-23;LB;RU;32.83;35.3;0.0353;;2024-01-01;2024-12-15;50.0;Sperre Strecke Nacht;0.5;47.4032902238,8.12695636496;Rupperswil
+RME;;AA;RU;;;0;FbE24 Aarau Weichen 10-12 (und allenf. 27-35+Gleis 241);2024-01-01;2024-12-29;52.0;Sperre Strecke 24 Std;0.5;47.4032902238,8.12695636496;Rupperswil
+RME;Immensee, BZU23 und Instandsetzung U Kantonsstrasse;IM;IM;0.05;0.75;ganzer Bhf;"mmensee: Koo BZU23 und
+Instandsetzung U Kantonsstrasse im 2025";2025-02-01;2025-10-31;39.0;Sperre Bahnhof Tag;0.25;47.0916186586,8.46267208892;Immensee
+RWT;RIM La Plaine - Vernier + Viaduc de l^'Alondon;LP;CHNE;;;;;2024-01-01;2024-12-29;52.0;Sperre Strecke 24 Std;0.5;46.2171294664,6.10260397474;Châtelaine (bif)
+RWT;St.Prex - Morges : FbE voie 409;MOR;STP;16.6;13.2;3.4;;2024-07-29;2024-08-25;4.0;Sperre Strecke 24 Std;0.5;46.4823168698,6.45590595285;St-Prex
+RWT;FbE  2024 Denges - Renens voie 400;DEN;REN;6.596;4.965;1.631;;2024-03-17;2024-04-27;6.0;Sperre Strecke Nacht;0.25;46.5370424761,6.57893536401;Renens VD
+RWT;Lausanne - Grandvaux : viaduc de Rochettaz;LS;CVN;;;;;2024-01-01;2024-10-06;40.0;Sperre Strecke 24 Std;0.5;46.5130844611,6.67832353213;La Conversion
+RWT;Lausanne - La Conversion : viaduc du Châtelard;LS;CVN;;;;;2028-01-01;2028-10-06;40.0;Sperre Strecke 24 Std;0.5;46.5130844611,6.67832353213;La Conversion
+RWT;Rose :  Wako lot 5.1;ROS;ROS;;;;;2024-01-01;2024-12-29;52.0;Sperre Bahnhof 24 Std;0.5;46.7826334225,7.06196863764;Rosé
+RWT;Monthey - St-Gingolph, renouvellement voie, LC et PN;MTH;BOU;6.492;22.148;-15.656;EP terminée, Putz-Perrier;;;;;;46.385817123,6.85324388418;Bouveret
+RWT;Neuchâtel Serrières : mise en conformité;NESE;NESE;72.2;72.6;-0.4;;2024-01-01;2024-12-29;52.0;Sperre Bahnhof Nacht;0.5;46.9839623251,6.903362631;Neuchâtel-Serrières
+RWT;AS25 : doppelspur Ligerz-Twann;LIG;TWN;96.153;93.919;2.234;;;1899-12-29;;;;47.0936641015,7.15649746383;Twann
+RWT;SBL-CORN FS23 Renouvellement;SBL;CORN;79.975;82.745;-2.77;pas de CPr / replanifié 2025;2025-07-04;2025-07-24;3.0;Sperre Strecke Nacht;0.25;47.0385720221,7.02336560983;Cornaux
+RWT;LHE, assainissement pont de Tournedos;LHE;LHE;47.235;;;Frédéric Restani;2024-01-01;2024-12-29;52.0;Sperre Strecke 24 Std;0.5;47.1894917627,7.22539576798;La Heutte
+ROT;HGO Bahnhofumbau;HGO;HGO;;;;;2024-01-01;2025-11-30;100.0;Umsetzung;;47.2587498232,8.58981587397;Horgen Oberdorf
+ROT;Nur Link zu Unterlagen / RSD;;;;;;;;1899-12-29;;;;;
+ROT;ZWD Stw Ersatz;ZWD;ZWD;;;;;2025-01-01;2026-12-01;100.0;Umsetzung;;47.5704481599,8.46791892376;Zweidlen
+ROT;FbE24 DT Gl. 4+5 (ex 2021);DT;DT;;;;;2024-06-01;2024-07-26;8.0;Sperre Strecke Nacht;0.5;47.405783798,8.40498813474;Dietikon
+ROT;AS35 ZBTII;TW;TW;;;;;2030-01-01;2034-10-16;250.0;Umsetzung;;47.2959813712,8.56476944831;Thalwil
+ROT;AS25: PF-ALTD Güterüberholgleis;PF;ALTD;34.4;35.7;;Bauphasenplanung bis 09/2020;2023-08-01;2025-06-30;100.0;Sperre Strecke Nacht;0.25;47.1939670295,8.82290588686;Altendorf
+ROT;Stw Ersatz ZWIE;ZWIE;ZWIE;;;;;2027-01-01;2028-11-30;100.0;Umsetzung;;47.3714772012,8.52348546565;Zürich Wiedikon
+ROT;Stw Ersatz HG;HG;HG;;;;;2028-01-01;2029-11-30;100.0;Umsetzung;;47.2614833923,8.59691702338;Horgen
+ROT;Ulmenberg-Engetunnel;ZWIE;ZWOL;;;;;2024-12-08;2025-12-06;52.0;Sperre Strecke 24 Std;0.5;47.34744029,8.53360098792;Zürich Wollishofen
+ROT;FbE25: PF- LA Gl. 200 (ex FbE20);PF;LA;;;1;Umsetzung 24 od. 25? MARS + RS nicht identisch;2024-06-23;2024-09-28;14.0;Sperre Strecke Nacht;0.5;47.1900684227,8.85271520237;Lachen
+ROT;AS35 ZSTH 4. Gleis, DS ZSTH-ZTB;ZSTH;ZSTH;;;0;;2026-01-01;2035-08-01;500.0;Umsetzung;;47.3666097487,8.54848908807;Zürich Stadelhofen
+ROT;FbE24 ZTB W1-4;ZTB;ZTB;;;0;W3/4 Geometrieänderung! Koo mit Sperrung Riesbachtunnel;2024-01-01;2024-02-04;5.0;Sperre Strecke Nacht;0.25;47.3501246373,8.56138988846;Zürich Tiefenbrunnen
+ROT;AS35 HERL-ML DS;HERL;ML;;;0;Konflikt mit Uster- Aatal;2026-01-01;2028-11-15;150.0;Umsetzung;;47.2698111422,8.64431191081;Meilen
+ROT;AS35 MAEN Kreuzungsstation;MAEN;MAEN;;;0;;2031-01-01;2032-11-30;100.0;Umsetzung;;47.2534240091,8.69234616957;Männedorf
+ROT;UER Stw Ersatz (ex 2024);UER;UER;;;0;;2026-01-01;2026-10-07;40.0;Umsetzung;;47.2358608014,8.75262523013;Uerikon
+ROT;FB Stw Ersatz (ex 2024);FB;FB;;;0;;2026-01-01;2026-10-07;40.0;Umsetzung;;47.2392035255,8.78349775224;Feldbach
+ROT;AS35 ZFZ LU-LIN+LGB Kreuzungstation;LU;LIN;;;0;Start VS 06/21;2025-01-01;2026-12-01;100.0;Umsetzung;;46.9255635637,8.9977948688;Linthal
+ROT;FsE21 O 760 GLB FL-Erneuerung;GLB;GLB;;;0;ev. Restausführung im 2024;2024-01-02;2024-05-20;20.0;Umsetzung;;47.4308267427,8.55885413606;Glattbrugg
+ROT;FbE 25_GLB Gl_31,67, W38, W54 (ex FbE22);GLB;GLB;;;0;;2025-01-01;2025-04-15;15.0;Umsetzung;;47.4308267427,8.55885413606;Glattbrugg
+ROT;SHGB G 750m;SHRB;SHRB;;;0;;2025-01-01;2027-06-29;130.0;Umsetzung;;47.7099047766,8.64113837569;Schaffhausen GB
+ROT;SH Anlageanpassung;SH;SH;;;0;;2024-01-01;2024-10-06;40.0;Umsetzung;0.25;47.6982814967,8.63275579305;Schaffhausen
+ROT;Stw Ersatz MELS;MELS;MELS;;;0;;2025-01-01;2026-12-01;100.0;Umsetzung;;47.053746248,9.41775823249;Mels
+ROT;Stw Ersatz Weesen;WN;WN;;;0;;2025-01-01;2026-12-01;100.0;Umsetzung;;47.1299210164,9.09471050742;Weesen
+ROT;AS35 LQ zusätzliche und längere Annahmegleise Graubünden;LQ;LQ;;;0;;2024-01-01;2028-10-15;250.0;Umsetzung;;46.9674404286,9.55404467894;Landquart
+ROT;AS35 ZSTH 4. Gl., DS ZSTH-ZTB;ZSTH;ZTB;;;0;Projektierungs-ISP 1149876;2026-01-01;2035-08-01;500.0;Umsetzung;;47.3501246373,8.56138988846;Zürich Tiefenbrunnen
+ROT;FbE24 Neugut NEGW W 13-16;NEGW;NEGW;;;0;Fpl Konzept nötig (WE Sperrungen);2024-01-01;2024-02-04;5.0;Umsetzung;;47.4031673379,8.60214177405;Neugut West bei DUE (Abzw)
+ROT;STET Stw Ersatz;STET;STET;;;0;integriert AS35 ZSTH 4. Gl?;2029-01-01;2030-12-01;100.0;Umsetzung;;47.3972153717,8.59614480424;Stettbach
+ROT;DTL Stw Ersatz;DTL;DTL;;;0;im Projekt AS35 Brüttener;2029-01-01;2030-12-01;100.0;Umsetzung;;47.4202020365,8.61927645696;Dietlikon
+ROT;EF Perronverlängerung 320m;EF;EF;;;0;FET-WZ;2024-01-01;2027-10-31;200.0;Sperre Strecke Nacht;;47.425812078,8.68667913161;Effretikon
+ROT;EF Gesamterneuerung;EF;EF;;;0;Start Vorstudie 08/20, MS1 03/21, MS2 09/21, MS3 07/22;2037-01-01;2040-10-31;200.0;Umsetzung;;47.425812078,8.68667913161;Effretikon
+ROT;KE BehiG;KE;KE;;;0;Konzeptanfrage 03.07.20 an FUB, keine Rückmeldung;2023-09-01;2024-11-28;65.0;Umsetzung;;47.4528388907,8.70558620929;Kemptthal
+ROT;ZWIP Stw Ersatz;ZWIP;ZWIP;;;0;;2029-01-01;2029-12-16;50.0;Umsetzung;;47.3930388776,8.52938238484;Zürich Wipkingen
+ROT;ZWIP Erhalt Bahninfra;ZWIP;ZWIP;;;0;;2023-12-15;2024-12-12;52.0;Sperre Strecke 24 Std;1.0;47.3930388776,8.52938238484;Zürich Wipkingen
+ROT;OP BehiG (Studie läuft);OP;OP;;;0;;2025-01-01;2026-12-01;100.0;Umsetzung;;47.4299548445,8.56179472865;Opfikon
+ROT;OP Stw Ersatz;OP;OP;;;0;;2029-01-01;2030-12-01;100.0;Umsetzung;;47.4299548445,8.56179472865;Opfikon
+ROT;AS35 OWT-FF Perronverlängerung 320m;WD;ISL;;;0;;2025-01-01;2027-11-16;150.0;Umsetzung;;47.5478349177,8.84619697706;Islikon
+ROT;SLG Verlängerung Abstellgleis Gl 97;SLG;SLG;;;0;Verlängerung GL 97 auf über 600m;2025-01-01;2025-12-16;50.0;Umsetzung;;47.5388040261,9.18369439908;Sulgen
+ROT;FbE25 WF Gl 389, W264 (ex FbE22);WF;WF;;;0.251;Nebengleis;2025-01-01;2025-01-21;3.0;Sperre Bahnhof 24 Std;;47.5662242454,9.10636820814;Weinfelden
+ROT;FsE OA-RH (FL Totalerneuerung);OA;RH;;;0;8h Einspurbetrieb möglich, Umsetzung 2024 Konflikt mit Rheintal + FbE SLG-OA;2023-01-01;2025-11-15;150.0;Umsetzung;;47.565522828,9.37937134408;Romanshorn
+ROT;WGR Busquerung;WGR;WGR;;;0;Evtl. Konflikt mit FsE / BehiG ARN,BZN  bei Umleitungsbedarf via SLG-GSS;2024-01-01;2025-11-30;100.0;Umsetzung;;47.4987547049,8.75105522894;Winterthur Grüze
+ROT;FbE24 EL W11,12, Gl 1,34 (ex FbE20);EL;EL;;;0;;2024-06-17;2024-07-14;4.0;Sperre Bahnhof 24 Std;;47.4985290889,8.86341151986;Elgg
+ROT;FbE24_SCHZ Gl. 3-53;SCHZ;SCHZ;;;0.82;Herausforderung Cargo SCHZ, Konzept WE prüfen, voraussichtlich 3-4 WE;2024-05-01;2024-05-28;4.0;Sperre Bahnhof 24 Std;;47.4451875896,9.06843068646;Schwarzenbach SG
+ROT;SG-SMG Anpassung für Neigezüge;SG;SMG;;;0;;2022-04-01;2022-12-01;35.0;Umsetzung;;47.4532159757,9.6382619195;St Margrethen
+ROT;FbE 2030: ORT - ALT;ORT;ALT;38.2;41;0;Anfrage Totalsperre FB Sanierung;2030-04-01;2030-10-27;30.0;Sperre Strecke 24 Std;1.0;47.3742348063,9.55651992327;Altstätten SG
+ROT;AS 25: TRUE - BU DS;TRUE;BU;;;0;Verlängerte Nachtsperre Fpl. 24;2023-12-10;2024-12-07;52.0;Sperre Strecke Nacht;1.0;47.1684119711,9.47863664902;Buchs SG
+ROT;BU Ersatz Rangierstw;BU;BU;;;0;;2024-01-01;2025-11-30;100.0;Umsetzung;;47.1684119711,9.47863664902;Buchs SG
+ROT;FbE27 WWUE-PFU Gl 606 (ex FbE22);PFU;WWUE;;;1.734;;2027-01-01;2027-12-16;50.0;Umsetzung;;47.5064358947,8.68092955866;Winterthur Wülflingen
+ROT;UST Stw Ersatz (ev im Rahmen Projekt DS UST-AAT);UST;UST;;;0;;2026-06-01;2027-12-12;80.0;Umsetzung;;47.3503689645,8.71870911871;Uster
+ROT;GIB-WL Erneuerung Stb's Grosswis und Büe;GIB;WL;;;0;;2024-09-01;2025-10-25;60.0;Umsetzung;;47.2726904861,8.91399979249;Wald
+ROT;AS35 OSS Kreuzungsgleis;OSS;OSS;;;0;08/20: ev Zusammenlegung BehiG 1159704 mit Ausbau;2030-01-01;2033-10-31;200.0;Umsetzung;;47.6146139832,8.72411652563;Ossingen
+ROT;AS35 STR Wendegleis;STR;STR;;;0;;2031-01-01;2032-11-30;100.0;Umsetzung;;47.6561110013,8.85502002864;Stein am Rhein
+ROT;EW BehiG;EW;EW;;;0;betrieblich nur 1 Perronkante nötig;2024-05-06;2024-09-22;20.0;Sperre Bahnhof 24 Std;0.5;47.6611446979,8.81861733248;Etzwilen
+ROT;FsE24: RH - RS;RH;RS;;;0;Terminkonflikt mit Sperrung Rheintal;2025-01-01;2026-12-01;100.0;Umsetzung;;47.4780019584,9.50514123365;Rorschach
+ROT;FbE24_BROA-WIL_Gl_700 (ex FbE20);BROA;WIL;;;0;Totalsperre Herbstferien;2024-10-05;2024-10-25;3.0;Sperre Strecke 24 Std;1.0;47.4624132783,9.04099307807;Wil SG
+ROT;FbE24 TOA W9 (ex FbE20);TOA;TOA;;;0;Totalsperre Herbstferien;2024-10-05;2024-10-18;2.0;Sperre Bahnhof 24 Std;1.0;47.5213013698,9.03370938412;Tobel-Affeltrangen
+ROT;FbE Rickentunnel;KAB;WA;;;#VALUE!;Umsetzung 2025, Studie nötig, wenn mögl. mit FbE Gl. 825 Studie nötig;2025-04-01;2025-07-14;15.0;Sperre Strecke Nacht;;47.2994799951,9.08645998773;Wattwil
+ROT;FbE WA Gl. 825;KAB;WA;;;0.543;soll zusammen mit FbE im Rickentunnel umgesetzt werden Verschiebung 24->25???;2025-06-17;2025-07-14;4.0;Sperre Strecke Nacht;;47.2994799951,9.08645998773;Wattwil
+RSD;IM-BRU Unterhaltsfenster;IM;BRU;1;20.9;19.9;Unterhaltsfenster;2024-09-08;2024-09-21;2.0;Sperre Strecke Nacht;0.5;46.9991749495,8.61006762236;Brunnen
+RSD;600-24- IM-GD-FsE25;IM;GD;1.988;9.226;7.238;FsE 2025;2025-01-01;2026-12-29;104.0;Sperre Strecke Nacht;0.5;47.049044874,8.54944633996;Arth-Goldau
+RSD;FbE24_GD_GL_5-45;GD;GD;8.6;9.1;0.5;FbE24;2024-03-18;2024-04-07;3.0;Sperre Bahnhof Nacht;0.5;47.049044874,8.54944633996;Arth-Goldau
+RSD;FbE25_SCHW_W_21-22-23-26;SCHW;SCHW;17.1;17.8;0.7;FbE25;2024-09-23;2024-10-27;5.0;Sperre Bahnhof Nacht;0.25;47.0263971725,8.6321517606;Schwyz
+RSD;BRU-AL Unterhaltsfenster;BRU;AL;20.9;36.2;15.3;Unterhaltsfenster;2024-04-14;2024-04-27;2.0;Sperre Strecke Nacht;0.5;46.8757386867,8.6315753775;Altdorf
+RSD;BRU-SK Tunnelbeleuchtung;BRU;SK;21.1;22.97;1.87;Tunnellbeleuchtung;2024-10-01;2025-03-31;26.0;Sperre Strecke Nacht;0.5;46.949253997,8.62074868788;Sisikon
+RSD;FbE25_ER_W_50-54-55-56;ER;ER;41.6;42.6;0.333;FbE25;2025-08-10;2025-09-13;5.0;Sperre Bahnhof Nacht;0.5;46.8203393997,8.65045465313;Erstfeld
+RSD;Amsteg Stellwerkersatzt;AS;AS;46.1;47.1;1;STW Ersatzt;2025-09-01;2026-03-29;30.0;Sperre Bahnhof Nacht;0.5;46.7810020225,8.67210555792;Amsteg-Silenen
+RSD;FbE24_AP_W_14-15-16-17-18;AP;AP;93.3;93.6;0.3;FbE24;2024-04-01;2024-05-12;6.0;Sperre Bahnhof Tag;0.5;46.5107637997,8.689927873;Ambrì-Piotta
+RSD;IBS AGZ_Giustizia cambio di binario;GIDI;GIDI;149.35;149.5;0.15;SPW GIDI;2025-01-01;2025-02-25;8.0;Sperre Strecke Nacht;0.5;46.3235262857,8.98219847522;Giustizia (dira)
+RSD;Concetto Macro fasi;;;;;;;2024-02-01;2026-12-23;151.0;Sperre Bahnhof Nacht;0.5;;
+RSD;Phase IBN;;;;;;;;;;;;;
+RSD;Phase A6 (GIU24);BEL;GIU;151.877;152.44;0.563;Bellinzona 892 152-12;2024-06-10;2024-07-21;6.0;Sperre Strecke 24 Std;0.5;46.1738126869,9.00360006177;Giubiasco
+RSD;Phase B3;BEL;GIU;150.618;152.29;1.672;Bellinzona 891-881-871-W901;2025-12-18;2026-10-07;42.0;Sperre Strecke Nacht;0.25;46.1738126869,9.00360006177;Giubiasco
+RSD;AS25: Lugano–Melide,Binari di giro corsa;MDE;MDE;186.908;187.576;0.668;ETCS L2;2024-06-01;2025-12-05;79.0;Umsetzung;;45.9557134937,8.94835914329;Melide
+RSD;FbE24_LG_W_34-35;LG;LG;180.2;180.4;0.2;FbE24;2024-01-02;2024-01-22;3.0;Sperre Strecke Nacht;0.25;46.0055005508,8.94699524398;Lugano
+RSD;FbE24_CHI_W_964-966-971-972-974_GL_11-953 (Ex bin. 965);CHI;CHI;;;0.2;FbE24;2024-01-02;2024-01-29;4.0;Sperre Strecke Nacht;0.25;45.8321680089,9.0314495232;Chiasso
+RSD;Baar: Zusäztliche 4. Perronkante;BAA;BAA;26.43;26.75;0.32;AS35;2027-01-01;2032-12-16;311.0;Sperre Bahnhof Nacht;0.5;47.1953640193,8.52327156341;Baar
+RSD;Zug-Baar: 3. Gleis;ZG;BAA;26.7;28.25;1.55;AS35;2027-01-01;2032-12-16;311.0;Sperre Strecke Nacht;0.25;47.1953640193,8.52327156341;Baar
+RSD;FbE24_BAA-ZG_GL_427-93;BAA;ZG;27.313;28.351;1.038;FbE24;2024-05-01;2024-05-28;4.0;Sperre Strecke Nacht;0.5;47.1737069864,8.51504936752;Zug
+RSD;ZG- LED Roullout;ZG;ZG;28.4;39.3;;;2027-03-01;2027-06-27;17.0;Sperre Bahnhof Nacht;0.25;47.1737069864,8.51504936752;Zug
+RSD;ZG-GD Unterhaltsfenster;ZG;GD;0.16;9.7;9.54;Unterhaltsfenster;2024-09-23;2024-10-06;2.0;Sperre Strecke Nacht;0.5;47.049044874,8.54944633996;Arth-Goldau
+RME;"Bern Ausbau
+Publikumsanlagen (APBB)";BN;BN;96.75;106.012;0.106012;;2017-06-30;2027-12-30;548.0;Sperre Bahnhof 24 Std;0.25;46.9488322725,7.4391309556;Bern
+RME;Cluster mit Totalsperrung;KZ;LY;85.1;100.3;0.1003;;2025-05-04;2025-07-24;6.0;Sperre Strecke 24 Std;1.0;47.076323468,7.30630158808;Lyss
+RME;;DN;DN;;;0;;2026-07-01;2026-09-01;9.0;Sperre Bahnhof 24 Std;0.25;47.2182258248,7.61891295891;Deitingen
+RME;Totalumbau Bahnhof OLH und Cargogleise;OLH;OLH;;;0;Studie am tun, FB mit 2024 Treiber;2024-01-01;2024-12-15;50.0;Sperre Bahnhof 24 Std;0.5;47.348555177,7.89772397213;Olten Hammer
+RME;"AS30 Publikumsanlage
+Olten (1. Etappe)";OL;OL;39;39.6;0.0396;;2027-01-01;2030-06-13;180.0;Sperre Strecke Nacht;0.25;47.3519347412,7.90769966099;Olten
+RME;AS30/35 Aarburg-O. - Wankdorf ZfZ 3 Min.;WKD;ABO;102;42.75;0.04275;;2027-01-01;2031-12-25;260.0;Sperre Strecke Nacht;;47.3202684783,7.90822265971;Aarburg-Oftringen
+RME;"ZEB Bern Wylerfeld,
+Entflechtung";BWY;"LGUT
+OST";105;"102.400
+109.600";#VALUE!;;2016-01-01;2026-07-16;550.0;Umsetzung;0.25;;
+RME;AS25 Bern Ost, 2 Min.-ZfZ;BN;BWY;106.1;105.6;0.1056;;2026-06-30;2028-10-16;120.0;Sperre Strecke 24 Std;0.25;46.9665979143,7.46028541655;Bern Wyler
+RME;FbE24 ZAE-BOE Gleis 826;ZAE;BOW;25;26.95;0.02695;;2024-01-15;2024-12-15;48.0;Sperre Strecke Nacht;;46.9000482296,7.69805348673;Bowil
+RME;Zofingen - Emmenbrücke ZfZ;ZF;EBR;47.5;90.8;0.0908;;2026-01-01;2028-11-15;150.0;Sperre Strecke Nacht;0.25;47.070601491,8.28256532837;Emmenbrücke
+RME;BS, W. 332, 337, 343, 345, 351, 352;BS;BS;;;0;;2024-01-01;2024-12-29;52.0;Sperre Bahnhof 24 Std;1.0;47.547412091,7.58956277697;Basel SBB
+RME;"ZOF: Aufhebung BUe alte 
+Luzernerstrasse K104";ZF;SAF;0.5;6.8;0.0068;Kanton Aargau plant die Aufhebung des BUe K 104, Aeussere Luzernstrasse – Aarburgerstrasse;2024-05-15;2025-10-21;75.0;Sperre Strecke Nacht;0.25;47.3217579027,7.98351818243;Safenwil
+RME;AS35 Suhr: Kreuzungsgleis 750m;SUHR;OEF;15.3;14.4;0.0144;;2026-01-01;2030-12-25;260.0;Sperre Strecke Nacht;0.25;47.3564864045,8.04838711049;Oberentfelden
+RME;AS30: Knoten Lenzburg, Publikumsanlagen;LB;LB;;;0;;2024-08-01;2030-12-25;334.0;Sperre Bahnhof 24 Std;0.25;47.3911997555,8.1703928761;Lenzburg
+RME;SINS, BZU23 Perronerhöhung;SINS;SINS;92.35;929;ganzer Bhf;;2025-01-01;2026-03-31;65.0;Sperre Bahnhof Nacht;0.25;47.188314246,8.39783087558;Sins
+RME;Ersatzneubau U Zürcherstrasse;MI;BNZ;82.3;84.9;0.0849;Ersatzneubau der Unterführung Zürcherstrasse, auszuführen in Koordination mit PU Eggstrasse (ISP 1154546);2025-01-08;2026-12-01;99.0;Sperre Strecke Nacht;0.25;47.2468514591,8.36561693375;Benzenschwil
+RME;"IB-Projekte vor 2024
+Ersatzneubau PU Eggstrasse";MI;BNZ;82.3;84.9;0.0849;Ersatzneubau der Unterführung Zürcherstrasse, auszuführen in Koordination mit PU Eggstrasse (ISP 1160217;2025-01-08;2026-12-01;99.0;Sperre Strecke Nacht;0.25;47.2468514591,8.36561693375;Benzenschwil
+RME;FBE24 EBI Gleis 103 & 104;EBI;EBI;59;60.5;0.0605;Laufmeter mit Gleis 63/103 - 64/104 = 3000m;2024-01-15;2024-12-15;48.0;Sperre Bahnhof 24 Std;;47.0842627454,8.34235821712;Ebikon
+RME;GSK Migration rcs95 auf RCI  von LZVH und MEG durch Zelle Luzern;EBI;EBI;52.823;58.58;0.05858;;2024-04-02;2024-04-15;2.0;Sperre Strecke 24 Std;;47.0842627454,8.34235821712;Ebikon
+RWT;Puidoux - Palézieux  : Wako lot 2.1;PUI;PAL;;;;;2023-01-01;2024-06-29;78.0;Sperre Strecke Nacht;0.5;46.5427635573,6.83787521203;Palézieux
+RWT;Palézieux : Wako lot 2.2;;;;;;;2024-01-01;2024-12-29;52.0;;;;
+? : ne correspond pas à Railsys;;;;;;;;;;;;;;
+RWT;Viaduc de la Paudèze;PU;CU;0.85;4.144;-3.294;EP terminée, B. Miraton;2024-01-08;2025-12-31;104.0;Sperre Strecke 24 Std;0.5;46.4885617736,6.72715145406;Cully
+RWT;MX-TER, PS Rue d'Etraz;MX;TER;23.806;28.644;-4.838;EP treminée, D. Luce;2024-01-01;2024-12-29;52.0;Sperre Strecke Nacht;0.5;46.4263815833,6.9227068988;Territet
+RWT;FbE24 MX-VIL_V_633_637;VIL;MX;28.61;24.027;4.583;;2024-07-08;2025-04-13;40.0;Sperre Strecke Nacht;0.25;46.4358843229,6.91044006944;Montreux
+RWT;Brig, tunnel du Simplon - assainissement du tube 1;BR;STDG;157.729;166.869;-9.14;1 tube en 2023 1 tube en 2024;2023-01-01;2023-12-02;48.0;Sperre Strecke 24 Std;0.5;46.2723377046,8.09349478399;Staz della Galleria Sempione
+RWT;Chavornay - boucle Travys;CHV;CHV;;;;Acerra Mariangela / prévu SAP 2023 +3mio 2024;2023-01-01;2024-05-18;72.0;Sperre Strecke Nacht;0.25;46.7100845475,6.56816325981;Chavornay
+RWT;LHE, assainissement pont Le Paradis;LHE;LHE;44.65;;;Frédéric Restani;2024-01-01;2024-12-29;52.0;Sperre Strecke Tag;0.5;47.1894917627,7.22539576798;La Heutte
+RWT;;;;;;;;;;;;;;
+ROT;AS35 ZSEB Kreuzungsgleis G 750m;ZSEB;ZSEB;;;;Anpassung gesamt Bhf Anlage;2025-01-01;2027-11-16;150.0;Umsetzung;0.25;47.4187500474,8.54466018901;Zürich Seebach
+ROT;ZUE Gesamterneuerung Brücke km 1.89 (Ev. Hardbrücke?);ZUE;ZUE;;;;;2031-01-01;2032-11-30;100.0;Umsetzung;;47.3781766923,8.54021233623;Zürich HB
+ROT;Unterführung Langstrasse;ZUE;;;;;Projekt Stadt ZUE: Anpassung Kabelkanal;2023-01-01;2024-11-30;100.0;Sperre Bahnhof Nacht;;;
+ROT;Stw Ersatz KLW (2030?);KLW;KLW;;;;Stw. Ersatz DO 67: 2027-30;2027-06-22;2030-12-02;180.0;Umsetzung;;47.4333288409,8.35421393402;Killwangen-Spreitenbach
+ROT;Stw Ersatz SCHL (2028?);SCHL;SCHL;;;;Stw. Ersatz DO 67: 2027-30;2027-06-22;2030-12-02;180.0;Umsetzung;;47.3991763687,8.44724501036;Schlieren
+ROT;FbE24 SCHL_Gl.51, 52, 62, W71, W72 (ex 2022);SCHL;SCHL;;;;Koo mit Pdu Goldschlägi;2024-08-25;2024-09-21;4.0;Sperre Strecke Nacht;0.5;47.3991763687,8.44724501036;Schlieren
+ROT;Cluster Heitersberg;KLW;MELH;;;;;2023-07-01;2023-09-08;10.0;Sperre Strecke 24 Std;1.0;47.4280750785,8.27636329083;Mellingen Heitersberg
+ROT;Stw Ersatz ZWOL;ZWOL;ZWOL;;;;;2027-01-01;2028-11-30;100.0;Umsetzung;;47.34744029,8.53360098792;Zürich Wollishofen
+ROT;FbE24:TW W 3-11;TW;TW;;;2.1;voraussichtlich 3 - 4 WE, Klärung ob Radien noch konform läuft bei                                    Stefan Gasser;2024-10-20;2024-11-16;4.0;Umsetzung;0.5;47.2959813712,8.56476944831;Thalwil
+ROT;FbE26: RG-BIL Gl.152 (ex FbE21);RG;BL;;;3.267;2 KW Einspur;2026-03-22;2026-05-30;10.0;Sperre Strecke Tag;0.5;46.5289636663,7.67555743661;Blausee-Mitholz
+ROT;Sanierung Riesbachtunnel;ZSTH;ZTB;;;0;;2025-06-01;2025-10-04;18.0;Umsetzung;;47.3501246373,8.56138988846;Zürich Tiefenbrunnen
+ROT;Totalsperrung Riesbachtunnel;ZSTH;ZTB;;;0;;2025-07-14;2025-08-10;4.0;Sperre Strecke 24 Std;1.0;47.3501246373,8.56138988846;Zürich Tiefenbrunnen
+ROT;KUES-RW Erneuerung FS und Beleuchtung;KUES;RW;;;0;evtl. Cluster 4 Wo Sommer 26 Totalsperre;2024-01-01;2028-10-15;250.0;Umsetzung;;47.2248871845,8.81674495291;Rapperswil
+ROT;ERLB Stw Ersatz;ERLB;ERLB;;;0;;2025-01-01;2026-12-01;100.0;Umsetzung;;47.3057919232,8.59152235647;Erlenbach ZH
+ROT;BehiG NID, LU, DSB, RUET, LINB, LIN;NID;LIN;;;0;Pilot mit TU, Ziel Vorzug Umsetzung in Totalsperrung 2023;2026-01-01;2026-10-07;40.0;Umsetzung;;46.9255635637,8.9977948688;Linthal
+ROT;FbE24: GLB Gl: 23, 42, 43-3-56, W 5/6;GLB;GLB;;;2.3;Int. Konzept anfragen;2024-05-01;2024-07-02;9.0;Sperre Bahnhof Nacht;0.25;47.4308267427,8.55885413606;Glattbrugg
+ROT;FbE24 HRD: Gl.51, 52, W 2-5;HRD;HRD;;;0;Kann nicht mit ZWIP Sperre umgesetzt werden;2025-01-01;2025-02-25;8.0;Umsetzung;;47.3915284925,8.51144653427;Hard Käferberg (Abzw)
+ROT;Stw Ersatz FMS;FMS;FMS;;;0;;2025-01-01;2026-12-01;100.0;Umsetzung;;47.0966166348,9.34792927358;Flums
+ROT;ZUE-CH div. Brückenplatten;ZUE;CH;;;0;;2029-01-01;2032-10-31;200.0;Umsetzung;;46.853084163,9.52893771993;Chur
+ROT;FbE26: FMS Gl. 42-2-72, W17, 18, 23-25 (evtl. Cluster mit BhiG);FMS;FMS;;;0;Schieben max bis 2028 mit Massnahmen (Lüönd schiebt D auf 26);2026-10-15;2026-12-16;9.0;Sperre Bahnhof Nacht;0.25;47.0966166348,9.34792927358;Flums
+ROT;OP-ZFH Teilern Flughafentunnel;OP;ZFH;;;0;;2025-01-01;2025-12-09;49.0;Sperre Bahnhof 24 Std;0.25;47.4503856566,8.56240184756;Zürich Flughafen
+ROT;FbE26 ZOER-ZFH Gl100/200 (ex FbE22);OP;ZFH;;;4.5;ev. Cluster mit 750-1? 2x2 Wo Einspurbetrieb in FbE22 geplant;2026-01-01;2026-03-25;12.0;Umsetzung;;47.4503856566,8.56240184756;Zürich Flughafen
+ROT;FbE25 ZFH-DORF Gl 100/200 (ex FbE21);ZFH;DORF;;;1.075;Wochenendsperrung;2025-05-08;2025-05-21;2.0;Sperre Strecke 24 Std;0.5;47.4433780357,8.60956981715;Dorfnest (Abzw)
+ROT;AS35 Brüttenertunnel Abschnitt WS-HUER;WS;HUER;;;0;;2026-01-01;2033-08-31;400.0;Umsetzung;0.25;47.4224509409,8.66343003186;Hürlistein (Abzw)
+ROT;W Abstellanlage Lindareal;W;W;;;0;Studienstart April 2020;2035-01-01;2036-07-13;80.0;Umsetzung;;47.5003337739,8.72382110762;Winterthur
+ROT;FbE24: HUER 110,112,114, Gl. 2-22+23;HUER;HUER;;;2.6;Schlüsselprojekt, WS erforderlich, pro W 1 WE (Sperrperimeter Gl 22-72 / 23-73), Umbau Gl in 8 Std Intervallen möglich;2024-01-01;2024-03-10;10.0;Umsetzung;;47.4224509409,8.66343003186;Hürlistein (Abzw)
+ROT;AS35 FF Güterannahmegleis und Wendegleis FV 420m;FF;FF;;;0;;2026-01-01;2027-12-29;104.0;Umsetzung;;47.5581634412,8.89655962127;Frauenfeld
+ROT;MUEL BehiG;MUEL;MUEL;;;0;;2024-10-01;2025-09-15;50.0;Umsetzung;;47.5881645738,9.01552204188;Müllheim-Wigoltingen
+ROT;AS35 SLG-WF ZFZ;SLG;WF;;;0;Studie mit 840-6;2028-01-01;2029-11-30;100.0;Umsetzung;;47.5662242454,9.10636820814;Weinfelden
+ROT;EdV WGR-SIR Perronverlängerung 320m;WGR;SIR;;;0;aufwändige Bhfe: SCHK, AD, GUN, SIR;2027-01-01;2030-04-04;170.0;Umsetzung;;47.4619971136,9.00047421982;Sirnach
+ROT;GSS Erweiterung Gleisanlage GV;GSS;GSS;;;0;;2024-01-01;2024-10-06;40.0;Umsetzung;;47.4118315691,9.25305071952;Gossau SG
+ROT;SGWI Stw Ersatz;SGWI;SGWI;;;0;;2027-01-01;2028-11-30;100.0;Umsetzung;;47.4039294299,9.300860239;St Gallen Winkeln
+ROT;AS35 W-SG ZFZ;WGR;SG;;;0;;2026-01-01;2028-09-06;140.0;Umsetzung;;47.4231789578,9.36989672929;St Gallen
+ROT;6 Durchlässe AD-GSS;GUN;GSS;;;0;6 Durchlässe (gem PoMa)                                              GUN-AD Ersatz Bdu 121.326                  ALG-SCHZ Ersatz Du 104.251                 UZW-ALG Teilern Du 101.822                   UZW-ALG Teilern Bdu 98.366              GSS-BUDZ Teilern Bdu 91.319;2026-01-01;2026-10-07;40.0;Umsetzung;;47.4118315691,9.25305071952;Gossau SG
+ROT;FsE GSS-SLG;GSS;SLG;;;0;22 km FsE, 780 Fundamente, vorgesehen FsE24/25;2024-01-01;2025-11-30;100.0;Umsetzung;;47.5388040261,9.18369439908;Sulgen
+ROT;FbE24 HGT Gl1-51, 2-52;HGT;HGT;;;0;;2024-01-01;2024-02-25;8.0;Umsetzung;;47.5642572262,8.68507519504;Henggart
+ROT;FsE22 O 769 WTOE-EMB Erneuerung ULK;WTOE;EMB;;;0;ohne RS Dossier Verantwortung PM, ev Restarbeiten im 2024;2023-01-01;2024-06-08;75.0;Umsetzung;;47.5205902494,8.58706883565;Embrach-Rorbas
+ROT;AS35 DUE-UST-AAT ZFZ und DS, 2 Ersatz BUe Zürcherstr. / Winterthurerstr.;UST;AAT;;;0;1. TP: 5 Wo Sommer 2027 Totalsperrung, zwingend Rest Randstd, 2. TP ca. 2 WE Sperrungen (2 Brücken), ev Stw Ersatz UST;2026-06-01;2029-11-11;180.0;Sperre Strecke Nacht;0.25;47.3359591251,8.76562510867;Aathal
+ROT;FbE24 UST Gl 3-43, W13;UST;UST;;;0;Fpl Konzept nötig (Ausfall wendende S9);2024-01-01;2024-02-11;6.0;Sperre Bahnhof Nacht;;47.3503689645,8.71870911871;Uster
+ROT;FsE EF-WZ;EF;WZ;;;0;24 km FL, 680 Fundamente;2024-01-01;2025-11-30;100.0;Sperre Strecke Nacht;0.25;47.3180315958,8.79228970642;Wetzikon
+ROT;FsE OWT-EW;SEU;EW;;;0;Abschnitt 3 SEU-EW, soll als Einzelprojekt beauftragt werden;2023-01-01;2026-10-31;200.0;Sperre Bahnhof Tag;0.5;47.6611446979,8.81861733248;Etzwilen
+ROT;FT BehiG;FT;FT;;;0;vorgesehen BZU Paket 3 2026+, möglicher Cluster mit FbE FT Gl1,2,10, W2,3;2026-01-01;2030-10-16;250.0;Umsetzung;;47.6921694419,8.645968468;Feuerthalen
+ROT;AS35 KR Kapazitätserweiterung S44;KR;KR;60.4;60.8;0;Temp. Ausserbetriebnahme Gl. 4;2024-01-01;2024-10-06;40.0;Sperre Bahnhof Nacht;0.25;47.6525527757,9.16908040533;Kreuzlingen
+ROT;FbE24_EW_Gl_4_5_33_W_12-17 (ex FbE22);EW;EW;;;1.579;Projektierungsvarianten: WE 54h oder Nacht 8h;2024-03-01;2024-04-25;8.0;Sperre Bahnhof Nacht;1.0;47.6611446979,8.81861733248;Etzwilen
+ROT;FbE25 STR-EZ Gl 535 (ex FbE22);STR;EZ;;;1.327;Intervallvarianten: à 8h oder Wochenendsperrung à 54h;2025-05-01;2025-06-25;8.0;Sperre Strecke Nacht;1.0;47.6454121293,8.87656168183;Eschenz
+ROT;AS35 Kreuzungsstation TOA oder TAEN (unklar wo?);TAEN;TAEN;;;0;ob TOA oder TAE ist unklar (je nach Unterlagen)!;2029-01-01;2032-10-31;200.0;Umsetzung;;47.5093638855,9.02479323479;Tägerschen
+ROT;FbE25 SHAU-LENG Gl 732 (ex FbE20);SHAU;LENG;;;0;Totalsperrung geplant im 2020;2025-01-10;2025-03-06;8.0;Sperre Strecke 24 Std;1.0;47.6255977915,9.19028315307;Lengwil
+ROT;FbE 24: Gl. 832: UZ - KAB;UZ;KAB;;;2.558;Zeitlich parallell zu Druckgelenksanierung Rickentunnel;2024-09-10;2024-12-02;12.0;Sperre Strecke Nacht;0.25;47.2179832172,9.0224310375;Kaltbrunn
+ROT;AS35 LUET Kreuzungsstation;LUET;LUET;;;0;;2029-01-01;2031-11-16;150.0;Umsetzung;;47.3838286581,9.07068713915;Lütisburg
+RSD;IM-BRU Unterhaltsfenster;IM;BRU;1;20.9;19.9;Unterhaltsfenster;2024-05-05;2024-05-18;2.0;Sperre Strecke Nacht;0.5;46.9991749495,8.61006762236;Brunnen
+RSD;FbE24_GD_W_74-75-119-120-121_GL_15-39-76;GD;GD;8.6;9.1;0.5;FbE24;2024-06-03;2024-06-30;4.0;Sperre Bahnhof Tag;0.25;47.049044874,8.54944633996;Arth-Goldau
+RSD;STN-GD, 15kV Speisung Anpassungen;GD;SCHW;8.6;18.6;10;FS;2023-01-01;2024-07-27;82.0;Sperre Bahnhof Nacht;0.5;47.0263971725,8.6321517606;Schwyz
+RSD;BZU23_Göschenen;GOE;GOE;70.35;70.55;;BZU23;2024-03-01;2024-12-26;43.0;Sperre Bahnhof Nacht;0.5;46.6658149308,8.5888081861;Göschenen
+RSD;"BZU23; Airolo";AI;AI;86;86.4;0.4;BZU23;2024-07-01;2025-11-23;73.0;Sperre Bahnhof Tag;0.25;46.5275259222,8.60861971573;Airolo
+RSD;"BZU23; Faido";FA;FA;105.75;106.2;0.45;BZU23;2025-03-01;2025-10-31;35.0;Sperre Bahnhof 24 Std;0.5;46.4830754867,8.79071005429;Faido
+RSD;"BZU23; Lavorgo";LAV;LAV;112.45;112.7;0.25;BZU23;2025-03-01;2025-10-31;35.0;Sperre Bahnhof 24 Std;0.25;46.4409016988,8.83974736529;Lavorgo
+RSD;UF_2024_(GIDI)-(CAST);GIDI;CAST;135.25;145.65;10.4;Unterhaltsfenster;2024-09-23;2024-09-29;1.0;Sperre Strecke Nacht;0.5;46.2229216623,9.04146179352;Castione-Arbedo
+RSD;Phase A7 (BIN 100+ 200);BEL;GIU;151.877;152.44;0.563;Bellinzona Sud 892 152-12;2024-07-22;2024-10-20;13.0;Sperre Strecke Nacht;0.5;46.1738126869,9.00360006177;Giubiasco
+RSD;Phase B1;BEL;GIU;151.345;152.121;0.776;Eliminazione SPW Dragonato;2025-12-22;2026-03-01;10.0;Sperre Strecke Nacht;0.25;46.1738126869,9.00360006177;Giubiasco
+RSD;Diverse Bauphasen in die Strecke;VEZB;CAP;178.278;195.442;;Dynamische Test Fahrten (+6 Mt);2024-01-01;2024-06-30;26.0;Sperre Strecke Nacht;1.0;45.9028373055,8.97890520587;Capolago-Riva S Vitale
+RSD;LUG Modulo 3 (PU Besso);LG;LG;;;;Dritte;2021-03-01;2024-12-29;200.0;Umsetzung;;46.0055005508,8.94699524398;Lugano
+RSD;Diverse Phasen in Bahnhof;MDE;MDE;186.908;187.576;;;2024-06-01;2025-12-05;79.0;Sperre Bahnhof Nacht;0.25;45.9557134937,8.94835914329;Melide
+RME;AS35 GREL-DUG Doppelspurausbau;GREL;DUG;107;111.4;0.1114;Sperrmuster ohne RM;2025-09-01;2026-05-03;35.0;Sperre Strecke Nacht;1.0;47.4534448145,7.60346074943;Duggingen
+RME;FbE24 TH W. 223, 224, 231-233, 237, 251, 252;TH;TH;137;137.45;0.13745;;2024-01-15;2024-12-15;48.0;Sperre Strecke Nacht;;46.7548527757,7.62960576339;Thun
+RME;;WBOL;WBOL;;;0;Vorzugsvariante, allf. mit PU Kleinwangen;2024-06-08;2024-12-06;26.0;Sperre Bahnhof Nacht;0.5;47.3414007003,7.86836046729;Wangen bei Olten
+RME;Bettlach: Umbau Bahnhof (BehiG/LHand);BET;BET;82.639;83.09;0.08309;Zusätzlich Erneuerung mit UBS Gl. 682;2026-01-01;2026-12-16;50.0;Sperre Bahnhof Nacht;0.5;47.1949494237,7.42837301675;Bettlach
+RME;Selzach: Umbau Bahnhof (BehiG/LHand);SEL;SEL;;;0;;2026-01-01;2026-12-16;50.0;Sperre Bahnhof Nacht;0.5;47.2006240031,7.4566349874;Selzach
+RME;"Langenthal West:
+Verbindungslinie Önz Stammlinie - ABS";LTH;HB;63.7;64.5;0.0645;;2025-06-30;2030-10-27;278.0;Sperre Strecke Nacht;0.25;47.1880861101,7.70095832122;Herzogenbuchsee
+RME;FbE24 ZOL Gleis 4, P4, P14 und Weichen 351, 352, 357, 358;ZOL;ZOL;97.9;98.9;0.0989;"Hauptsächlich Nebenanlagen
+ausser Gleis 4";2024-01-15;2024-12-15;48.0;Umsetzung;;47.0018259804,7.46291123529;Zollikofen
+RME;Vorarbeiten Cluster SCHH_LN;LN;SCHH;38.1;59.7;0.0597;Div.;2025-02-01;2025-04-04;9.0;Sperre Strecke Nacht;0.25;46.9506473328,8.01515060209;Schüpfheim
+RME;FbE24 LN Gleise 4, 5, 6, 7, 46, 47 und Weichen 14, 21, 22, 41-44;LN;LN;37.4;38;0.038;Integration BZU Massnahmen;2026-01-15;2026-12-16;48.0;Sperre Bahnhof 24 Std;0.25;46.9392422605,7.78419750003;Langnau iE
+RME;AS35: Dagmersellen, Überhol- u. Annahmegleis für Güterzüge à 750 m;DAG;DAG;54.9;56.3;0.0563;"Koo mit AS25/35 Zofingen: Schnelle
+Einfahrt G nach Gleis 4";2026-07-01;2028-10-17;120.0;Sperre Strecke 24 Std;0.25;47.2175579138,7.97902593539;Dagmersellen
+RME;Ersatz Stellwerke ZF, DAG, SS, SEM, RBG,;ZF;RBG;46.5;85;0.085;;2027-01-01;2028-11-30;100.0;Sperre Strecke Nacht;0.25;47.0881900168,8.24918003636;Rothenburg
+RME;"Oberkirch, Massnahmen
+BZU-B23";OBK;OBK;71;71.3;0.0713;;2024-08-18;2024-10-19;9.0;Sperre Strecke 24 Std;0.25;47.1552376585,8.11423443373;Oberkirch LU
+RME;"ZEB: Luzern, Neue Weichenverbindung
+u ZFZ-Verkürzung";LZ;LZ;94.4;95.05;0.09505;inkl. FbE  LZ Gl. 2, 3, 4, W. 15, 30, 31, 32, 41 sowie in Koo mit FbE FbE LZ W28, 29;2022-09-18;2024-06-22;92.0;Sperre Bahnhof Nacht;0.25;47.0501778105,8.31018315401;Luzern
+RME;AS35 Safenwil: Bau Annahmegleis Gleis 2;SAF;SAF;6.6;7;0.007;;2025-01-01;2027-12-21;155.0;Sperre Strecke Nacht;0.25;47.3217579027,7.98351818243;Safenwil
+RME;Neue Abstellanlage Dulliken;DK;DK;;;0;;2028-01-01;2029-12-28;104.0;Sperre Bahnhof 24 Std;1.0;47.3563901233,7.97877139805;Däniken
+RME;Serviceanlage Däniken;DKRB;DKRB;;;0;;2028-01-01;2029-12-28;104.0;Sperre Bahnhof 24 Std;0.25;47.3534202455,7.97128545373;Däniken RB
+RME;Umleitung 640-710;RU;KLW;;;0;Grundfahrplan 24-30 muss ohne Umleitung auskommen;2024-08-01;2030-12-25;334.0;Umleitung;;47.4333288409,8.35421393402;Killwangen-Spreitenbach
+RME;;AA;RU;;;0;Passerelle Aarau Torfeld, Drittauftrag, Totalsperre 4h für Einbau Passerelle inkl. Vor- und Nacharbeiten. Allf. NNP-relevant;2024-07-07;2024-09-21;11.0;Sperre Strecke Nacht;1.0;47.4032902238,8.12695636496;Rupperswil
+RME;OI, BZU23 Perronerhöhung;OL;OL;94.7;95.4;ganzer Bhf;;2024-01-01;2024-12-29;52.0;Sperre Bahnhof Nacht;0.25;47.3519347412,7.90769966099;Olten
+RME;"AS35 Ebikon: Wendegleis
+mit Perronkante";GSK;KUE;58;60.4;ganzer Bhf;;2026-01-01;2030-12-25;260.0;Sperre Bahnhof 24 Std;0.5;47.0835941099,8.43351749599;Küssnacht am Rigi
+RME;Brugg-Turgi Reussbrücke Gebenstorf;BG;TG;;;0;DEB über 2 x 5 Wochen oder Bauweiche über mehrere Monate;2024-01-01;2024-12-29;52.0;Sperre Strecke Tag;0.5;47.4917573104,8.25345865884;Turgi
+RME;LED Rollout;TG;TG;;;0;6 WE in Prüfung;2024-01-01;2024-12-29;52.0;Sperre Bahnhof 24 Std;0.5;47.4917573104,8.25345865884;Turgi
+RME;TG, W. 4, 14-16;TG;TG;;;0;;2024-01-01;2024-12-29;52.0;Sperre Bahnhof 24 Std;1.0;47.4917573104,8.25345865884;Turgi
+RWT;Genève : intervention anticipée 4 (réfection faisceau B);GE;GE;;;;;2024-01-01;2025-12-28;104.0;Sperre Strecke 24 Std;0.25;46.2102129079,6.14245160789;Genève
+RWT;Morges : mise en conformité de la gare;MOR;MOR;;;;;2025-01-01;2030-01-15;263.0;Sperre Bahnhof 24 Std;0.25;46.5111011525,6.49396944931;Morges
+RWT;Denges - Morges : 3ème voie;DEN;MOR;;;;;2024-01-01;2026-12-27;156.0;Sperre Strecke Nacht;0.5;46.5111011525,6.49396944931;Morges
+RWT;FbE  2024 Renens - Denges voie 300;REN;DEN;5.102;7.974;2.872;;2024-01-01;2024-03-17;11.0;Sperre Strecke Nacht;0.25;46.5291270593,6.54050544475;Denges-Echandens
+RWT;Wako lot 1,1 FbE24 Lausanne - La Conversion;LS;CVN;1.223;3.927;2.704;;2024-07-10;2024-09-17;10.0;Sperre Strecke 24 Std;0.5;46.5130844611,6.67832353213;La Conversion
+RWT;Turtmann. Lhand;TUR;TUR;122.11;122.11;0;;2024-01-01;2024-12-29;52.0;Sperre Strecke Nacht;0.5;46.3093314059,7.69960490297;Turtmann
+RWT;FbE24 Staz. Della Galleria Sempione-Iselle Tun1;STDG;IS;156.64;166.304;-9.664;;2024-01-07;2026-10-10;144.0;Sperre Strecke Nacht;0.5;;
+RWT;Cornaux LHAnd;CORN;CORN;82.746;84.707;-1.961;;2025-01-01;2025-12-30;52.0;Sperre Bahnhof Nacht;0.25;47.0385720221,7.02336560983;Cornaux
+RWT;Moutier, mise en conformité Lhand yc FbE 2023 ?;MOU;MOU;72;74;-2;Julien Bierman, plannifié SAP  22/23;2022-01-01;2024-10-04;144.0;Sperre Bahnhof Tag;0.5;47.2806724995,7.38104432272;Moutier
+ROT;Stw. Ersatz WE;WE;WE;;;;Stw. Ersatz WE;2025-01-01;2026-06-09;75.0;Umsetzung;;47.4596382122,8.31600613226;Wettingen
+ROT;ZUE Teilerneuerung Brücke Langstrasse;ZUE;ZUE;;;;Was ist das???;2025-01-01;2026-12-01;100.0;Umsetzung;;47.3781766923,8.54021233623;Zürich HB
+ROT;FbE24 ZAS W89,93,94 Gl 535;ZAS;ZAS;;;;;2024-03-01;2024-04-04;5.0;Sperre Strecke Nacht;0.25;47.3914830997,8.48896269022;Zürich Altstetten
+ROT;AS35 WAE Publikumsanlagen;WAE;WAE;23.2;25.05;;Sehr ambitiöse und kritische Bauphasen;2027-04-01;2032-01-14;250.0;Umsetzung;0.25;47.2293072774,8.67521627099;Wädenswil
+ROT;PF Stw Ersatz;PF;PF;;;;im Projekt 1148732;2024-01-01;2025-07-13;80.0;Umsetzung;;47.2029974431,8.77812981895;Pfäffikon SZ
+ROT;FbE26: RG-BIL Gl.252 (ex FbE22);RG;BIL;;;1.118;8-10 Tg Einspur;2026-08-31;2026-11-22;12.0;Sperre Strecke Tag;0.5;47.152192936,9.02991826857;Bilten
+ROT;RUES: Umsetzung BehiG;RUES;RUES;;;0;2 x Verläng WE Sperre HiBrü, evtl FbE hinzufügen;2023-09-03;2024-11-02;61.0;Umsetzung;;47.3071318652,8.55516269432;Rüschlikon
+ROT;FsE ZB: FS-Anlage erneuern (ex20-22);ZB;ZB;;;0;Umfangreiches Intervallkonzept aus 2020ff in Dossier Kopiert;2025-01-01;2027-11-16;150.0;Umsetzung;;47.1361559024,9.06005168288;Ziegelbrücke
+ROT;STAE Stw Ersatz (ex 2024);STAE;STAE;;;0;;2026-01-01;2026-10-07;40.0;Umsetzung;;47.2405272079,8.72165283054;Stäfa
+ROT;UET_320m Furttal+BhiG;UET;UET;;;0;Termin evtl. früher;2027-01-01;2027-12-16;50.0;Umsetzung;;47.259030122,8.67878704546;Uetikon
+ROT;A53 Zufahrt Gaster;SCME;KAB / ZB;;;0;ab 2027;2027-01-01;2028-11-30;100.0;Sperre Strecke Nacht;0.25;;
+ROT;SH Stw Ersatz;SH;SH;;;0;;2027-01-01;2028-11-30;100.0;Umsetzung;;47.6982814967,8.63275579305;Schaffhausen
+ROT;GF BehiG;GF;GF;;;0;;2026-01-01;2026-10-07;40.0;Umsetzung;;47.548557954,8.52405520291;Glattfelden
+ROT;Fischerhölzlitunnel Sanierung;JE;NH;;;0;Anlagezustand?;2024-01-01;2026-11-15;150.0;Umsetzung;;47.683133385,8.62493454502;Neuhausen
+ROT;FbE24: EGL Gl. 31-1-823, W 5/6;EGL;HUEW;;;1.4;Bedarf auf Brücke (Gl 823 = 683m) klären, Dilatation?, keine Brückenhölzer;2024-07-18;2024-08-14;4.0;Sperre Strecke Nacht;1.0;47.581268881,8.51284803608;Hüntwangen-Wil
+ROT;FbE24: RZ Gl. 3;RZ;RZ;;;0.74;;2024-09-01;2024-09-28;4.0;Sperre Bahnhof Nacht;0.25;47.6037967676,8.54345146419;Rafz
+ROT;AS35 Brüttenertunnel Abschnitt KE-W;KE;W;;;0;;2026-01-01;2033-08-31;400.0;Umsetzung;0.25;47.5003337739,8.72382110762;Winterthur
+ROT;AS35 OP-KL Doppelspur, 2. Perronkante KLB;OP;KL;;;0;;2024-01-01;2027-06-13;180.0;Umsetzung;0.25;47.4486073311,8.5838096454;Kloten
+ROT;Stw Ersatz Kloten;KL;KL;;;0;;2022-01-01;2024-11-15;150.0;Umsetzung;;47.4486073311,8.5838096454;Kloten
+ROT;EdV OWTU Erweiterung Abstellanlage Gl 109;OWTU;OWTU;;;0;ev. 1 Jahr später?;2024-01-01;2024-10-06;40.0;Umsetzung;;47.5147998642,8.76782019663;Oberwinterthur Unterhaltanlage
+ROT;Stw Ersatz RIK;RIK;RIK;;;0;;2027-01-01;2028-11-30;100.0;Umsetzung;;47.5353573659,8.78917502501;Rickenbach-Attikon
+ROT;Stw Ersatz ISL;ISL;ISL;;;0;;2027-01-01;2028-11-30;100.0;Umsetzung;;47.5478349177,8.84619697706;Islikon
+ROT;FbE25 WF Gl 1-3 (ex FbE21);WF;WF;;;0.84;;2025-10-15;2025-11-25;6.0;Sperre Bahnhof 24 Std;0.25;47.5662242454,9.10636820814;Weinfelden
+ROT;FbE25 BGL-SLG Gl 164 (ex FbE21);BGL;SLG;;;2.106;;2025-02-10;2025-08-03;25.0;Sperre Strecke Nacht;0.25;47.5388040261,9.18369439908;Sulgen
+ROT;FbE24 SLG;SLG;SLG;;;2.3;div Weichen, Bahnersatz SLG - Kradolf nötig, W 53-55 im Cluster Streckenumbau an WE;2024-05-01;2024-05-28;4.0;Sperre Strecke Nacht;0.25;47.5388040261,9.18369439908;Sulgen
+ROT;AS35 WGRN neue Haltestelle;WGR;WGR;;;0;;2031-01-01;2033-11-15;150.0;Umsetzung;;47.4987547049,8.75105522894;Winterthur Grüze
+ROT;WGR Umsetzung BehiG;WGR;WGR;;;0;;2022-07-01;2024-12-26;130.0;Umsetzung;;47.4987547049,8.75105522894;Winterthur Grüze
+ROT;GSS Erhaltungszentrum;GSS;GSS;;;0;abhängig von 1148851 Ue Buchenwaldstr. (IBN23)+ 1158780 Erweiterung Gleisanlage GV;2024-05-01;2025-12-16;85.0;Umsetzung;;47.4118315691,9.25305071952;Gossau SG
+ROT;FbE25 SGF W 33-36 (ex FbE21);SGF;SGF;;;0.669;;2025-05-05;2025-06-01;4.0;Sperre Bahnhof Nacht;;47.4345403564,9.39344374823;St Gallen St Fiden
+ROT;AS25 RTH-ORT Anlageanpassung;RTH;ORT;;;0;IBN 12/24;2023-01-01;2023-10-07;40.0;Umsetzung;;47.3234832152,9.57137702646;Oberriet
+ROT;ARN BehiG;ARN;ARN;;;0;2 Konzeptideen zur Prüfung für nächste Phase;2024-03-01;2024-05-23;12.0;Sperre Bahnhof Nacht;1.0;47.4420016029,9.25202496067;Arnegg
+ROT;EdV W-NH Perronverlängerung 320m;HET;SH;;;0;;2027-01-01;2031-05-29;230.0;Umsetzung;0.25;47.6982814967,8.63275579305;Schaffhausen
+ROT;FbE25 AN Gl 1 (ex FbE22);AN;AN;;;0.447;;2025-03-03;2025-04-06;5.0;Sperre Bahnhof Nacht;0.5;47.5937661665,8.67800163738;Andelfingen
+ROT;AS35 BUB Abstellanlage;BUB;BUB;;;0;Start VS Sept 2020;2027-01-01;2028-11-30;100.0;Sperre Strecke Nacht;;47.2708409956,8.82271479896;Bubikon
+ROT;AS35 FET-WZ Perronverlängerung 320m;FET;WZ;;;0;;2025-01-01;2027-11-16;150.0;Sperre Strecke Nacht;0.25;47.3180315958,8.79228970642;Wetzikon
+ROT;SH-FT Sanierung Emmersbergtunnel;SH;FT;;;0;ev. Cluster mit Rheinbrücke?;2026-01-01;2026-03-25;12.0;Umsetzung;;47.6921694419,8.645968468;Feuerthalen
+ROT;STR, SU Kaltenbachstr. Km 35.089;STR;STR;35.089;35.089;0;frühester Baustart 2027-28, MPM189551;2027-01-01;2028-07-13;80.0;Umsetzung;;47.6561110013,8.85502002864;Stein am Rhein
+ROT;FbE25 MAM W1+7 (ex FbE22);MAM;MAM;;;0.757;;2025-03-03;2025-04-06;5.0;Sperre Bahnhof Nacht;1.0;47.6441602007,8.91400061948;Mammern
+ROT;FbE24_BERG_W_9 (ex FbE22);BERG;BERG;;;0.2;2022 in Totalsperre Herbst geplant, neu entwickeln;2024-09-02;2024-10-27;8.0;Sperre Bahnhof Nacht;1.0;47.5822500403,9.17452772676;Berg
+ROT;Cluster SOB Ost 2024;HE;LSG;;;0;Totalsperre KW 28-36;2024-07-08;2024-09-08;9.0;Umsetzung;1.0;47.3196899626,9.08317001921;Lichtensteig
+ROT;Rickentunnel Druckgelenksanierung;KAB;WA;;;0;Zeitlich parallell zu FbE Gl. 832;2024-09-10;2024-12-02;12.0;Sperre Strecke Nacht;0.25;47.2994799951,9.08645998773;Wattwil
+RSD;FbE25_ER_W_40-41-48-49-49T6_GL_A3-A64;ER;ER;41.6;42.6;0.333;FbE25;2025-09-14;2025-10-18;5.0;Sperre Bahnhof Nacht;0.5;46.8203393997,8.65045465313;Erstfeld
+RSD;FbE24_GU_W_11-12-31;GU;GU;54;54.3;0.3;FbE24;2024-07-07;2024-07-27;3.0;Sperre Bahnhof Nacht;0.5;46.7293535255,8.62247619656;Gurtnellen
+RSD;FbE24_GOE_W_24-25-40-41-58_GL_12-22_3-43_42-52-53-54;GOE;GOE;70;71;1;FbE24;2024-04-01;2024-06-02;9.0;Sperre Bahnhof Nacht;0.5;46.6658149308,8.5888081861;Göschenen
+RSD;FbE24_SPW Sordo_AoE_W_101-104;SORD;SORD;89.5;89.8;0.3;FbE24;2024-07-01;2024-07-28;4.0;Sperre Strecke Nacht;0.5;46.5175571333,8.64756285769;Sordo (c bin)
+RSD;FbE24_LAV_GL_3;LAV;LAV;112.1;112.7;0.6;FbE24;2024-09-09;2024-09-29;3.0;Sperre Bahnhof 24 Std;0.25;46.4409016988,8.83974736529;Lavorgo
+RSD;UF_2024_(POLN)-(GIDI);POLN;GIDI;128;134.9;6.9;Unterhaltsfenster;2024-09-16;2024-09-22;1.0;Sperre Strecke Nacht;0.5;46.3235262857,8.98219847522;Giustizia (dira)
+RSD;CAST, Nuovo Centro di Manutenzione Ticino;CAST;CAST;145.975;147.63;1.655;Dritte;2024-02-01;2026-12-23;151.0;Umsetzung;;46.2229216623,9.04146179352;Castione-Arbedo
+RSD;Phase C1;BEL;GIU;151.345;152.02;0.675;Bellinzona 852-862-882-892;2026-10-06;2027-05-31;34.0;Sperre Strecke Tag;0.25;46.1738126869,9.00360006177;Giubiasco
+RSD;VEZ-CHI ZEB ZfZ Komplett;VEZB;CAP;178.278;195.442;17.164;ETCS L2;2022-02-01;2023-12-25;99.0;Umsetzung;;45.9028373055,8.97890520587;Capolago-Riva S Vitale
+RSD;FbE24_LG_GL_472;LG;LG;180.727;181.164;1.437;FbE24;2024-03-01;2024-03-07;1.0;Sperre Strecke Nacht;0.5;46.0055005508,8.94699524398;Lugano
+RSD;Diverse Phasen Unterführung;LG;LG;;;;Noch nicht definiert (Risiken);2024-01-01;2024-12-15;50.0;Sperre Bahnhof Nacht;0.25;46.0055005508,8.94699524398;Lugano
+RSD;Zug: Diverse Anpassungen;ZG;ZG;28.1;39.4;11.3;AS35;2031-01-01;2035-12-18;259.0;Sperre Bahnhof Nacht;0.25;47.1737069864,8.51504936752;Zug
+RME;AS35 GREL-DUG Doppelspurausbau;GREL;DUG;107;111.4;0.1114;Totalsperre ohne RM;2025-04-01;2025-09-01;22.0;Sperre Strecke 24 Std;1.0;47.4534448145,7.60346074943;Duggingen
+RME;"Bern West, AS25
+Leistungssteigerung";BNBS;BN;94.5;96.75;0.09675;;2023-01-09;2033-06-19;545.0;Sperre Bahnhof 24 Std;0.5;46.9488322725,7.4391309556;Bern
+RME;Flamatt–Bern Bümpliz Süd WAKO Lose 7a und 7b;BNBS;FLM;87.9;83.9;0.0839;;2022-02-01;2024-12-02;148.0;Sperre Strecke Nacht;;46.8884913393,7.31957079845;Flamatt
+RME;FbE24 Lyss W. 3, 4 und Gleise 32, 52, 53, 62;LY;LY;22.9;23.897;0.023897;;2024-01-15;2024-12-15;48.0;Sperre Bahnhof Nacht;;47.076323468,7.30630158808;Lyss
+RME;Ostermundigen, BZU23 Gleis 1,2,3 und ÖV-Knoten;OST;OST;110.6;111;0.111;"Koo mit Ausbau
+Lötschberg-Basistunel (BLS)";2023-06-30;2027-06-24;208.0;Sperre Strecke Nacht;0.25;46.9568024174,7.48149794736;Ostermundigen
+RME;Bern Wankdorf Süd Ostermundigen, AS25 Entflechtung;LGUT;OST;108.6;113.25;0.11325;"Koo mit Ausbau
+Lötschberg-Basistunel (BLS)";2023-06-30;2032-11-18;490.0;Sperre Strecke 24 Std;0.5;46.9568024174,7.48149794736;Ostermundigen
+RME;FbE24 UTI-KI Gleis 420;UTI;KI;129.8;128.6;0.1286;Koo mit Gleis 424;2024-01-15;2024-12-15;48.0;Sperre Strecke Nacht;;46.818943814,7.57550132419;Kiesen
+RME;Migration rcs95 auf RCI, Olten Nord-Ost;ABO;LGUT;;;0;;2025-01-15;2025-12-16;48.0;Sperre Strecke Nacht;;46.9805903923,7.46595467656;Löchligut (Abzw)
+RME;;WAA;WAA;;;0;;2025-07-01;2025-10-27;17.0;Sperre Bahnhof Nacht;0.25;47.2319565613,7.65623444913;Wangen an der Aare
+RME;Pieterlen: Umbau Bahnhof (BehiG/LHand);PIE;PIE;;;0;;2025-01-01;2025-12-16;50.0;Sperre Bahnhof Nacht;0.5;47.17144119,7.34019351187;Pieterlen
+RME;;BIM;BIM;;;0;;2025-01-01;2025-12-16;50.0;Sperre Bahnhof Nacht;0.5;47.1447253199,7.27248728258;Biel Mett
+RME;PU Kleinwangen;WBOL;WBOL;42.89;42.89;0.04289;Synergie mit BZU, Hauptarbeiten 52 Std. Totalsperre;2024-04-12;2024-04-18;1.0;Sperre Bahnhof 24 Std;1.0;47.3414007003,7.86836046729;Wangen bei Olten
+RME;FbE24 HB-RTW Gl. 91/368;HB;RTW;67.416;71.932;0.071932;;2024-01-15;2024-12-15;48.0;Sperre Strecke Nacht;;47.1401578579,7.69327597194;Riedtwil
+RME;FbE24 WH_SCHA Gleis 878;WH;SCHA;78.3;78.8;0.0788;;2024-01-15;2024-12-15;48.0;Sperre Strecke Nacht;0.25;47.0379733975,8.1432588728;Schachen LU
+RME;"AS25 Zofingen-Abzw.
+Kriegsschlaufe ZfZ";ZF;ABO;47.5;44;0.044;;2022-07-01;2024-12-12;128.0;Sperre Strecke Nacht;0.25;47.3202684783,7.90822265971;Aarburg-Oftringen
+RME;Abstellanlage Sursee;SS;SS;68.2;70.1;0.0701;"Evtl. auch anderer Standort
+für Personenverkehr";2028-01-01;2032-10-15;250.0;Umsetzung;;47.170795068,8.09789385181;Sursee
+RME;Rothenburg Überhol- / Annahmegleis GV;RBG;RBG;83.4;84.4;0.0844;;2029-01-01;2031-11-16;150.0;Umsetzung;;47.0881900168,8.24918003636;Rothenburg
+RME;;BS;OL;;;0;Sperre DpS GREL-DUG;2025-04-01;2025-09-01;22.0;Umleitung;;47.3519347412,7.90769966099;Olten
+RME;BS, W. 249, 252-258K;BS;BS;;;0;;2024-01-01;2024-12-29;52.0;Sperre Bahnhof Nacht;0.25;47.547412091,7.58956277697;Basel SBB
+RME;BS, Gl. G11, G12;BS;BS;;;0;;2024-01-01;2024-12-29;52.0;Sperre Bahnhof Nacht;0.25;47.547412091,7.58956277697;Basel SBB
+RME;AS35 Oberentfelden Entflechtung WSB;OEF;OEF;13.4;13.5;0.0135;;2024-01-01;2031-08-31;400.0;Umsetzung;;47.3564864045,8.04838711049;Oberentfelden
+RME;AS35 KK: Kreuzungsgleis 1000m;KK;OEF;11.5;12.6;0.0126;;2026-01-01;2030-12-25;260.0;Sperre Strecke Nacht;0.25;47.3564864045,8.04838711049;Oberentfelden
+RME;FbE24_W_205_206_217;OLN;OLN;;;0;;2024-01-01;2024-12-29;52.0;Sperre Strecke 24 Std;0.5;47.3649707491,7.9180571857;Olten Nord (Abzw)
+RME;LZVH-MEGZ, Teilerneuerung Stbw 7.357;LZVH;MEGZ;7.35;7.36;0.00736;;2024-04-01;2024-05-05;5.0;Sperre Strecke Nacht;;47.0451944647,8.374393044;Meggen Zentrum
+RME;BZU23 MERL, Perronerhöhung;MERL;MERL;13.5;13.7;0.0137;Koo mit FbE Gleis 514;2024-10-01;2025-12-29;65.0;Sperre Strecke Nacht;0.25;47.0676600027,8.40905810777;Merlischachen
+RME;10 WU Erneuerung LZVH - KUE (-IM);LZVH;IM;6.723;17.336;0.017336;"Koo mit Sanierung eines
+Stützbauwerk";2024-04-02;2024-04-15;2.0;Sperre Strecke 24 Std;0.25;47.0916186586,8.46267208892;Immensee
+RME;HDK, BZU23 Perronerhöhung;HDK;HDK;65;65.4;ganzer Bhf;;2025-01-01;2025-12-30;52.0;Sperre Bahnhof Nacht;;47.3894310909,8.20738865977;Hendschiken
+RME;AS35: Wohlen Gleis 1;WO;WO;71.5;72.25;0.07225;;2027-06-01;2028-11-06;75.0;Sperre Bahnhof 24 Std;0.25;47.3484640448,8.26979236531;Wohlen AG
+RME;FMUE-ROTS, Teilerneuerung Reussbrücke;FMUE;ROTS;63.75;63.5;0.0635;"6 Wochenendsperren à ca 50h 
+Nachtsperren ohne Massnahmen à 3.5h  
+Mit Massnahmen bis 7.5h möglich.";2024-01-01;2027-08-29;191.0;Sperre Strecke Nacht;0.25;47.0740670373,8.3199743401;Rotsee (Verzw)
+RWT;"RIM Satigny - Vernier ;Meyrin Cargo";;;;;;;2025-07-01;2025-08-25;8.0;Sperre Strecke 24 Std;0.5;;
+RWT;Clarens - Montreux : FbE24_CL-MX_V341-342;CL;MX;24.1;25.385;-1.285;;2024-01-01;2024-12-29;52.0;Sperre Strecke Nacht;0.5;46.4358843229,6.91044006944;Montreux
+RWT;ZEB Villeneuve-St-Maurice : amélioration du distancement;VIL;SM;30.006;51.136;-21.13;;2023-01-01;2023-12-30;52.0;Sperre Strecke 24 Std;0.5;46.2163694939,7.00204392424;St-Maurice
+RWT;Raron, Lhand;RAR;RAR;129.754;130.278;-0.524;;2024-01-01;2024-12-29;52.0;Sperre Strecke Nacht;0.5;46.3062743875,7.80151065367;Raron
+RWT;Brig, tunnel du Simplon - assainissement du tube 1;BR;STDG;157.729;166.869;-9.14;1 tube en 2023 1 tube en 2024;2024-01-01;2024-12-01;48.0;Sperre Strecke 24 Std;0.5;46.2723377046,8.09349478399;Staz della Galleria Sempione
+RWT;LHE, assainissement pont Saissenais;LHE;LHE;45.201;;;Frédéric Restani;2024-01-01;2024-12-29;52.0;Sperre Strecke Tag;0.5;47.1894917627,7.22539576798;La Heutte
+ROT;Umleitung BU-RH-W (DS Rheintal);BU;W;;;;;2024-01-01;2024-12-29;52.0;Umleitung;;47.5003337739,8.72382110762;Winterthur
+ROT;Sanierung Zimmerberg- / Albistunnel;SBG;SBG;;;;Vorstellung Studie 14.05. PZ Ost, Variantenentschei 08/20 immer noch offen!;2024-08-01;2025-12-03;70.0;Sperre Strecke Nacht;0.25;47.2384279078,8.5770589292;Sihlbrugg
+ROT;KLW Umbau UW;KLW;KLW;;;;;2024-01-01;2025-11-30;100.0;Umsetzung;;47.4333288409,8.35421393402;Killwangen-Spreitenbach
+ROT;Stw Ersatz DT (2027?);DT;DT;;;;Stw. Ersatz DO 67: 2027-30;2027-06-22;2030-12-02;180.0;Umsetzung;;47.405783798,8.40498813474;Dietikon
+ROT;Stw Ersatz ZAS (2029?);ZAS;ZAS;;;;Stw. Ersatz DO 67: 2027-30;2027-06-22;2030-12-02;180.0;Umsetzung;;47.3914830997,8.48896269022;Zürich Altstetten
+ROT;Sanierung Notbeleuchtung / Selbstrettung Heitersberg;KLW;MELH;;;;Nach Möglichkeit G-Trassen 00.30-05.30h  im JFP ohne Begegnung im Heitersberg;2025-01-07;2025-12-22;50.0;Sperre Strecke Nacht;0.5;47.4280750785,8.27636329083;Mellingen Heitersberg
+ROT;AS25 SIB Überholgleis;SIB;SIB;;;;Bauphasen gem. Studienbericht so kaum bewilligungsfähig;2025-07-01;2028-05-15;150.0;Umsetzung;0.25;47.1826706698,8.90071365596;Siebnen-Wangen
+ROT;STAE Anpassung Bahnzugang;STAE;STAE;;;0;;2025-01-01;2026-12-01;100.0;Umsetzung;;47.2405272079,8.72165283054;Stäfa
+ROT;FbE24 FB-RW;FB;RW;;;2.017;Koo mit 1158890 KUEW-RW Erneuerung FS+Bel. Nötig;2024-02-26;2024-04-07;6.0;Sperre Strecke Nacht;0.25;47.2248871845,8.81674495291;Rapperswil
+ROT;FbE24: HER Gl. 3 (ex FbE 22);HERL;HERL;;;0.398;;2024-05-01;2024-05-28;4.0;Sperre Bahnhof Nacht;0.5;47.2818266004,8.61273348833;Herrliberg-Feldmeilen
+ROT;WIN - HERL: Instands Stb's Grüt I + Pfaffen;WIN;HERL;;;0;Intervalle noch ohne Konzept;2025-04-01;2025-10-27;30.0;Sperre Strecke Nacht;0.5;47.2818266004,8.61273348833;Herrliberg-Feldmeilen
+ROT;FbE25 UER. Gl. 2,3 (ex FbE 22);UER;UER;;;0;Intervallkonzept fehlt;2025-03-01;2025-04-25;8.0;Sperre Strecke Nacht;0.5;47.2358608014,8.75262523013;Uerikon
+ROT;Umnutzung Gl. 987 BLU-RW;RW;BLU;;;0;evtl. Umsetzung bis 06/24;2023-11-26;2024-06-22;30.0;Sperre Strecke Nacht;0.25;47.2236707178,8.84240514771;Blumenau
+ROT;Tunnelsanierung Käferberg;HRD;ZOER;;;0;gem PZ 27.08.20 voraussichtlich 2028;2026-04-01;2026-09-15;24.0;Sperre Strecke 24 Std;0.5;47.4115300323,8.54413989655;Zürich Oerlikon
+ROT;AS35 ZFZ BUE-EGL;BUE;EGL;;;0;;2025-01-01;2026-05-05;70.0;Umsetzung;;47.5723745199,8.5165580286;Eglisau
+ROT;Bau Passerelle Glasiareal BUE;BUE;BUE;;;0;"Bau ""Stadt Bülach"" (Kundenprojekt)";2024-02-01;2025-07-09;75.0;Sperre Bahnhof Nacht;0.25;47.5239499588,8.53620921292;Bülach
+ROT;FsE24: NH Umsetzung Linienkonzept (ex 2020);NH;NH;;;0;Konzept aus 2020 übernommen neu prüfen, Umleitung, FsE24 Ausführung jedoch 2025;2025-08-03;2025-09-13;6.0;Sperre Bahnhof Nacht;0.25;47.683133385,8.62493454502;Neuhausen
+ROT;WN Überholgleis;WN;WN;;;0;;2024-01-01;2024-12-15;50.0;Umsetzung;;47.1299210164,9.09471050742;Weesen
+ROT;FsE24 Mols - UNT;MOLS;UNT;;;4.4;Konflikt Rheintal;2024-01-01;2024-12-15;50.0;Umsetzung;0.25;47.1138568354,9.25501833667;Unterterzen
+ROT;LQ Stw Ersatz;LQ;LQ;;;0;im Projekt 1161186;2024-01-01;2025-11-30;100.0;Umsetzung;;46.9674404286,9.55404467894;Landquart
+ROT;FbE24: W Gl. 43,44,61;WWE;W;;;1.1;Abgleich Brüttener: Was ist nötig.;2024-03-01;2024-04-04;5.0;Sperre Bahnhof Nacht;0.25;47.5003337739,8.72382110762;Winterthur
+ROT;AS35 Brüttenertunnel Abschnitt BSD;BSD;BSD;;;0;;2026-01-01;2033-08-31;400.0;Umsetzung;0.25;47.4385705613,8.62622097081;Bassersdorf
+ROT;BSD Stw Ersatz;BSD;BSD;;;0;im AS35 Brüttener Projekt;2029-01-01;2030-12-01;100.0;Umsetzung;;47.4385705613,8.62622097081;Bassersdorf
+ROT;SG Stw Ersatz;SG;SG;;;0;;2027-01-01;2028-11-30;100.0;Umsetzung;;47.4231789578,9.36989672929;St Gallen
+ROT;ZEB WAKO SG-SMG;SG;SMG;;;0;;2025-01-01;2029-10-16;250.0;Umsetzung;;47.4532159757,9.6382619195;St Margrethen
+ROT;AS35 RS-RSST DS;RS;RSST;;;0;;2031-01-01;2032-11-30;100.0;Umsetzung;;47.4755923529,9.48936372278;Rorschach Stadt
+ROT;RCK Stw Ersatz;RCK;RCK;;;0;;2028-01-01;2029-11-30;100.0;Umsetzung;;47.4668859521,9.5909126225;Rheineck
+ROT;Fährhütten Neubau Haltestelle;SEV;TRUE;;;0;Termine SAP: Ausführung 2025-2027, IBN 03/27!;2024-01-01;2025-11-30;100.0;Umsetzung;;47.0715830597,9.4803456152;Trübbach
+ROT;BZN BehiG;BZN;BZN;;;0;zu prüfende Konzeptidee:Tagsüber ausserhalb HVZ, kein kommerzieller Halt in BZN (Durchfahrt über Gl. 2, sofern frei), Bahnersatz für BZN;2024-03-01;2024-04-25;8.0;Sperre Bahnhof Nacht;1.0;47.5004152503,9.23403531753;Bischofszell Nord
+ROT;WZ-KN Neubau Unterführung Usterstrasse;WZ;KN;;;0;gem LCM IBN 2026;2026-01-01;2026-06-24;25.0;Umsetzung;;47.3320431153,8.8047206925;Kempten
+ROT;AS35 SEU Wendegleis;SEU;DIH;;;0;;2030-01-01;2033-10-31;200.0;Umsetzung;;47.5533451481,8.75298087411;Dinhard
+ROT;EdV OWT-STR Perronverlängerung 170m (TLH, OSS, EW);OWT;STR;;;0;;2027-01-01;2028-11-30;100.0;Umsetzung;;47.6561110013,8.85502002864;Stein am Rhein
+ROT;FsE OWT-EW;OWT;SEU;;;0;Abschnitt 1 OWT-SEU, Abschnitt 2 Bhf SEU, soll als Einzelprojekt beauftragt werden;2023-01-01;2026-10-31;200.0;Sperre Strecke Nacht;0.25;47.5357669764,8.73888339067;Seuzach
+ROT;FbE24 Arbon (ganzer Bhf) + Einfahrweiche Horn;ARB;HN;;;#VALUE!;Antrag auf Schiebung in 2025 Grund: Konflikt Sperrung Rheintal Süd;2025-01-01;2026-12-01;100.0;Umsetzung;;47.4931799805,9.46338787007;Horn
+ROT;FbE26 WF-KHF Gl 720 (ex FbE22);WF;KHF;;;0.968;Totalsperrung ex 2022;2026-09-05;2026-09-25;3.0;Sperre Strecke 24 Std;1.0;47.5721871628,9.1697794714;Kehlhof
+RSD;BRU-AL Unterhaltsfenster;BRU;AL;20.9;36.2;15.3;Unterhaltsfenster;2024-08-25;2024-09-07;2.0;Sperre Strecke Nacht;0.5;46.8757386867,8.6315753775;Altdorf
+RSD;LED Roullout Los 2;FL;FL;32;33.3;1300;LED Roullot;2026-01-04;2026-05-02;17.0;Sperre Bahnhof Nacht;0.25;46.9017301738,8.6243027189;Flüelen
+RSD;Vergrössern der Gleisachsabstände beide Seiten;RYN;RYN;37.2;39;1.8;Anlagen Manko;2025-04-01;2025-12-22;38.0;Sperre Strecke Nacht;0.25;46.8633479623,8.63546681711;Rynächt Nord
+RSD;Erstfeld  Stellwerkersatzt;ER;ER;40.8;42.5;1.7;STW Ersatzt;2025-09-01;2026-03-29;30.0;Sperre Bahnhof Nacht;0.5;46.8203393997,8.65045465313;Erstfeld
+RSD;"BZU23; Bodio";BO;BO;125.4;125.6;0.2;BZU23;2026-03-01;2026-12-12;41.0;Sperre Bahnhof Nacht;0.25;46.380254548,8.90656793402;Bodio TI
+RSD;FbE24_BO_W_21-22-28_GL_5-35;BO;BO;125.2;125.5;0.3;FbE24;2024-08-19;2024-09-15;4.0;Sperre Bahnhof Tag;0.5;46.380254548,8.90656793402;Bodio TI
+RSD;Bodio, nuovo piazzale di carico/scarico;BO;BO;123.9;124.35;0.45;Freiverlad Bodio;2024-04-01;2024-12-22;38.0;Sperre Bahnhof Tag;0.25;46.380254548,8.90656793402;Bodio TI
+RSD;Phase A9;BEL;GIU;151.876;153.07;1.194;Giubiasco 44-34-24 13-252;2024-11-11;2024-12-01;3.0;Sperre Strecke Tag;0.25;46.1738126869,9.00360006177;Giubiasco
+RSD;Phase C3 (BIN 200);BEL;GIU;151.652;152.089;0.437;Bellinzona 891-881-871-W901;2027-04-27;2027-05-24;4.0;Sperre Strecke Nacht;0.25;46.1738126869,9.00360006177;Giubiasco
+RSD;FbE24_CHI_W_103-104-106_GL_122-132;CHI;CHI;;;0.2;FbE24;2024-01-02;2024-01-29;4.0;Sperre Strecke Nacht;0.25;45.8321680089,9.0314495232;Chiasso
+RSD;Cadenazzo aumento capacità (GV) AS2030/35;CD;CD;159.669;159.831;0.162;AS35;2024-01-01;2026-12-13;154.0;Sperre Bahnhof Nacht;0.25;46.1526199984,8.94169884827;Cadenazzo
+RSD;Cadenazzo Erhaltungszentrum (IH);CD;CD;;;;ETCS L2 (Anmeld);2025-01-01;2027-12-13;154.0;Sperre Bahnhof Nacht;0.25;46.1526199984,8.94169884827;Cadenazzo
+RSD;Cham: Perronverlängerung 320m;CHAM;CHAM;43.35;43.75;0.4;AS35;2026-01-01;2028-04-26;121.0;Sperre Bahnhof Nacht;0.25;47.178243841,8.45750481581;Cham
+RSD;ZG-GD Unterhaltsfenster;ZG;GD;0.16;9.7;9.54;Unterhaltsfenster;2024-05-20;2024-06-02;2.0;Sperre Strecke Nacht;0.5;47.049044874,8.54944633996;Arth-Goldau
+RME;AS35 GREL-DUG Doppelspurausbau;GREL;DUG;107;111.4;0.1114;Sperrmuster ohne RM;2023-04-01;2025-03-28;104.0;Sperre Strecke Nacht;1.0;47.4534448145,7.60346074943;Duggingen
+RME;;OL;BI;;;0;Sperre DpS GREL-DUG;2025-04-01;2025-09-01;22.0;Umleitung;;47.1328978528,7.24291053739;Biel/Bienne
+RME;;OB;OB;;;0;;2025-02-01;2025-05-30;17.0;Sperre Bahnhof Nacht;0.25;47.3052472113,7.7717238037;Oberbuchsiten
+RME;;LUT;LUT;;;0;;2026-02-01;2026-05-02;13.0;Sperre Bahnhof Nacht;0.25;47.2171492197,7.58352344644;Luterbach-Attisholz
+RME;SO-SW, Ersatz Aarebrücken;SO;SW;74;74.6;0.0746;"Wettbewerb brücke; Ausführungszeit inkl. Bauzeit Brücke; BPP Stufe 1 am 31.3.22";2026-01-01;2027-12-29;104.0;Sperre Strecke 24 Std;0.5;47.2067172615,7.53194908407;Solothurn West
+RME;OEN=NB, Gl. 104-556;OEN;WAA;57.247;58.028;0.058028;Zusammen mit BZU NB, FbE22 600er Gleis teilweise im 24;2024-07-01;2024-07-28;4.0;Sperre Strecke Nacht;0.5;47.2319565613,7.65623444913;Wangen an der Aare
+RME;FbE: Gl. 492, 62-72, 73-23, 641-2, 7-9, W. 11/12;OLH;OLH;39.844;41.102;0.041102;;2024-01-01;2024-12-29;52.0;Sperre Bahnhof Nacht;0.5;47.348555177,7.89772397213;Olten Hammer
+RME;UF Gäu;OLH;SO;;;0;"Total 40 Sperrungen, jeweils Dienstag bis Samstag 08.30h bis 15.30h
+	10 Sperrungen, 2 Wochen im Frühling und 2 Wochen im Herbst.
+Bahnersatz: Für Regionalverkehr. Schnellzüge umleiten über NBS-ABS";2024-01-01;2024-12-29;52.0;Sperre Strecke Tag;0.5;47.2041925029,7.54268923738;Solothurn
+RME;"Herzogenbuchsee und Langenthal: Bau von IH-
+Stützpunkte";HB;LTH;67.5;58.5;0.0585;;2024-01-01;2025-10-26;95.0;Umsetzung;;47.2173029163,7.78471520185;Langenthal
+RME;"Bern Wankdorf, neue PU
+und Haltestelle Nord";BWY;"LGUT
+OST";103.3;"102.400
+109.600";#VALUE!;;2021-08-02;2025-09-14;215.0;Sperre Strecke 24 Std;0.25;;
+RME;FbE24 LTH-HB Gleis 365;LTH;HB;64.6;65.415;0.065415;;2024-01-15;2024-12-15;48.0;Sperre Strecke 24 Std;0.25;47.1880861101,7.70095832122;Herzogenbuchsee
+RME;Cluster mit Totalsperrung SCHH_LN;LN;SCHH;38.1;59.7;0.0597;Div.;2025-04-02;2025-07-29;17.0;Sperre Strecke 24 Std;1.0;46.9506473328,8.01515060209;Schüpfheim
+RME;"AS35 Zofingen: Schnelle
+Einfahrt G nach Gleis 4";ZF;ZF;46.8;48.2;0.0482;Inkl. Stellwerkersatz;2027-02-01;2031-08-03;235.0;Sperre Bahnhof Nacht;0.25;47.2880525355,7.94311764754;Zofingen
+RME;Stellwerkersatz und Fahrbahnerneuerungen;EBR;EBR;87.1;90.9;0.0909;;2024-01-01;2025-01-19;55.0;Sperre Strecke Nacht;;47.070601491,8.28256532837;Emmenbrücke
+RME;FMUE, FbE24 W. 9-11, 14-16;LZ;EBR;91.95;91.7;0.0917;;2024-01-15;2024-12-15;48.0;Sperre Strecke Nacht;;47.070601491,8.28256532837;Emmenbrücke
+RME;Erneuerung Brücke über die kleine Emme;EBR;FMUE;90.615;90.65;0.09065;;2024-09-01;2026-03-28;82.0;Umsetzung;;47.0566007468,8.28684763509;Fluhmühle (Abzw)
+RME;FbE24 LZ Weichen 643, 644, 651-655, 657, 658, 704, 705 und Gleis 304;LZ;LZ;94.2;94.6;0.0946;Umbau der Nebenanlage;2024-01-15;2024-12-15;48.0;Sperre Bahnhof 24 Std;;47.0501778105,8.31018315401;Luzern
+RME;;OL;OL;;;0;FL Arbeiten UW in Olten, ABO, OLH, RTR, Arbeiten aktuell verzögert;2024-01-01;2024-12-29;52.0;Sperre Bahnhof 24 Std;1.0;47.3519347412,7.90769966099;Olten
+RME;PR=FRE, Gl. 109;PR;FRE;;;0;;2024-01-01;2024-12-29;52.0;Sperre Strecke Nacht;0.5;47.5014699912,7.71911047846;Frenkendorf-Füllinsdorf
+RME;AS35 Safenwil-Walterswil: Bau Doppelspur inkl. 2. Perron;SAF;WAST;6.5;4.4;0.0044;;2026-01-01;2030-12-25;260.0;Sperre Strecke Nacht;0.25;47.3199235956,7.96320362872;Walterswil-Striegel
+RME;Umbau Knoten Olten;OL;OL;;;0;;2030-01-01;2032-12-27;156.0;Sperre Bahnhof 24 Std;0.25;47.3519347412,7.90769966099;Olten
+RME;Totalerneuer. Fahrleitung;MEG;MEG;10.043;11.45;0.01145;Bau Fundamente im 2022;2024-04-02;2024-04-15;2.0;Sperre Strecke 24 Std;0.25;47.0501478318,8.38306144451;Meggen
+RME;"BZ Mitte, Migration rcs95 auf
+RCI der Zellen OTH";OTH;OI;65.5;95.9;0.0959;"Benzenschwil, Mellingen, Oberrüti,
+Othmarsingen, Sins, Wohlen. Abbruch rcs95 Stationen, Bau RCI, Migration aSB9 von S5 auf S7 und  Rückbau rcs95 Zentralen";2024-01-01;2024-12-29;52.0;Sperre Strecke Nacht;;47.1659261632,8.4047794455;Oberrüti
+RME;"RK Projektierung WildTK
+ZG6 Risch Astra";RK;IM;101.6;102.6;0.1026;"Erstellung Wildtierkorridier
+Spw Brüglen";2023-04-01;2025-02-28;100.0;Sperre Strecke Nacht;;47.0916186586,8.46267208892;Immensee
