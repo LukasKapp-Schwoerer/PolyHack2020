@@ -5,16 +5,16 @@ class Congestion:
     def __init__(self, passenger_value=0, freight_value=0):
         self.passenger_value = passenger_value
         self.freight_value = freight_value
-        
+
     def __str__(self):
         return f"passenger_value: {self.passenger_value} | freight_value: {self.freight_value}"
-    
+
     def __add__(self, other):
         return Congestion(self.passenger_value + other.passenger_value, self.freight_value + other.passenger_value)
-        
+
     def increase_passenger_value(self, increment):
         self.passenger_value += increment
-        
+
     def increase_freight_value(self, increment):
         self.freight_value += increment
 
@@ -27,19 +27,19 @@ class Operating_point:
         self.connections_outbound = []
         self.congestion = Congestion()
         self.lines = []
-        
+
     def add_connection_outbound(self, connection):
         self.connections_outbound.append(connection)
-            
+
     def add_connection_inbound(self, connection):
         self.connections_inbound.append(connection)
-        
+
     def add_line(self, line_id):
         self.lines.append(line_id)
-        
+
     def __str__(self):
         return f"{self.id_index:d} {self.id_word} {self.gps} " +                f"outbound: {self.connections_outbound} | inbound: {self.connections_inbound}\n"                f"congestion: {self.congestion}"
-    
+
 class Connection:
     def __init__(self, from_op, to_op, trains, load, train_type):
         self.from_op = from_op
@@ -47,7 +47,7 @@ class Connection:
         self.trains = trains
         self.load = load
         self.train_type = train_type
-        
+
     def __str__(self):
         return f"{self.from_op} {self.to_op} {self.trains} {self.load}"
 
@@ -59,8 +59,8 @@ class Connection_congestion:
             self.congestion = congestion
         else:
             self.congestion = Congestion()
-        
-        
+
+
     def __str__(self):
         return f"Connection_congetion {self.smaller_op} <-> {self.greater_op}: " + str(self.congestion) + "\n"
 
@@ -87,7 +87,7 @@ class Data_extractor:
 
         for index, row in self.operating_points_df.iterrows():
             id_word = row['Abbreviation of the operating point']
-            
+
             self.points.setdefault(id_word,
                               Operating_point(index,
                                               id_word,
@@ -95,7 +95,7 @@ class Data_extractor:
             self.points[id_word].add_line(row['LINIE'])
 
         op_index = 9000
-            
+
         for index, row in self.train_tracks_df.iterrows():
             from_op = row['BP_Von_Abschnitt']
             to_op = row['BP_Bis_Abschnitt']
@@ -106,7 +106,7 @@ class Data_extractor:
                     op_index += 1
 
             new_connection = Connection(from_op, to_op,
-                                        row['Anzahl_Zuege'], 
+                                        row['Anzahl_Zuege'],
                                         row['Gesamtbelastung_Bruttotonnen'],
                                         row['Geschaeftscode'])
             self.points[from_op].add_connection_outbound(new_connection)
@@ -123,14 +123,14 @@ class Data_extractor:
             x_coords.append(point.gps[0])
             y_coords.append(point.gps[1])
             incidence_list[point.id_index] = []
-            
+
             for connection in point.connections_outbound:
                 incidence_list[point.id_index].append(self.points[connection.to_op].id_index)
-            
+
         vis_data = {'ID': ids,
                 'x': x_coords,
                 'y': y_coords,
-                'IL': incidence_list}  
+                'IL': incidence_list}
         """
 
     def get_operation_points(self):
@@ -141,14 +141,14 @@ class Data_extractor:
 
         connection_congestions = {}
 
-        # passenger congestion: capacity reduction during day 
+        # passenger congestion: capacity reduction during day
         for index, row in self.construction_df.iterrows():
             umsetzung = row['Umsetzung / \nIntervalltyp / Umleitung']
             if umsetzung not in ['Umsetzung', 'Sperre Strecke 24 Std', 'Sperre Strecke Tag']:
                 continue # not during day
             from_op = row['bp_from']
             to_op = row['bp_to']
-            
+
             if from_op not in self.points.keys() or to_op not in self.points.keys(): # location not known
                 continue
             if from_op == to_op: # op congestion
@@ -157,8 +157,8 @@ class Data_extractor:
                 reduction_frac = row['reduction of capacity']
                 if math.isnan(reduction_frac):
                     reduction_frac = 0
-                
-                # BFS starting at from_op        
+
+                # BFS starting at from_op
                 frontier = [from_op]
                 visited = set()
                 visited.add(from_op)
@@ -179,7 +179,7 @@ class Data_extractor:
                             frontier.append(neighbor)
                             prev[neighbor] = element
                             visited.add(neighbor)
-                 
+
                 # backtracking
                 assert(element == to_op) # check that a route was found
                 route = [to_op]
@@ -187,7 +187,7 @@ class Data_extractor:
                 while current in prev.keys():
                     current = prev[current]
                     route.append(current)
-                
+
                 # count total trains
                 total_trains = 0
                 for from_op in route:

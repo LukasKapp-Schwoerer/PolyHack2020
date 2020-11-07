@@ -8,6 +8,7 @@ data_dir = 'data/'
 data_extractor = Data_extractor(data_dir)
 
 points = data_extractor.get_operation_points()
+ccg = data_extractor.get_connection_congestions()
 
 x_coords = []
 y_coords = []
@@ -18,14 +19,14 @@ for point in points.values():
     x_coords.append(point.gps[0])
     y_coords.append(point.gps[1])
     incidence_list[point.id_index] = []
-                        
+
     for connection in point.connections_outbound:
         incidence_list[point.id_index].append(points[connection.to_op].id_index)
-                                            
+
 ops = {'ID': ids,
       'x': x_coords,
       'y': y_coords,
-      'IL': incidence_list}  
+      'IL': incidence_list}
 
 """
 # Create a list of x-coordinates

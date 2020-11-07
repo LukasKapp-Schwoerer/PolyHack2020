@@ -8,7 +8,6 @@ from viz import transform
 
 class Map:
     """docstring for ."""
-
     def __init__(self, ops, title):
         self.width = 20
         self.height = 10
