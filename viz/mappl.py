@@ -8,10 +8,30 @@ from viz import transform
 
 class Map:
     """docstring for ."""
-    def __init__(self, ops, title):
+    def __init__(self, points, title):
         self.width = 20
         self.height = 10
         self.fig, self.ax = plt.subplots(nrows = 1, ncols = 1, figsize=(self.width,self.height))
+
+        self.points = points
+        #extract locations and incidence lists
+        x_coords = []
+        y_coords = []
+        ids = []
+        incidence_list = {}
+        for point in points.values():
+            ids.append(point.id_index)
+            x_coords.append(point.gps[0])
+            y_coords.append(point.gps[1])
+            incidence_list[point.id_index] = []
+
+            for connection in point.connections_outbound:
+                incidence_list[point.id_index].append(points[connection.to_op].id_index)
+
+        self.ops = {'ID': ids,
+              'x': x_coords,
+              'y': y_coords,
+              'IL': incidence_list}
 
         self.nodes = 0
         self.edges = []
@@ -37,11 +57,13 @@ class Map:
         #imext_y = [1050000,1300000]
         self.ax.imshow(self.im, extent = imext)
 
-    def plotgraph(self, ops):
-        self.nodes = self.ax.scatter(ops['x'], ops['y'], s=10, c = 'r')
+    def plotgraph(self,):
+        ops = self.ops
+        self.nodes = self.ax.scatter(self.ops['x'], ops['y'], s=10, c = 'r')
         plt.show(block=False)
 
-    def plotedges(self, ops):
+    def plotedges(self):
+        ops = self.ops
         plotted_edges = []
         #loop ove rall points and plot incident lists
         for startingpoint in ops['ID']:
@@ -50,7 +72,6 @@ class Map:
             IL = ops['IL'][startingpoint]
             #print("IL", IL)
             for target in IL:
-
                 #if(target >startingpoint):
                 #plot line
                 xline = [ ops['x'][ops['ID'].index(startingpoint)], ops['x'][ops['ID'].index(target)] ]
@@ -67,6 +88,13 @@ class Map:
             #print("starting point idx", startingpoint, IL)
         plt.show(block=False)
 
+    def plotcongestions(self, ccgs):
+        points = self.points
+        #iterate over connection congestions
+        for ccg in ccgs:
+            smaller_op = points[ccg.smaller_op].gps
+            greater_op = points[ccg.greater_op].gps
+            
     def activatebuttons(self):
         def dateupdate(date):
             #print(self.timestamp)
@@ -79,6 +107,7 @@ class Map:
             self.timestamp.append(self.ax.text(2500000, 1245000, str(date)))
         self.sl_date.on_changed(dateupdate)
 
+
     def deletegraph(self):
         print("deleting")
         self.nodes.remove()
@@ -90,4 +119,6 @@ class Map:
             line[0].remove()
         self.edges = []
         self.fig.canvas.draw()
+
+
 #precompute coarsness levels.
