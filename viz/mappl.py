@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from matplotlib.widgets import Slider, Button, RadioButtons
 import os
 print(os.getcwd())
-import transform
+from viz import transform
 
 
 class Map:
@@ -25,7 +25,7 @@ class Map:
         self.radio = RadioButtons(self.ax_daytime, ('day', 'night'), active=0)
         self.ax.set_xlim([2450000,2850000])
         self.ax.set_ylim([1050000,1300000])
-        self.im = plt.imread("ch.jpg")
+        self.im = plt.imread("viz/ch.jpg")
 
         ratio = 1582.0/974.0
         scale = 0.926
