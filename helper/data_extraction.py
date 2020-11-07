@@ -2,9 +2,11 @@ import pandas as pd
 import math
 
 class Congestion:
-    def __init__(self, passenger_value=0, freight_value=0):
-        self.passenger_value = passenger_value
-        self.freight_value = freight_value
+    def __init__(self, passenger_congestion=0, freight_congestion=0, passenger_trains=0, freight_trains=0):
+        self.passenger_congestion = passenger_congestion
+        self.freight_congestion = freight_congestion
+        self.passenger_trains = passenger_trains
+        self.freight_trains = freight_trains
 
     def __str__(self):
         return f"passenger_value: {self.passenger_value} | freight_value: {self.freight_value}"
@@ -12,11 +14,17 @@ class Congestion:
     def __add__(self, other):
         return Congestion(self.passenger_value + other.passenger_value, self.freight_value + other.passenger_value)
 
-    def increase_passenger_value(self, increment):
-        self.passenger_value += increment
+    def increase_passenger_congestion(self, increment):
+        self.passenger_congestion += increment
 
-    def increase_freight_value(self, increment):
-        self.freight_value += increment
+    def increase_freight_congestion(self, increment):
+        self.freight_congestion += increment
+
+    def increase_passenger_trains(self, increment):
+        self.passenger_trains += increment
+
+    def increase_freight_trains(self, increment):
+        self.freight_trains += increment
 
 class Operating_point:
     def __init__(self, id_index, id_word, gps):
@@ -204,6 +212,8 @@ class Data_extractor:
                             greater_op = to_op if from_op <= to_op else from_op
                             connection_congestions.setdefault((smaller_op, greater_op),
                                                               Connection_congestion(smaller_op, greater_op))
-                            connection_congestions[(smaller_op, greater_op)].congestion.increase_passenger_value(reduction_frac * trains)
+                            connection_congestion = connection_congestions[(smaller_op, greater_op)]
+                            connection_congestion.congestion.increase_passenger_trains(trains)
+                            connection_congestion.congestion.increase_passenger_congestion(reduction_frac * trains)
 
         return list(connection_congestions.values())
