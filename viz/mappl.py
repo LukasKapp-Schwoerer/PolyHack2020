@@ -14,10 +14,9 @@ class Map:
         self.height = 10
         self.fig, self.ax = plt.subplots(nrows = 1, ncols = 1, figsize=(self.width,self.height))
 
-        self.nodes = []
+        self.nodes = 0
         self.edges = []
         self.timestamp = []
-        self.conv = transform.GPSConverter()
 
         axcolor = 'lightgoldenrodyellow'
         self.ax_date = plt.axes([0.1, 0.05, 0.75, 0.03], facecolor=axcolor)
@@ -40,11 +39,11 @@ class Map:
         self.ax.imshow(self.im, extent = imext)
 
     def plotgraph(self, ops):
-        x, y = self.conv.WGSlist2CH(ops['y'], ops['x'])
-        self.nodes.append(self.ax.scatter(ops['x'], ops['y'], s=10, c = 'r'))
+        self.nodes = self.ax.scatter(ops['x'], ops['y'], s=10, c = 'r')
         plt.show(block=False)
 
     def plotedges(self, ops):
+        plotted_edges = []
         #loop ove rall points and plot incident lists
         for startingpoint in ops['ID']:
             #plot all edges in incidence list to points not covered yet
@@ -52,24 +51,44 @@ class Map:
             IL = ops['IL'][startingpoint]
             #print("IL", IL)
             for target in IL:
+
                 #if(target >startingpoint):
                 #plot line
                 xline = [ ops['x'][ops['ID'].index(startingpoint)], ops['x'][ops['ID'].index(target)] ]
                 yline = [ ops['y'][ops['ID'].index(startingpoint)], ops['y'][ops['ID'].index(target)] ]
                 #x, y = self.conv.WGSlist2CH(yline, xline)
-
-                if(xline[0] != 0 and xline[1] != 0):
+                if(target>= startingpoint):
+                    edgetup = [startingpoint, target]
+                else:
+                    edgetup = [target, startingpoint]
+                if((xline[0] != 0 and xline[1] != 0) and (edgetup not in plotted_edges)):
                     self.edges.append(self.ax.plot(xline, yline, linewidth = 1, c = 'k'))
+                    plotted_edges.append(edgetup)
 
             #print("starting point idx", startingpoint, IL)
         plt.show(block=False)
 
     def activatebuttons(self):
         def dateupdate(date):
+            #print(self.timestamp)
             if len(self.timestamp):
-                self.timestamp[0].remove()
-            print("called")
-            print("date", date)
-            self.timestamp.append(self.ax.text(47, 8.25,str(date)))
+                self.timestamp[-1].remove()
+                self.timestamp = []
+            #print("called")
+            #print("date", date)
+            #update congestion
+            self.timestamp.append(self.ax.text(2500000, 1245000, str(date)))
         self.sl_date.on_changed(dateupdate)
+
+    def deletegraph(self):
+        print("deleting")
+        self.nodes.remove()
+        self.nodes = 0
+        self.fig.canvas.draw()
+        for idx in range(len(self.edges)):
+            #print("rem edg")
+            line = self.edges[idx]
+            line[0].remove()
+        self.edges = []
+        self.fig.canvas.draw()
 #precompute coarsness levels.
