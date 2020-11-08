@@ -16,6 +16,19 @@ We show you the bottleneck
 ![Alt](/img/GUI.png "Screenshot of the GUI")
 
 ## data_extraction
+Date Processing
+* Selecting most insightful data
+* Approximating missing GPS coordinates
+* Rich data-structures combining multiple sources
+
+
+Algorithm
+* For construction sites: Employ graph-exploration to find affected track segments
+* Distinction between night and day (passenger trains are day only, freight trains evenly split)
+    - Congestion metric considering
+    - Time of day
+    - Number & Type of trains passing
+    - Capacity loss induced by the construction work
 
 
 ## Clustering
@@ -24,3 +37,5 @@ To provide a high-level overview of congestions in regions, operational points a
 * Averaging points in a common neighborhood
 * Clusters are selected by a grid
 * Only connected points could belong to a single cluster
+
+![Alt](/img/Cluster.jpeg "Visualization of Clustering")
