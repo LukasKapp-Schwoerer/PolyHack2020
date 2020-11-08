@@ -6,6 +6,12 @@ We show you the bottleneck
  * linie-mit-betriebspunkten.csv
  * zugzahlen.csv
 
+## Create conda environment
+Run this command to install all dependencies:
+```
+conda env create -f conda_env.yml
+```
+
 ## Functionality
 
 * Provide a fine-grained or coarse-grained overview of critical bottlenecks of the railway grid
@@ -25,7 +31,7 @@ Date Processing
 Algorithm
 * For construction sites: Employ graph-exploration to find affected track segments
 * Distinction between night and day (passenger trains are day only, freight trains evenly split)
-    - Congestion metric considering
+* Congestion metric considering
     - Time of day
     - Number & Type of trains passing
     - Capacity loss induced by the construction work
