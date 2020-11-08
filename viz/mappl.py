@@ -6,11 +6,12 @@ from matplotlib.widgets import Slider, Button, RadioButtons
 import os
 print(os.getcwd())
 from viz import transform
-
+from datetime import date
 
 class Map:
     """docstring for ."""
-    def __init__(self, points, title):
+    def __init__(self, points, extractor, title):
+        self.extractor = extractor
         self.width = 20
         self.height = 10
         self.fig, self.ax = plt.subplots(nrows = 1, ncols = 1, figsize=(self.width,self.height))
@@ -41,11 +42,20 @@ class Map:
         self.timestamp = []
         self.iscbar = 0
 
-        axcolor = 'lightgoldenrodyellow'
-        self.ax_date = plt.axes([0.1, 0.05, 0.75, 0.03], facecolor=axcolor)
-        self.sl_date = Slider(self.ax_date, 'Days', 0, 100, valinit=0, valstep = 1)
+        #axcolor = 'lightgoldenrodyellow'
+        axcolor = 'w'
+        self.ax_date = plt.axes([0.23, 0.03, 0.2, 0.03], facecolor=axcolor)
+        self.sl_date = Slider(self.ax_date, 'Start', 2019, 2040, valinit=2019, valstep = 0.25)
+        self.ax_wind = plt.axes([0.55, 0.03, 0.1, 0.03], facecolor=axcolor)
+        self.sl_window = Slider(self.ax_wind, 'Length', 1, 5, valinit=1, valstep = 0.25)
+        self.constructionduration = 2 #one year
+        self.range_start = date(2019,1,1)
+        self.range_end = date(2019+self.constructionduration, 1, 1)
         self.ax_daytime = plt.axes([0.01, 0.5, 0.06, 0.15], facecolor=axcolor)
         self.radio = RadioButtons(self.ax_daytime, ('day', 'night'), active=0)
+        self.resetax = plt.axes([0.75, 0.03, 0.06, 0.03])
+        self.button = Button(self.resetax, 'Compute', color=axcolor, hovercolor='0.975')
+
         self.ax.set_xlim([2450000,2850000])
         self.ax.set_ylim([1050000,1300000])
         self.im = plt.imread("viz/ch.jpg")
@@ -63,7 +73,7 @@ class Map:
 
     def plotgraph(self,):
         ops = self.ops
-        self.nodes = self.ax.scatter(self.ops['x'], ops['y'], s=10, c = 'r')
+        self.nodes = self.ax.scatter(self.ops['x'], ops['y'], s=2, c = 'k', alpha = 0.5)
         plt.show(block=False)
 
     def plotedges(self):
@@ -86,7 +96,7 @@ class Map:
                 else:
                     edgetup = [target, startingpoint]
                 if((xline[0] != 0 and xline[1] != 0) and (edgetup not in plotted_edges)):
-                    self.edges.append(self.ax.plot(xline, yline, linewidth = 1, c = 'k'))
+                    self.edges.append(self.ax.plot(xline, yline, linewidth = 2, c = 'k', alpha = 0.3))
                     plotted_edges.append(edgetup)
 
             #print("starting point idx", startingpoint, IL)
@@ -106,12 +116,19 @@ class Map:
         maxconj = np.max(conj)
 
         throughput = 0.2 + np.array(throughput)*5.0/np.max(throughput)
-        colors = cm.jet(conj/maxconj)
+        #print("conj", conj)
+        if(np.sum(conj)):
+            #print("sum",np.sum(conj))
+            colors = cm.autumn((maxconj-conj)*1.0/maxconj)
+        else:
+            colors = cm.autumn(np.array(conj)+1)
+        #print((maxconj-conj)*1.0/maxconj)
+        #print(colors)
 
         if(not self.iscbar):
-            sc = self.ax.scatter([0,0], [0,0], c = [0, 1], cmap = cm.jet)
+            sc = self.ax.scatter([0,0], [0,0], c = [0, 1], cmap = cm.autumn)
             self.cbarax = self.fig.add_axes([0.9, .1, 0.02, 0.7])
-            self.cbar = self.fig.colorbar(sc, self.cbarax, ticks = [0, 1])
+            self.cbar = self.fig.colorbar(sc, self.cbarax, ticks = [1, 0])
             self.cbar.ax.set_yticklabels(['0', '1'])
             self.cbar.set_label("Congestion index (normalized)")
             self.iscbar = 1
@@ -130,16 +147,39 @@ class Map:
 
 
     def activatebuttons(self):
-        def dateupdate(date):
+        def dateupdate(sliderval):
             #print(self.timestamp)
             if len(self.timestamp):
                 self.timestamp[-1].remove()
                 self.timestamp = []
-            #print("called")
-            #print("date", date)
-            #update congestion
-            self.timestamp.append(self.ax.text(2500000, 1245000, str(date)))
+            year = np.int(sliderval)
+            month = np.int(1+11.0*(sliderval-year))
+            #print("y,m", year, month)
+            #print("dtype", year.dtype, month.dtype)
+            self.range_start = date(year, month, 1)
+            year_end = np.int(sliderval+self.constructionduration)
+            month_end = np.int(1+11.0*(sliderval+self.constructionduration-year_end))
+            self.range_end = date(year_end, month_end,1)
+            self.timestamp.append(self.ax.text(2480000, 1245000,"Congestion: " +str(year)+"/"+str(month)+"-"+str(year_end)+"/"+str(month_end)))
+
+        def windowupdate(val):
+            self.constructionduration = val
+
+        def computecongestion(event):
+            print("computing ccg")
+            range_start = self.range_start
+            range_end = self.range_end
+            vcg, ccg = self.extractor.get_congestions_list(range_start, range_end)
+            if(len(self.congestededges)):
+                self.deletecongestionedges()
+            if(len(ccg)):
+                self.plotcongestions(ccg)
+            else:
+                print("no congestion detected")
+
+        self.button.on_clicked(computecongestion)
         self.sl_date.on_changed(dateupdate)
+        self.sl_window.on_changed(windowupdate)
 
 
     def deletegraph(self):

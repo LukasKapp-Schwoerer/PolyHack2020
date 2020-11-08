@@ -63,16 +63,11 @@ with open(filename, 'rb') as handle:
 """
 
 
-map = mappl.Map(points, "test")
+map = mappl.Map(points, data_extractor, "test")
 map.plotgraph()
 map.plotedges()
-map.plotcongestions(ccg)
+#map.plotcongestions(ccg)
 map.activatebuttons()
-plt.show(block=False)
-input("press button to delete conginfo")
-map.deletecongestionedges()
-input("plot again")
-map.plotcongestions(ccg)
 plt.show()
 
 '''
