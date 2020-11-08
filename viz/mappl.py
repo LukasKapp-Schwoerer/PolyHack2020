@@ -6,6 +6,7 @@ from matplotlib.widgets import Slider, Button, RadioButtons
 import os
 print(os.getcwd())
 from viz import transform
+import time
 
 
 class Map:
@@ -109,6 +110,8 @@ class Map:
         self.cbar.ax.set_yticklabels(['0', '1'])
         self.cbar.set_label("Congestion index (normalized)")
 
+        annotations = []
+
         idx = 0
         for ccg in ccgs:
             smaller_op = points[ccg.smaller_op].gps
@@ -117,7 +120,39 @@ class Map:
             y = [smaller_op[1], greater_op[1]]
             if(x[0] != 0 and x[1] != 0):
                 self.congestededges.append(self.ax.plot(x,y, color = colors[idx], linewidth = 4 ))
+                congestion_frac = ccg.congestion.passenger_congestion / ccg.congestion.passenger_trains
+                if congestion_frac > 0:
+                    congestion_text = str(congestion_frac)
+                else:
+                    congestion_text = "unknown"
+                annotation = self.ax.annotate(f"{ccg.smaller_op} <-> {ccg.greater_op}\n" + \
+                                              f"reduction fraction: {congestion_text}",
+                                              (np.mean(x), np.mean(y)), 
+                                              xytext=(20,20),textcoords="offset points",
+                                              bbox=dict(boxstyle="round", fc="w"),
+                                              arrowprops=dict(arrowstyle="->"))
+                annotation.set_visible(False)
+                annotations.append(annotation)
+
             idx+=1
+
+        def hover(event):
+            for i in range(len(annotations)):
+                annotation = annotations[i]
+                artist = self.congestededges[i][0]
+                vis = annotation.get_visible()
+                cont, ind = artist.contains(event)
+                if cont:
+                    annotation.set_visible(True)
+                    cont, ind = sc.contains(event)
+                    self.fig.canvas.draw_idle()
+                else:
+                    if annotation.get_visible():
+                        annotation.set_visible(False)
+                        self.fig.canvas.draw_idle()
+
+        self.fig.canvas.mpl_connect("motion_notify_event", hover)
+
 
     def activatebuttons(self):
         def dateupdate(date):
