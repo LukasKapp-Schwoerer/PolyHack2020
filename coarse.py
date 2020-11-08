@@ -1,10 +1,13 @@
 import numpy as np
-from helper.data_extraction import Congestion
+import helper.data_extraction
 from queue import LifoQueue
 
 class Meta_connection_congestion:
-    def __init__(self):
-        self.congestion = Congestion()
+    def __init__(self, op1, op2):
+        self.congestion = helper.data_extraction.Congestion()
+        op1, op2 = sorted([op1, op2])
+        self.smaller_op = op1
+        self.greater_op = op2
 
     def add_connection(self, connection):
         self.congestion += connection.congestion
@@ -15,6 +18,7 @@ class Meta_connection:
         self.load = 0
         self.from_op = from_op
         self.to_op = to_op
+        self.train_type = 'PERSONENVERKEHR'
 
     def add_connection(self, connection):
         self.trains += connection.trains
@@ -25,16 +29,22 @@ class Meta_operating_point:
     def __init__(self, points):
         assert(len(points) > 0)
         self.congestion = sum([p.congestion for p in points],
-                Congestion())
+                helper.data_extraction.Congestion())
         self.gps = np.average([np.array(p.gps) for p in points],axis=0)
         self.connections_outbound = []
+        self.connections_inbound = []
 
         #TODO smarter way to assing id
         self.id_word = points[0].id_word 
         self.id_index = points[0].id_index
         
+        #TODO
+        #self.trains = sum([p.trains for p in points])
+        
     def add_connection(self, meta_connection):
         self.connections_outbound.append(meta_connection)
+    def add_reverse_connection(self, meta_connection):
+        self.connections_inbound.append(meta_connection)
 
     #TODO maybe store inner throughput
     def add_inner_connection(self, connection):
@@ -122,9 +132,9 @@ def sep_non_connected(points, clusters):
     
 
 
-def coarse(points, connection_congestions, level):
+def coarse(points, connection_congestions, level=1):
     points = [p for p in points if p.gps[0] != 0]
-
+  
     #points = points_dict.values()
     x_coords = [p.gps[0] for p in points]
     y_coords = [p.gps[1] for p in points]
@@ -160,25 +170,42 @@ def coarse(points, connection_congestions, level):
                         Meta_connection(meta_points[meta1].id_word,
                             meta_points[meta2].id_word))
                 meta_points[meta1].add_connection(meta_edges[(meta1, meta2)])
+                meta_points[meta2].add_reverse_connection(meta_edges[(meta1, meta2)])
                 meta_edges[(meta1, meta2)].add_connection(connection)
 
     meta_connection_congestions_dict = {}
+    meta_vcg = {}
+    print(f"num of cc={len(connection_congestions)}")
     for connection in connection_congestions:
+        if connection.smaller_op not in point_to_meta \
+                or connection.greater_op not in point_to_meta:
+            continue
+            #pass
         meta1 = point_to_meta[connection.smaller_op]
         meta2 = point_to_meta[connection.greater_op]                    
+        meta_vcg.setdefault(meta_points[meta1].id_word, \
+                meta_points[meta1])
+        meta_vcg.setdefault(meta_points[meta2].id_word, \
+                meta_points[meta2])
         if meta1 == meta2:
             meta_points[meta1].add_inner_connection_congestion(connection)
         else:
             meta_connection_congestions_dict.setdefault(
-                    (connection.smaller_op, connection.greater_op),
-                    Meta_connection_congestion()
+                    (meta_points[meta1].id_word, meta_points[meta2].id_word),
+                    Meta_connection_congestion(meta_points[meta1].id_word,\
+                            meta_points[meta2].id_word)
                     )
-            meta_connection_congestion[
-                    (connection.smaller_op, connection.greater_op)] \
+            meta_connection_congestions_dict[
+                    (meta_points[meta1].id_word, meta_points[meta2].id_word)] \
                         .add_connection(connection)
+
+    ccgs = [ccg for ccg in list(meta_connection_congestions_dict.values())]
+    print(f"num of ccgs={len(ccgs)}")
 
 
     meta_points_dict = {}
     for p in meta_points:
         meta_points_dict[p.id_word] = p
-    return meta_points_dict, meta_connection_congestions_dict 
+
+    return meta_points_dict, list(meta_vcg.values()), ccgs
+             
