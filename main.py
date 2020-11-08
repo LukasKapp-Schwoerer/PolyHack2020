@@ -39,7 +39,7 @@ ops = {'ID': ids,
       'IL': incidence_list}
 
 range_start = date(2021, 3, 28)
-range_end = date(2023, 5, 28)
+range_end = date(2035, 5, 28)
 vcg, ccg = data_extractor.get_congestions_list(range_start, range_end)
 print(f"number of congested vertices: {len(vcg)}")
 print(f"number of connection congestions: {len(ccg)}")
@@ -68,6 +68,11 @@ map.plotgraph()
 map.plotedges()
 map.plotcongestions(ccg)
 map.activatebuttons()
+plt.show(block=False)
+input("press button to delete conginfo")
+map.deletecongestionedges()
+input("plot again")
+map.plotcongestions(ccg)
 plt.show()
 
 '''
