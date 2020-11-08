@@ -31,7 +31,7 @@ for point in points.values():
     incidence_list[point.id_index] = []
 
     for connection in point.connections_outbound:
-        incidence_list[poigit pnt.id_index].append(points[connection.to_op].id_index)
+        incidence_list[point.id_index].append(points[connection.to_op].id_index)
 
 ops = {'ID': ids,
       'x': x_coords,
