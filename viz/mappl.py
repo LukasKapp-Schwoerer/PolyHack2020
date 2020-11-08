@@ -287,7 +287,19 @@ class Map:
             self.set_points(points)
             self.plotgraph()
             self.plotedges()
-            self.computecongestion()
+            range_start = self.range_start
+            range_end = self.range_end
+            points, vcg, ccg = self.extractor.get_congestions_list(range_start, range_end, self.coarsity)
+            if(len(self.congestededges)):
+                self.deletecongestionedges()
+            if(len(self.congestvertices)):
+                self.deletecongestionvertices()
+            if(len(ccg)):
+                self.plotcongestions(points, ccg)
+            if(len(vcg)):
+                self.plotvertexcongestions(vcg)
+            else:
+                print("no congestion detected")
             
         def dateupdate(sliderval):
             #print(self.timestamp)
