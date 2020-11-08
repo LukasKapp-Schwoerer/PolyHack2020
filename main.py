@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import pickle
 import os
 import argparse
-from coarse import *
+from helper.coarse import *
 from datetime import date
 
 parser = argparse.ArgumentParser()

@@ -1,8 +1,8 @@
 import pandas as pd
 import math
 from datetime import date
-from connect import *
-from coarse import *
+from helper.connect import *
+from helper.coarse import *
 
 class Congestion:
     def __init__(self, amount=0, passenger_trains=0, freight_trains=0):
