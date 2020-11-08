@@ -16,9 +16,23 @@ class Congestion:
         return f"congestion amount: {self.amount}"
 
     def __add__(self, other):
-        return Congestion(self.amount + other.amount, \
+        res= Congestion(self.amount + other.amount, \
                           self.passenger_trains + other.passenger_trains, \
-                          self.freight_trains + other.freight_trains)
+                          self.freight_trains + other.freight_trains,
+                          )
+        if self.start_date is None: 
+            res.start_date = other.start_date
+        elif other.start_date is None:
+            res.start_date = self.start_date
+        else:
+            res.start_date = min(self.start_date, other.start_date)
+        if self.end_date is None: 
+            res.end_date = other.end_date
+        elif other.end_date is None:
+            res.end_date = self.end_date
+        else:
+            res.end_date = max(self.end_date, other.end_date)
+        return res
 
     def zero(self):
         self.amount = 0
@@ -164,7 +178,7 @@ class Data_extractor:
                 self.points[to_op].congestion.increase_freight_trains(trains)
 
 
-        # connect(self.points)
+        #connect(self.points)
         
 
     # returns a dict of Operation_point indexed by alphabetic op indices

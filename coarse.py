@@ -139,7 +139,7 @@ def coarse(points, connection_congestions, level=1):
     x_coords = [p.gps[0] for p in points]
     y_coords = [p.gps[1] for p in points]
     #clusters = cluster_points(x_coords, y_coords, level)
-    clusters = cluster_points(x_coords, y_coords, level, cells_per_axis=15)
+    clusters = cluster_points(x_coords, y_coords, level, cells_per_axis=8)
     clusters = sep_non_connected(points, clusters)
 
     print(f"# of clusters = {len(clusters)}")

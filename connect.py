@@ -69,7 +69,8 @@ def connect(points_dict):
                             best_i2 = i2
                             best_c2 = c2
 
-        if min_dist != np.inf:
+        #print(min_dist)
+        if min_dist <= 8000:
             ds.union(c1, best_c2)
             conn = Connection(points[best_i1].id_word, 
                     points[best_i2].id_word,
