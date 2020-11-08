@@ -1,5 +1,6 @@
 import numpy as np
 from helper.data_extraction import Congestion
+from queue import LifoQueue
 
 class Meta_connection_congestion:
     def __init__(self):
@@ -72,7 +73,54 @@ def cluster_points(x_coords, y_coords, level, cells_per_axis=20):
                 clusters.append(cells[yc][xc])
 
     return clusters
+
+def cluster_connected(points):
+    pdict = {}
+    for i, p in enumerate(points):
+        pdict[p.id_word] = i
+
+    cur_cluster = 0
+    q = LifoQueue()
+    clusters = [-1] * len(points)
+    for i, sp in enumerate(points):
+        if clusters[i] == -1:
+            q.put(i)
+            while not q.empty():
+                cur = q.get()
+                clusters[cur] = cur_cluster
+                nxts = [conn.to_op for conn in \
+                        points[cur].connections_outbound] \
+                        + [conn.from_op for conn in \
+                        points[cur].connections_inbound]
+                for nxt in nxts:
+                    if nxt not in pdict:
+                        continue
+                    ni = pdict[nxt]
+                    if clusters[ni] != -1:
+                        continue
+                    q.put(ni)
+            cur_cluster += 1
+    #print(f"p {len(points)} cl {cur_cluster}")
+
+    clst = [[] for i in range(cur_cluster)]
+    for i in range(len(points)):
+        clst[clusters[i]].append(i)
+    return clst
+
+def sep_non_connected(points, clusters):
+    new_clusters = []
+    for cluster in clusters:
+        #print(f"clust: {cluster}")
+        subclust = cluster_connected([points[i] for i in cluster])
+        #print(f"    subclust: {subclust}")
+        for new_cl in subclust:
+            for ind in range(len(new_cl)):
+                new_cl[ind] = cluster[new_cl[ind]]
+        #print(f"new subclust: {subclust}")
+        new_clusters += subclust
+    return new_clusters
     
+
 
 def coarse(points, connection_congestions, level):
     points = [p for p in points if p.gps[0] != 0]
@@ -80,10 +128,13 @@ def coarse(points, connection_congestions, level):
     #points = points_dict.values()
     x_coords = [p.gps[0] for p in points]
     y_coords = [p.gps[1] for p in points]
-    clusters = cluster_points(x_coords, y_coords, level)
+    #clusters = cluster_points(x_coords, y_coords, level)
+    clusters = cluster_points(x_coords, y_coords, level, cells_per_axis=15)
+    clusters = sep_non_connected(points, clusters)
+
     print(f"# of clusters = {len(clusters)}")
-    print(len(points))
-    print(sum([len(c) for c in clusters]))
+    #print(len(points))
+    #print(sum([len(c) for c in clusters]))
 
     point_to_meta = {}
     for ci, cluster in enumerate(clusters):
