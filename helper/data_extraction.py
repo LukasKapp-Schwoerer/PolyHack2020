@@ -1,6 +1,7 @@
 import pandas as pd
 import math
 from datetime import date
+from connect import *
 
 class Congestion:
     def __init__(self, passenger_congestion=0, freight_congestion=0, passenger_trains=0, freight_trains=0):
@@ -130,6 +131,8 @@ class Data_extractor:
             self.points[to_op].add_connection_inbound(new_connection)
             self.points[from_op].increment_trains(trains)
             self.points[to_op].increment_trains(trains)
+
+        connect(self.points)
         
 
     # returns a dict of Operation_point indexed by alphabetic op indices

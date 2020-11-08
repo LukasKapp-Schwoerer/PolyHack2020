@@ -40,6 +40,7 @@ class Map:
         self.edges = []
         self.congestededges = []
         self.timestamp = []
+        self.iscbar = 0
 
         axcolor = 'lightgoldenrodyellow'
         self.ax_date = plt.axes([0.1, 0.05, 0.75, 0.03], facecolor=axcolor)
@@ -97,18 +98,24 @@ class Map:
 
         #extract all congestion values for color map
         conj = []
+        throughput = []
         for ccg in ccgs:
             conj.append(ccg.congestion.passenger_congestion)
+            throughput.append(ccg.congestion.passenger_trains)
 
         minconj = np.min(conj)
-        print(minconj)
         maxconj = np.max(conj)
-        sc = self.ax.scatter([0,0], [0,0], c = [minconj, maxconj], cmap = cm.jet)
-        colors = cm.jet(conj)
-        self.cbarax = self.fig.add_axes([0.9, .1, 0.02, 0.7])
-        self.cbar = self.fig.colorbar(sc, self.cbarax, ticks = [minconj, maxconj])
-        self.cbar.ax.set_yticklabels(['0', '1'])
-        self.cbar.set_label("Congestion index (normalized)")
+
+        throughput = 0.2 + np.array(throughput)*5.0/np.max(throughput)
+        colors = cm.jet(conj/maxconj)
+
+        if(not self.iscbar):
+            sc = self.ax.scatter([0,0], [0,0], c = [0, 1], cmap = cm.jet)
+            self.cbarax = self.fig.add_axes([0.9, .1, 0.02, 0.7])
+            self.cbar = self.fig.colorbar(sc, self.cbarax, ticks = [0, 1])
+            self.cbar.ax.set_yticklabels(['0', '1'])
+            self.cbar.set_label("Congestion index (normalized)")
+            self.iscbar = 1
 
         annotations = []
 
@@ -120,6 +127,7 @@ class Map:
             y = [smaller_op[1], greater_op[1]]
             if(x[0] != 0 and x[1] != 0):
                 self.congestededges.append(self.ax.plot(x,y, color = colors[idx], linewidth = 4 ))
+                self.congestededges.append(self.ax.plot(x,y, color = colors[idx], linewidth = 2+throughput[idx] ))
                 congestion_frac = ccg.congestion.passenger_congestion / ccg.congestion.passenger_trains
                 if congestion_frac > 0:
                     congestion_text = str(congestion_frac)
@@ -135,6 +143,9 @@ class Map:
                 annotations.append(annotation)
 
             idx+=1
+        self.fig.canvas.draw()
+    #def plotvertexcongestions(self, vcgs):
+
 
         def hover(event):
             for i in range(len(annotations)):
@@ -178,6 +189,17 @@ class Map:
             line[0].remove()
         self.edges = []
         self.fig.canvas.draw()
+
+    def deletecongestionedges(self):
+        print("deleting")
+        for idx in range(len(self.congestededges)):
+            #print("rem edg")
+            line = self.congestededges[idx]
+            line[0].remove()
+        self.congestededges = []
+        self.fig.canvas.draw()
+        #self.cbar.remove()
+
 
 
 #precompute coarsness levels.
