@@ -5,7 +5,7 @@ import pickle
 import os
 import argparse
 from coarse import *
-
+from datetime import date
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-c", "--coarsity", type=float)
@@ -38,7 +38,9 @@ ops = {'ID': ids,
       'y': y_coords,
       'IL': incidence_list}
 
-congested_vertices, connection_congestions = data_extractor.get_congestions_list()
+range_start = date(2021, 3, 28)
+range_end = date(2023, 5, 28)
+congested_vertices, connection_congestions = data_extractor.get_congestions_list(range_start, range_end)
 print(f"number of congested vertices: {len(congested_vertices)}")
 print(f"number of connection congestions: {len(connection_congestions)}")
 
