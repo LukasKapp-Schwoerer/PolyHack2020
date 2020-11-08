@@ -9,6 +9,8 @@ class Congestion:
         self.freight_congestion = freight_congestion
         self.passenger_trains = passenger_trains
         self.freight_trains = freight_trains
+        self.start_date = None
+        self.end_date = None
 
     def __str__(self):
         return f"passenger_value: {self.passenger_value} | freight_value: {self.freight_value}"
@@ -19,6 +21,8 @@ class Congestion:
     def zero(self):
         self.passenger_congestion = 0
         self.freight_congestion = 0
+        self.start_date = None
+        self.end_date = None
 
     def increase_passenger_congestion(self, increment):
         self.passenger_congestion += increment
@@ -31,6 +35,18 @@ class Congestion:
 
     def increase_freight_trains(self, increment):
         self.freight_trains += increment
+
+    def add_dates(self, d_start, d_end):
+        # start_date
+        if self.start_date == None:
+            self.start_date = d_start
+        else:
+            self.start_date = min(d_start, self.start_date)
+        # end_date
+        if self.end_date == None:
+            self.end_date = d_end
+        else:
+            self.end_date = max(d_start, self.end_date)
 
 class Operating_point:
     def __init__(self, id_index, id_word, gps):
@@ -203,6 +219,7 @@ class Data_extractor:
                 trains = self.points[from_op].congestion.passenger_trains
                 congestion = self.points[from_op].congestion
                 congestion.increase_passenger_congestion(reduction_frac * trains)
+                congestion.add_dates(d_start, d_end)
                 congested_vertices.append(self.points[from_op])
                 
             else: # connection congestion
@@ -252,6 +269,8 @@ class Data_extractor:
                                 connection_congestion = connection_congestions[(smaller_op, greater_op)]
                                 connection_congestion.congestion.increase_passenger_trains(trains)
                                 connection_congestion.congestion.increase_passenger_congestion(reduction_frac * trains)
+                                connection_congestion.congestion.add_dates(d_start, d_end)
+                                
                             
 
         return (congested_vertices, list(connection_congestions.values()))

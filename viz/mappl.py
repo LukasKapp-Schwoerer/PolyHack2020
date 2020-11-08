@@ -153,7 +153,8 @@ class Map:
                 else:
                     congestion_text = "unknown"
                 annotation = self.ax.annotate(f"{ccg.smaller_op} <-> {ccg.greater_op}\n" + \
-                                              f"reduction fraction: {congestion_text}",
+                                              f"reduction fraction: {congestion_text}\n" + \
+                                              f"earliest: {ccg.congestion.start_date}, latest: {ccg.congestion.end_date}",
                                               (np.mean(x), np.mean(y)),
                                               xytext=(20,20),textcoords="offset points",
                                               bbox=dict(boxstyle="round", fc="w"),
@@ -238,7 +239,8 @@ class Map:
                     congestion_text = "unknown"
 
                 annotation = self.ax.annotate(f"OP {vcg.id_word}\n" + \
-                                              f"reduction fraction: {congestion_text}",
+                                              f"reduction fraction: {congestion_text}\n" + \
+                                              f"earliest: {vcg.congestion.start_date}, latest: {vcg.congestion.end_date}",
                                               (xvals[idx], yvals[idx]),
                                               xytext=(20,20),textcoords="offset points",
                                               bbox=dict(boxstyle="round", fc="w"),
