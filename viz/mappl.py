@@ -159,7 +159,7 @@ class Map:
                 self.congestededges.append(self.ax.plot(x,y, color = colors[idx], linewidth = 2+throughput[idx] ))
                 congestion_frac = ccg.congestion.amount / ccg.congestion.passenger_trains
                 if congestion_frac > 0:
-                    congestion_text = str(congestion_frac)
+                    congestion_text = f"{congestion_frac:.2f}"
                 else:
                     congestion_text = "unknown"
                 annotation = self.ax.annotate(f"{ccg.smaller_op} <-> {ccg.greater_op}\n" + \
@@ -244,7 +244,7 @@ class Map:
                 if(vcg.congestion.passenger_trains):
                     congestion_frac = vcg.congestion.amount / vcg.congestion.passenger_trains
                 if congestion_frac > 0:
-                    congestion_text = str(congestion_frac)
+                    congestion_text = f"{congestion_frac:.2f}"
                 else:
                     congestion_text = "unknown"
 
