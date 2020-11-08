@@ -76,7 +76,7 @@ class Map:
         shiftx = 2470000
         shifty = 1074500
         imext = [shiftx, shiftx+width, shifty, shifty+height]
-        print(imext)
+        #print(imext)
         #imext_y = [1050000,1300000]
         self.ax.imshow(self.im, extent = imext)
 
@@ -329,7 +329,7 @@ class Map:
             dateupdate(self.sl_date.val)
 
         def computecongestion(event):
-            print("computing ccg")
+            #print("computing ccg")
             range_start = self.range_start
             range_end = self.range_end
             points, vcg, ccg = self.extractor.get_congestions_list(range_start, range_end, self.is_daytime, self.coarsity)
@@ -355,7 +355,7 @@ class Map:
 
 
     def deletegraph(self):
-        print("deleting")
+        #print("deleting")
         self.nodes.remove()
         self.nodes = 0
         self.fig.canvas.draw()
@@ -367,7 +367,7 @@ class Map:
         self.fig.canvas.draw()
 
     def deletecongestionedges(self):
-        print("deleting")
+        #print("deleting")
         for idx in range(len(self.congestededges)):
             #print("rem edg")
             line = self.congestededges[idx]
@@ -377,7 +377,7 @@ class Map:
         self.annotations = []
         #self.cbar.remove()
     def deletecongestionvertices(self):
-        print("deleting vertices")
+        #print("deleting vertices")
         for idx in range(len(self.congestvertices)):
             #print("rem edg")
             temp = self.congestvertices[idx]

@@ -48,8 +48,8 @@ def connect(points_dict):
         clst[clusters[i]].append(i)
         
    
-    print(f"clust: {len(clst)}")
-    print(f"{len(points)} ? {sum([len(c) for c in clst])}")       
+    #print(f"clust: {len(clst)}")
+    #print(f"{len(points)} ? {sum([len(c) for c in clst])}")       
 
     ds = DisjointSet()
     for c1 in range(len(clst)):

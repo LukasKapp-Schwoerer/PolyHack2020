@@ -195,7 +195,6 @@ class Data_extractor:
             E is a list of Connection_congestions
     """
     def get_congestions_list(self, range_date_start=date(2020, 1, 1), range_date_end=date(2050, 1, 1), is_daytime=True, coarsity='fine'):
-        print(f"is_daytime: {is_daytime}")
 
         connection_congestions = {}
         congested_vertices = []
@@ -310,8 +309,6 @@ class Data_extractor:
         points = self.points
         cvg = congested_vertices
         ccg = list(connection_congestions.values())
-        print(f"ccg bef = {len(connection_congestions)}")
         if coarsity == 'coarse':
-            print(f"coarse render")
             points, cvg, ccg = coarse(list(points.values()), ccg)
         return (points, cvg, ccg)

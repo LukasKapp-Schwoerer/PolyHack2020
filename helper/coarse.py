@@ -142,7 +142,7 @@ def coarse(points, connection_congestions, level=1):
     clusters = cluster_points(x_coords, y_coords, level, cells_per_axis=8)
     clusters = sep_non_connected(points, clusters)
 
-    print(f"# of clusters = {len(clusters)}")
+    #print(f"# of clusters = {len(clusters)}")
     #print(len(points))
     #print(sum([len(c) for c in clusters]))
 
@@ -175,7 +175,7 @@ def coarse(points, connection_congestions, level=1):
 
     meta_connection_congestions_dict = {}
     meta_vcg = {}
-    print(f"num of cc={len(connection_congestions)}")
+    #print(f"num of cc={len(connection_congestions)}")
     for connection in connection_congestions:
         if connection.smaller_op not in point_to_meta \
                 or connection.greater_op not in point_to_meta:
@@ -200,7 +200,7 @@ def coarse(points, connection_congestions, level=1):
                         .add_connection(connection)
 
     ccgs = [ccg for ccg in list(meta_connection_congestions_dict.values())]
-    print(f"num of ccgs={len(ccgs)}")
+    #print(f"num of ccgs={len(ccgs)}")
 
 
     meta_points_dict = {}
