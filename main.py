@@ -3,11 +3,22 @@ from helper.data_extraction import Data_extractor
 import matplotlib.pyplot as plt
 import pickle
 import os
+import argparse
+from coarse import *
+
+
+parser = argparse.ArgumentParser()
+parser.add_argument("-c", "--coarsity", type=float)
+args = parser.parse_args()
+
 
 data_dir = 'data/'
 data_extractor = Data_extractor(data_dir)
 
 points = data_extractor.get_operation_points_dict()
+
+if args.coarsity is not None:
+    points, _ = coarse(list(points.values()), [], args.coarsity)
 
 x_coords = []
 y_coords = []

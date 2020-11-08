@@ -13,7 +13,7 @@ class Congestion:
         return f"passenger_value: {self.passenger_value} | freight_value: {self.freight_value}"
 
     def __add__(self, other):
-        return Congestion(self.passenger_value + other.passenger_value, self.freight_value + other.passenger_value)
+        return Congestion(self.passenger_congestion + other.passenger_congestion, self.freight_congestion + other.passenger_congestion)
 
     def zero(self):
         self.passenger_congestion = 0
