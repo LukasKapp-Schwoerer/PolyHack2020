@@ -41,7 +41,6 @@ class Operating_point:
         self.connections_outbound = []
         self.congestion = Congestion()
         self.lines = []
-        self.trains = 0
 
     def add_connection_outbound(self, connection):
         self.connections_outbound.append(connection)
@@ -51,9 +50,6 @@ class Operating_point:
 
     def add_line(self, line_id):
         self.lines.append(line_id)
-
-    def increment_trains(self, increment):
-        self.trains += increment
 
     def __str__(self):
         return f"{self.id_index:d} {self.id_word} {self.gps} " +                f"outbound: {self.connections_outbound} | inbound: {self.connections_inbound}\n"                f"congestion: {self.congestion}"
@@ -146,8 +142,9 @@ class Data_extractor:
                                         row['Geschaeftscode'])
             self.points[from_op].add_connection_outbound(new_connection)
             self.points[to_op].add_connection_inbound(new_connection)
-            self.points[from_op].increment_trains(trains)
-            self.points[to_op].increment_trains(trains)
+            if row['Geschaeftscode'] == 'PERSONENVERKEHR':
+                self.points[from_op].congestion.increase_passenger_trains(trains)
+                self.points[to_op].congestion.increase_passenger_trains(trains)
 
         # connect(self.points)
         
@@ -203,7 +200,7 @@ class Data_extractor:
                 reduction_frac = 0
 
             if from_op == to_op: # op congestion
-                trains = self.points[from_op].trains
+                trains = self.points[from_op].congestion.passenger_trains
                 congestion = self.points[from_op].congestion
                 congestion.increase_passenger_congestion(reduction_frac * trains)
                 congested_vertices.append(self.points[from_op])
