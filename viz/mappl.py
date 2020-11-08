@@ -7,6 +7,9 @@ import os
 print(os.getcwd())
 from viz import transform
 from datetime import date
+from matplotlib.axes._axes import _log as matplotlib_axes_logger
+
+matplotlib_axes_logger.setLevel('ERROR')
 
 class Map:
     """docstring for ."""
@@ -170,7 +173,7 @@ class Map:
                 cont, ind = artist.contains(event)
                 if cont:
                     annotation.set_visible(True)
-                    cont, ind = sc.contains(event)
+                    #cont, ind = sc.contains(event)
                     self.fig.canvas.draw_idle()
                 else:
                     if annotation.get_visible():
@@ -184,20 +187,27 @@ class Map:
         #extract all congestion values for color map
         conj = []
         throughput = []
+        xvals = []
+        yvals = []
         for vcg in vcgs:
             conj.append(vcg.congestion.passenger_congestion)
             throughput.append(vcg.congestion.passenger_trains)
+            xvals.append(vcg.gps[0])
+            yvals.append(vcg.gps[1])
 
         minconj = np.min(conj)
         maxconj = np.max(conj)
 
-        throughput = 0.2 + np.array(throughput)*5.0/np.max(throughput)
+        throughput = 3 + np.array(throughput)*60.0/np.max(throughput)
+        print("thorughput",throughput)
         #print("conj", conj)
         if(np.sum(conj)):
             #print("sum",np.sum(conj))
             colors = cm.autumn((maxconj-conj)*1.0/maxconj)
         else:
             colors = cm.autumn(np.array(conj)+1)
+        print("conj", conj)
+        #print("colors", colors)
         #print((maxconj-conj)*1.0/maxconj)
         #print(colors)
 
@@ -209,54 +219,55 @@ class Map:
             self.cbar.set_label("Congestion index (normalized)")
             self.iscbar = 1
 
-        self.annotations = []
+        self.vannotations = []
 
         idx = 0
         self.congestvertices = []
+        #self.congestvertices.append(self.ax.scatter(xvals,yvals, s = 20 ,c = colors))
         for vcg in vcgs:
+            #throughput[idx]
             if(vcg.gps[0]!=0):
-                self.congestvertices.append(self.ax.scatter(vcg.gps[0], vcg.gps[1], s=throughput[idx], c = 'k', alpha = 0.5))
+                self.congestvertices.append(self.ax.scatter(vcg.gps[0], vcg.gps[1], s=throughput[idx], c = colors[idx]))
                 congestion_frac = 0.5
-                congestion_frac = vcg.congestion.passenger_congestion / vcg.congestion.passenger_trains
+                if(vcg.congestion.passenger_trains):
+                    congestion_frac = vcg.congestion.passenger_congestion / vcg.congestion.passenger_trains
                 if congestion_frac > 0:
                     congestion_text = str(congestion_frac)
                 else:
                     congestion_text = "unknown"
-                """
-                annotation = self.ax.annotate(f"{ccg.smaller_op} <-> {ccg.greater_op}\n" + \
+
+                annotation = self.ax.annotate(f"OP {vcg.id_word}\n" + \
                                               f"reduction fraction: {congestion_text}",
-                                              (np.mean(x), np.mean(y)),
+                                              (xvals[idx], yvals[idx]),
                                               xytext=(20,20),textcoords="offset points",
                                               bbox=dict(boxstyle="round", fc="w"),
                                               arrowprops=dict(arrowstyle="->"))
                 annotation.set_visible(False)
-                self.annotations.append(annotation)
+                self.vannotations.append(annotation)
 
-                """
+
 
             idx+=1
-            
+
         self.fig.canvas.draw()
 
-
-        """
-        def hover(event):
-            for i in range(len(self.annotations)):
-                annotation = self.annotations[i]
-                artist = self.congestededges[i][0]
+        def hoverv(event):
+            for i in range(len(self.vannotations)):
+                annotation = self.vannotations[i]
+                artist = self.congestvertices[i]
                 vis = annotation.get_visible()
                 cont, ind = artist.contains(event)
                 if cont:
                     annotation.set_visible(True)
-                    cont, ind = sc.contains(event)
+                    #cont, ind = sc.contains(event)
                     self.fig.canvas.draw_idle()
                 else:
                     if annotation.get_visible():
                         annotation.set_visible(False)
                         self.fig.canvas.draw_idle()
 
-        self.fig.canvas.mpl_connect("motion_notify_event", hover)
-        """
+        self.fig.canvas.mpl_connect("motion_notify_event", hoverv)
+
 
     def activatebuttons(self):
         def dateupdate(sliderval):
@@ -285,12 +296,9 @@ class Map:
             if(len(self.congestededges)):
                 self.deletecongestionedges()
             if(len(ccg)):
-                pass
-                #self.plotcongestions(ccg)
+                self.plotcongestions(ccg)
             if(len(vcg)):
                 self.plotvertexcongestions(vcg)
-            if(len(ccg) or len(vcg)):
-                self.button.on_clicked(computecongestion)
             else:
                 print("no congestion detected")
 
@@ -321,7 +329,11 @@ class Map:
         self.fig.canvas.draw()
         self.annotations = []
         #self.cbar.remove()
-
-
-
+    def deletecongestionvertices(self):
+        print("deleting vertices")
+        temp = self.congestvertices[-1]
+        temp.remove()
+        self.congestvertices = []
+        self.fig.canvas.draw()
+        self.vannotations = []
 #precompute coarsness levels.
