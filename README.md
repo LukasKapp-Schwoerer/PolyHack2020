@@ -5,6 +5,12 @@ CoDe is an interactive railway traffic data aggregation tool, enabling the user 
  * construction-cite.csv
  * linie-mit-betriebspunkten.csv
  * zugzahlen.csv
+ 
+## Create conda environment
+With conda installed run this command to install all dependencies:
+```
+conda env create -f conda_env.yml
+```
 
 ## Functionality
 
