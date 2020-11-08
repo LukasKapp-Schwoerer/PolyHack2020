@@ -113,7 +113,7 @@ class Map:
         conj = []
         throughput = []
         for ccg in ccgs:
-            conj.append(ccg.congestion.passenger_congestion)
+            conj.append(ccg.congestion.amount)
             throughput.append(ccg.congestion.passenger_trains)
 
         minconj = np.min(conj)
@@ -147,7 +147,7 @@ class Map:
             y = [smaller_op[1], greater_op[1]]
             if(x[0] != 0 and x[1] != 0):
                 self.congestededges.append(self.ax.plot(x,y, color = colors[idx], linewidth = 2+throughput[idx] ))
-                congestion_frac = ccg.congestion.passenger_congestion / ccg.congestion.passenger_trains
+                congestion_frac = ccg.congestion.amount / ccg.congestion.passenger_trains
                 if congestion_frac > 0:
                     congestion_text = str(congestion_frac)
                 else:
@@ -192,7 +192,7 @@ class Map:
         xvals = []
         yvals = []
         for vcg in vcgs:
-            conj.append(vcg.congestion.passenger_congestion)
+            conj.append(vcg.congestion.amount)
             throughput.append(vcg.congestion.passenger_trains)
             xvals.append(vcg.gps[0])
             yvals.append(vcg.gps[1])
@@ -232,7 +232,7 @@ class Map:
                 self.congestvertices.append(self.ax.scatter(vcg.gps[0], vcg.gps[1], s=throughput[idx], c = colors[idx]))
                 congestion_frac = 0.5
                 if(vcg.congestion.passenger_trains):
-                    congestion_frac = vcg.congestion.passenger_congestion / vcg.congestion.passenger_trains
+                    congestion_frac = vcg.congestion.amount / vcg.congestion.passenger_trains
                 if congestion_frac > 0:
                     congestion_text = str(congestion_frac)
                 else:
