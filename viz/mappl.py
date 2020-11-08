@@ -159,7 +159,7 @@ class Map:
 
             idx+=1
         self.fig.canvas.draw()
-    #def plotvertexcongestions(self, vcgs):
+
 
 
         def hover(event):
@@ -179,6 +179,84 @@ class Map:
 
         self.fig.canvas.mpl_connect("motion_notify_event", hover)
 
+    def plotvertexcongestions(self, vcgs):
+
+        #extract all congestion values for color map
+        conj = []
+        throughput = []
+        for vcg in vcgs:
+            conj.append(vcg.congestion.passenger_congestion)
+            throughput.append(vcg.congestion.passenger_trains)
+
+        minconj = np.min(conj)
+        maxconj = np.max(conj)
+
+        throughput = 0.2 + np.array(throughput)*5.0/np.max(throughput)
+        #print("conj", conj)
+        if(np.sum(conj)):
+            #print("sum",np.sum(conj))
+            colors = cm.autumn((maxconj-conj)*1.0/maxconj)
+        else:
+            colors = cm.autumn(np.array(conj)+1)
+        #print((maxconj-conj)*1.0/maxconj)
+        #print(colors)
+
+        if(not self.iscbar):
+            sc = self.ax.scatter([0,0], [0,0], c = [0, 1], cmap = cm.autumn)
+            self.cbarax = self.fig.add_axes([0.9, .1, 0.02, 0.7])
+            self.cbar = self.fig.colorbar(sc, self.cbarax, ticks = [1, 0])
+            self.cbar.ax.set_yticklabels(['0', '1'])
+            self.cbar.set_label("Congestion index (normalized)")
+            self.iscbar = 1
+
+        self.annotations = []
+
+        idx = 0
+        self.congestvertices = []
+        for vcg in vcgs:
+            if(vcg.gps[0]!=0):
+                self.congestvertices.append(self.ax.scatter(vcg.gps[0], vcg.gps[1], s=throughput[idx], c = 'k', alpha = 0.5))
+                congestion_frac = 0.5
+                congestion_frac = vcg.congestion.passenger_congestion / vcg.congestion.passenger_trains
+                if congestion_frac > 0:
+                    congestion_text = str(congestion_frac)
+                else:
+                    congestion_text = "unknown"
+                """
+                annotation = self.ax.annotate(f"{ccg.smaller_op} <-> {ccg.greater_op}\n" + \
+                                              f"reduction fraction: {congestion_text}",
+                                              (np.mean(x), np.mean(y)),
+                                              xytext=(20,20),textcoords="offset points",
+                                              bbox=dict(boxstyle="round", fc="w"),
+                                              arrowprops=dict(arrowstyle="->"))
+                annotation.set_visible(False)
+                self.annotations.append(annotation)
+
+                """
+
+            idx+=1
+            
+        self.fig.canvas.draw()
+
+
+        """
+        def hover(event):
+            for i in range(len(self.annotations)):
+                annotation = self.annotations[i]
+                artist = self.congestededges[i][0]
+                vis = annotation.get_visible()
+                cont, ind = artist.contains(event)
+                if cont:
+                    annotation.set_visible(True)
+                    cont, ind = sc.contains(event)
+                    self.fig.canvas.draw_idle()
+                else:
+                    if annotation.get_visible():
+                        annotation.set_visible(False)
+                        self.fig.canvas.draw_idle()
+
+        self.fig.canvas.mpl_connect("motion_notify_event", hover)
+        """
 
     def activatebuttons(self):
         def dateupdate(sliderval):
@@ -207,7 +285,12 @@ class Map:
             if(len(self.congestededges)):
                 self.deletecongestionedges()
             if(len(ccg)):
-                self.plotcongestions(ccg)
+                pass
+                #self.plotcongestions(ccg)
+            if(len(vcg)):
+                self.plotvertexcongestions(vcg)
+            if(len(ccg) or len(vcg)):
+                self.button.on_clicked(computecongestion)
             else:
                 print("no congestion detected")
 
