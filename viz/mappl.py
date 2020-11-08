@@ -325,6 +325,7 @@ class Map:
 
         def windowupdate(val):
             self.constructionduration = val
+            dateupdate(self.sl_date.val)
 
         def computecongestion(event):
             print("computing ccg")
