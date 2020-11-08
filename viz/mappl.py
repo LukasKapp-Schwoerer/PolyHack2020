@@ -48,6 +48,7 @@ class Map:
         self.congestvertices = []
         self.timestamp = []
         self.iscbar = 0
+        self.is_daytime = True
         self.coarsity = 'fine'
 
         #axcolor = 'lightgoldenrodyellow'
@@ -59,8 +60,10 @@ class Map:
         self.constructionduration = 2 #one year
         self.range_start = date(2019,1,1)
         self.range_end = date(2019+self.constructionduration, 1, 1)
-        self.ax_daytime = plt.axes([0.01, 0.5, 0.06, 0.15], facecolor=axcolor)
-        self.radio = RadioButtons(self.ax_daytime, ('fine', 'coarse'), active=0)
+        self.ax_daytime = plt.axes([0.01, 0.55, 0.1, 0.25], facecolor=axcolor)
+        self.radio_daytime = RadioButtons(self.ax_daytime, ('day', 'night'), active=0)
+        self.ax_coarsity = plt.axes([0.01, 0.25, 0.1, 0.25], facecolor=axcolor)
+        self.radio_coarsity = RadioButtons(self.ax_coarsity, ('fine', 'coarse'), active=0)
         self.resetax = plt.axes([0.75, 0.03, 0.06, 0.03])
         self.button = Button(self.resetax, 'Compute', color=axcolor, hovercolor='0.975')
 
@@ -280,16 +283,22 @@ class Map:
 
 
     def activatebuttons(self):
+        def setdaytime(daytime_string):
+            if daytime_string == 'day':
+                self.is_daytime = True
+            else:
+                self.is_daytime = False
+
         def setcoarsity(coarsity):
             self.coarsity = coarsity
             self.deletegraph()
-            points, vcg, ccg = self.extractor.get_congestions_list(date(2020, 1, 1), date(2050, 1, 1), self.coarsity)
+            points, vcg, ccg = self.extractor.get_congestions_list(date(2020, 1, 1), date(2050, 1, 1), self.is_daytime, self.coarsity)
             self.set_points(points)
             self.plotgraph()
             self.plotedges()
             range_start = self.range_start
             range_end = self.range_end
-            points, vcg, ccg = self.extractor.get_congestions_list(range_start, range_end, self.coarsity)
+            points, vcg, ccg = self.extractor.get_congestions_list(range_start, range_end, self.is_daytime, self.coarsity)
             if(len(self.congestededges)):
                 self.deletecongestionedges()
             if(len(self.congestvertices)):
@@ -323,7 +332,7 @@ class Map:
             print("computing ccg")
             range_start = self.range_start
             range_end = self.range_end
-            points, vcg, ccg = self.extractor.get_congestions_list(range_start, range_end, self.coarsity)
+            points, vcg, ccg = self.extractor.get_congestions_list(range_start, range_end, self.is_daytime, self.coarsity)
             if(len(self.congestededges)):
                 self.deletecongestionedges()
             if(len(self.congestvertices)):
@@ -338,7 +347,8 @@ class Map:
         self.button.on_clicked(computecongestion)
         self.sl_date.on_changed(dateupdate)
         self.sl_window.on_changed(windowupdate)
-        self.radio.on_clicked(setcoarsity)
+        self.radio_daytime.on_clicked(setdaytime)
+        self.radio_coarsity.on_clicked(setcoarsity)
 
 
     def deletegraph(self):

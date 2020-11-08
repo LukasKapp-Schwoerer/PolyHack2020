@@ -180,7 +180,8 @@ class Data_extractor:
             V is a list of Operation_points that are congested
             E is a list of Connection_congestions
     """
-    def get_congestions_list(self, range_date_start=date(2020, 1, 1), range_date_end=date(2050, 1, 1), coarsity='fine', is_daytime=True):
+    def get_congestions_list(self, range_date_start=date(2020, 1, 1), range_date_end=date(2050, 1, 1), is_daytime=True, coarsity='fine'):
+        print(f"is_daytime: {is_daytime}")
 
         connection_congestions = {}
         congested_vertices = []
