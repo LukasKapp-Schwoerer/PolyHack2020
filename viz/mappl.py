@@ -42,6 +42,7 @@ class Map:
         self.nodes = 0
         self.edges = []
         self.congestededges = []
+        self.congestvertices = []
         self.timestamp = []
         self.iscbar = 0
 
@@ -199,14 +200,14 @@ class Map:
         maxconj = np.max(conj)
 
         throughput = 3 + np.array(throughput)*60.0/np.max(throughput)
-        print("thorughput",throughput)
+        #print("thorughput",throughput)
         #print("conj", conj)
         if(np.sum(conj)):
             #print("sum",np.sum(conj))
             colors = cm.autumn((maxconj-conj)*1.0/maxconj)
         else:
             colors = cm.autumn(np.array(conj)+1)
-        print("conj", conj)
+        #print("conj", conj)
         #print("colors", colors)
         #print((maxconj-conj)*1.0/maxconj)
         #print(colors)
@@ -295,6 +296,8 @@ class Map:
             vcg, ccg = self.extractor.get_congestions_list(range_start, range_end)
             if(len(self.congestededges)):
                 self.deletecongestionedges()
+            if(len(self.congestvertices)):
+                self.deletecongestionvertices()
             if(len(ccg)):
                 self.plotcongestions(ccg)
             if(len(vcg)):
@@ -331,8 +334,10 @@ class Map:
         #self.cbar.remove()
     def deletecongestionvertices(self):
         print("deleting vertices")
-        temp = self.congestvertices[-1]
-        temp.remove()
+        for idx in range(len(self.congestvertices)):
+            #print("rem edg")
+            temp = self.congestvertices[idx]
+            temp.remove()
         self.congestvertices = []
         self.fig.canvas.draw()
         self.vannotations = []
