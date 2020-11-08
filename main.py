@@ -27,7 +27,8 @@ ops = {'ID': ids,
       'y': y_coords,
       'IL': incidence_list}
 
-connection_congestions = data_extractor.get_connection_congestions_list()
+congested_vertices, connection_congestions = data_extractor.get_congestions_list()
+print(f"number of congested vertices: {len(congested_vertices)}")
 print(f"number of connection congestions: {len(connection_congestions)}")
 
 """
