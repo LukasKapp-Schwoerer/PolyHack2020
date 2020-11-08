@@ -119,10 +119,27 @@ class Data_extractor:
             to_op = row['BP_Bis_Abschnitt']
             trains = row['Anzahl_Zuege']
 
+            abort = False
             for op in [from_op, to_op]:
                 if op not in self.points.keys():
-                    self.points.setdefault(op, Operating_point(op_index, from_op, (0,0)))
+                    other_op = from_op if op != from_op else to_op
+                    if other_op not in self.points.keys(): # both ops are outside of Switzerland
+                        abort = True
+                        continue
+                    other_position = self.points[other_op].gps
+                    self.points.setdefault(op, Operating_point(op_index, from_op, other_position))
+                    """
+                    other_position = self.points[other_op].gps
+                    center = (2666281, 1210739) # center of Swizterland
+                    delta = (other_position[0] - center[0], other_position[1] - center[1])
+                    delta_length = math.sqrt(delta[0]**2 + delta[1]**2)
+                    new_position = (other_position[0] + delta[0] / delta_length * 50000, other_position[1] + delta[1] / delta_length * 50000)
+                    self.points.setdefault(op, Operating_point(op_index, from_op, new_position))
+                    """
                     op_index += 1
+
+            if abort: # both ops are outside of Switzerland
+                continue
 
             new_connection = Connection(from_op, to_op, trains,
                                         row['Gesamtbelastung_Bruttotonnen'],
@@ -132,7 +149,7 @@ class Data_extractor:
             self.points[from_op].increment_trains(trains)
             self.points[to_op].increment_trains(trains)
 
-        connect(self.points)
+        # connect(self.points)
         
 
     # returns a dict of Operation_point indexed by alphabetic op indices
