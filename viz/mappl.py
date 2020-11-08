@@ -64,8 +64,6 @@ class Map:
         self.radio_daytime = RadioButtons(self.ax_daytime, ('day', 'night'), active=0)
         self.ax_coarsity = plt.axes([0.01, 0.25, 0.1, 0.25], facecolor=axcolor)
         self.radio_coarsity = RadioButtons(self.ax_coarsity, ('fine', 'coarse'), active=0)
-        self.resetax = plt.axes([0.75, 0.03, 0.06, 0.03])
-        self.button = Button(self.resetax, 'Compute', color=axcolor, hovercolor='0.975')
 
         self.ax.set_xlim([2450000,2850000])
         self.ax.set_ylim([1050000,1300000])
@@ -344,11 +342,14 @@ class Map:
             else:
                 print("no congestion detected")
 
-        self.button.on_clicked(computecongestion)
         self.sl_date.on_changed(dateupdate)
         self.sl_window.on_changed(windowupdate)
         self.radio_daytime.on_clicked(setdaytime)
         self.radio_coarsity.on_clicked(setcoarsity)
+
+        self.radio_daytime.on_clicked(computecongestion)
+        self.sl_date.on_changed(computecongestion)
+        self.sl_window.on_changed(computecongestion)
 
 
     def deletegraph(self):
