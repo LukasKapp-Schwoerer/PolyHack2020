@@ -1,16 +1,10 @@
 # CoDe
-We show you the bottleneck
+CoDe is an interactive railway traffic data aggregation tool, enabling the user to combine information from different data sets. It visualizes contruction site induced bottlenecks while providing settings such as time of day, construction work time interval and traffic grid coarseness. After computing a congestion metric, the interactive geographic map provides additional data when exploring the resulting railway grid streamlining the planning of new construction work.
 
 ## Used data sets
  * construction-cite.csv
  * linie-mit-betriebspunkten.csv
  * zugzahlen.csv
-
-## Create conda environment
-Run this command to install all dependencies:
-```
-conda env create -f conda_env.yml
-```
 
 ## Functionality
 
@@ -38,7 +32,7 @@ Algorithm
 
 
 ## Clustering
-To provide a high-level overview of congestions in regions, operational points are grouped in clusters. Clustering is performed by a uniform grid. Additionaly,  to preserve disconnections in the network, clusters are only formed from connected regions.
+To provide a high-level overview of congestions in regions, operational points are grouped in clusters. Clustering is performed by a uniform grid. Additionaly, to preserve disconnections in the network, clusters are only formed from connected regions.
 
 * Averaging points in a common neighborhood
 * Clusters are selected by a grid
