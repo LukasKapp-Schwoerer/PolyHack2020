@@ -133,7 +133,7 @@ class Map:
             self.cbar.set_label("Congestion index (normalized)")
             self.iscbar = 1
 
-        annotations = []
+        self.annotations = []
 
         idx = 0
         for ccg in ccgs:
@@ -142,7 +142,6 @@ class Map:
             x = [smaller_op[0], greater_op[0]]
             y = [smaller_op[1], greater_op[1]]
             if(x[0] != 0 and x[1] != 0):
-                self.congestededges.append(self.ax.plot(x,y, color = colors[idx], linewidth = 4 ))
                 self.congestededges.append(self.ax.plot(x,y, color = colors[idx], linewidth = 2+throughput[idx] ))
                 congestion_frac = ccg.congestion.passenger_congestion / ccg.congestion.passenger_trains
                 if congestion_frac > 0:
@@ -156,7 +155,7 @@ class Map:
                                               bbox=dict(boxstyle="round", fc="w"),
                                               arrowprops=dict(arrowstyle="->"))
                 annotation.set_visible(False)
-                annotations.append(annotation)
+                self.annotations.append(annotation)
 
             idx+=1
         self.fig.canvas.draw()
@@ -164,8 +163,8 @@ class Map:
 
 
         def hover(event):
-            for i in range(len(annotations)):
-                annotation = annotations[i]
+            for i in range(len(self.annotations)):
+                annotation = self.annotations[i]
                 artist = self.congestededges[i][0]
                 vis = annotation.get_visible()
                 cont, ind = artist.contains(event)
@@ -237,6 +236,7 @@ class Map:
             line[0].remove()
         self.congestededges = []
         self.fig.canvas.draw()
+        self.annotations = []
         #self.cbar.remove()
 
 
