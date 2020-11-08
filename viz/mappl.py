@@ -100,6 +100,7 @@ class Map:
             conj.append(ccg.congestion.passenger_congestion)
 
         minconj = np.min(conj)
+        print(minconj)
         maxconj = np.max(conj)
         sc = self.ax.scatter([0,0], [0,0], c = [minconj, maxconj], cmap = cm.jet)
         colors = cm.jet(conj)

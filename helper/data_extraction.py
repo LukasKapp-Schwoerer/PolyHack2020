@@ -1,5 +1,6 @@
 import pandas as pd
 import math
+from datetime import date
 
 class Congestion:
     def __init__(self, passenger_congestion=0, freight_congestion=0, passenger_trains=0, freight_trains=0):
@@ -12,7 +13,11 @@ class Congestion:
         return f"passenger_value: {self.passenger_value} | freight_value: {self.freight_value}"
 
     def __add__(self, other):
-        return Congestion(self.passenger_value + other.passenger_value, self.freight_value + other.passenger_value)
+        return Congestion(self.passenger_congestion + other.passenger_congestion, self.freight_congestion + other.passenger_congestion)
+
+    def zero(self):
+        self.passenger_congestion = 0
+        self.freight_congestion = 0
 
     def increase_passenger_congestion(self, increment):
         self.passenger_congestion += increment
@@ -35,6 +40,7 @@ class Operating_point:
         self.connections_outbound = []
         self.congestion = Congestion()
         self.lines = []
+        self.trains = 0
 
     def add_connection_outbound(self, connection):
         self.connections_outbound.append(connection)
@@ -44,6 +50,9 @@ class Operating_point:
 
     def add_line(self, line_id):
         self.lines.append(line_id)
+
+    def increment_trains(self, increment):
+        self.trains += increment
 
     def __str__(self):
         return f"{self.id_index:d} {self.id_word} {self.gps} " +                f"outbound: {self.connections_outbound} | inbound: {self.connections_inbound}\n"                f"congestion: {self.congestion}"
@@ -107,39 +116,21 @@ class Data_extractor:
         for index, row in self.train_tracks_df.iterrows():
             from_op = row['BP_Von_Abschnitt']
             to_op = row['BP_Bis_Abschnitt']
+            trains = row['Anzahl_Zuege']
 
             for op in [from_op, to_op]:
                 if op not in self.points.keys():
                     self.points.setdefault(op, Operating_point(op_index, from_op, (0,0)))
                     op_index += 1
 
-            new_connection = Connection(from_op, to_op,
-                                        row['Anzahl_Zuege'],
+            new_connection = Connection(from_op, to_op, trains,
                                         row['Gesamtbelastung_Bruttotonnen'],
                                         row['Geschaeftscode'])
             self.points[from_op].add_connection_outbound(new_connection)
             self.points[to_op].add_connection_inbound(new_connection)
-
-
-        """
-        x_coords = []
-        y_coords = []
-        ids = []
-        incidence_list = {}
-        for point in self.points.values():
-            ids.append(point.id_index)
-            x_coords.append(point.gps[0])
-            y_coords.append(point.gps[1])
-            incidence_list[point.id_index] = []
-
-            for connection in point.connections_outbound:
-                incidence_list[point.id_index].append(self.points[connection.to_op].id_index)
-
-        vis_data = {'ID': ids,
-                'x': x_coords,
-                'y': y_coords,
-                'IL': incidence_list}
-        """
+            self.points[from_op].increment_trains(trains)
+            self.points[to_op].increment_trains(trains)
+        
 
     # returns a dict of Operation_point indexed by alphabetic op indices
     def get_operation_points_dict(self):
@@ -149,10 +140,19 @@ class Data_extractor:
     def get_operation_points_list(self):
         return list(self.points.values())
 
-    # returns a list of Connection_congestions
-    def get_connection_congestions_list(self):
+    """
+        returns a tuple (V, E), where
+            V is a list of Operation_points that are congested
+            E is a list of Connection_congestions
+    """
+    def get_congestions_list(self, range_date_start=date(2020, 1, 1), range_date_end=date(2050, 1, 1)):
 
         connection_congestions = {}
+        congested_vertices = []
+
+        # zero congestion of vertices
+        for point in self.points.values():
+            point.congestion.zero()
 
         # passenger congestion: capacity reduction during day
         for index, row in self.construction_df.iterrows():
@@ -162,14 +162,33 @@ class Data_extractor:
             from_op = row['bp_from']
             to_op = row['bp_to']
 
+            # get date from cc
+            cc_date_start = row['date from']
+            cc_date_end = row['date to']
+            d_start = date(int(cc_date_start[0:4]), int(cc_date_start[5:7]), int(cc_date_start[8:10]))
+            d_end = date(int(cc_date_end[0:4]), int(cc_date_end[5:7]), int(cc_date_end[8:10]))
+
+            # check if in date range
+            if not((range_date_start <= d_start <= range_date_end)
+                    or (range_date_start <= d_end <= range_date_end)
+                    or (d_start <= range_date_start and range_date_end <= d_end)):
+                continue
+
+            # start adding cc
             if from_op not in self.points.keys() or to_op not in self.points.keys(): # location not known
                 continue
+
+            reduction_frac = row['reduction of capacity']
+            if math.isnan(reduction_frac):
+                reduction_frac = 0
+
             if from_op == to_op: # op congestion
-                continue
+                trains = self.points[from_op].trains
+                congestion = self.points[from_op].congestion
+                congestion.increase_passenger_congestion(reduction_frac * trains)
+                congested_vertices.append(self.points[from_op])
+                
             else: # connection congestion
-                reduction_frac = row['reduction of capacity']
-                if math.isnan(reduction_frac):
-                    reduction_frac = 0
 
                 # BFS starting at from_op
                 frontier = [from_op]
@@ -206,14 +225,16 @@ class Data_extractor:
                 for from_op in route:
                     for outbound_connection in self.points[from_op].connections_outbound:
                         to_op = outbound_connection.to_op
-                        if to_op in route and outbound_connection.train_type == 'PERSONENVERKEHR':
+                        if to_op in route :
                             trains = outbound_connection.trains
                             smaller_op = from_op if from_op <= to_op else to_op
                             greater_op = to_op if from_op <= to_op else from_op
-                            connection_congestions.setdefault((smaller_op, greater_op),
-                                                              Connection_congestion(smaller_op, greater_op))
-                            connection_congestion = connection_congestions[(smaller_op, greater_op)]
-                            connection_congestion.congestion.increase_passenger_trains(trains)
-                            connection_congestion.congestion.increase_passenger_congestion(reduction_frac * trains)
+                            if outbound_connection.train_type == 'PERSONENVERKEHR':
+                                connection_congestions.setdefault((smaller_op, greater_op),
+                                                                  Connection_congestion(smaller_op, greater_op))
+                                connection_congestion = connection_congestions[(smaller_op, greater_op)]
+                                connection_congestion.congestion.increase_passenger_trains(trains)
+                                connection_congestion.congestion.increase_passenger_congestion(reduction_frac * trains)
+                            
 
-        return list(connection_congestions.values())
+        return (congested_vertices, list(connection_congestions.values()))
