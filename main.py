@@ -34,6 +34,7 @@ with open(filename, 'rb') as handle:
 map = mappl.Map(points, "test")
 map.plotgraph()
 map.plotedges()
+map.plotcongestions(ccg)
 map.activatebuttons()
 plt.show()
 
