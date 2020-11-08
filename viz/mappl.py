@@ -54,9 +54,9 @@ class Map:
         #axcolor = 'lightgoldenrodyellow'
         axcolor = 'w'
         self.ax_date = plt.axes([0.23, 0.03, 0.2, 0.03], facecolor=axcolor)
-        self.sl_date = Slider(self.ax_date, 'Start', 2019, 2040, valinit=2019, valstep = 0.25)
+        self.sl_date = Slider(self.ax_date, 'Start year', 2019, 2040, valinit=2019, valstep = 0.25)
         self.ax_wind = plt.axes([0.55, 0.03, 0.1, 0.03], facecolor=axcolor)
-        self.sl_window = Slider(self.ax_wind, 'Length', 1, 5, valinit=1, valstep = 0.25)
+        self.sl_window = Slider(self.ax_wind, 'Length in years', 0, 5, valinit=0, valstep = 0.25)
         self.constructionduration = 2 #one year
         self.range_start = date(2019,1,1)
         self.range_end = date(2019+self.constructionduration, 1, 1)
