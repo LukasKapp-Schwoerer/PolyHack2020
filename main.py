@@ -17,8 +17,13 @@ data_extractor = Data_extractor(data_dir)
 
 points = data_extractor.get_operation_points_dict()
 
-if args.coarsity is not None:
-    points, _ = coarse(list(points.values()), [], args.coarsity)
+range_start = date(2021, 3, 28)
+range_end = date(2035, 5, 28)
+points, vcg, ccg = data_extractor.get_congestions_list(range_start, range_end)
+
+#if args.coarsity is not None:
+    #points, vcg, ccg = coarse(list(points.values()), ccg, args.coarsity)
+    #data_extractor.points = points
 
 x_coords = []
 y_coords = []
@@ -38,9 +43,6 @@ ops = {'ID': ids,
       'y': y_coords,
       'IL': incidence_list}
 
-range_start = date(2021, 3, 28)
-range_end = date(2035, 5, 28)
-vcg, ccg = data_extractor.get_congestions_list(range_start, range_end)
 print(f"number of congested vertices: {len(vcg)}")
 print(f"number of connection congestions: {len(ccg)}")
 

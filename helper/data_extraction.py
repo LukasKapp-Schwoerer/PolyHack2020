@@ -2,6 +2,7 @@ import pandas as pd
 import math
 from datetime import date
 from connect import *
+from coarse import *
 
 class Congestion:
     def __init__(self, passenger_congestion=0, freight_congestion=0, passenger_trains=0, freight_trains=0):
@@ -16,7 +17,10 @@ class Congestion:
         return f"passenger_value: {self.passenger_value} | freight_value: {self.freight_value}"
 
     def __add__(self, other):
-        return Congestion(self.passenger_congestion + other.passenger_congestion, self.freight_congestion + other.passenger_congestion)
+        return Congestion(self.passenger_congestion + other.passenger_congestion, \
+                self.freight_congestion + other.passenger_congestion,\
+                self.passenger_trains + other.passenger_trains,\
+                self.freight_trains + other.freight_trains)
 
     def zero(self):
         self.passenger_congestion = 0
@@ -178,7 +182,7 @@ class Data_extractor:
             V is a list of Operation_points that are congested
             E is a list of Connection_congestions
     """
-    def get_congestions_list(self, range_date_start=date(2020, 1, 1), range_date_end=date(2050, 1, 1)):
+    def get_congestions_list(self, range_date_start=date(2020, 1, 1), range_date_end=date(2050, 1, 1), coarsity='fine'):
 
         connection_congestions = {}
         congested_vertices = []
@@ -273,4 +277,11 @@ class Data_extractor:
                                 
                             
 
-        return (congested_vertices, list(connection_congestions.values()))
+        points = self.points
+        cvg = congested_vertices
+        ccg = list(connection_congestions.values())
+        print(f"ccg bef = {len(connection_congestions)}")
+        if coarsity == 'coarse':
+            print(f"coarse render")
+            points, cvg, ccg = coarse(list(points.values()), ccg)
+        return (points, cvg, ccg)

@@ -12,13 +12,7 @@ from matplotlib.axes._axes import _log as matplotlib_axes_logger
 matplotlib_axes_logger.setLevel('ERROR')
 
 class Map:
-    """docstring for ."""
-    def __init__(self, points, extractor, title):
-        self.extractor = extractor
-        self.width = 20
-        self.height = 10
-        self.fig, self.ax = plt.subplots(nrows = 1, ncols = 1, figsize=(self.width,self.height))
-
+    def set_points(self, points):
         self.points = points
         #extract locations and incidence lists
         x_coords = []
@@ -39,12 +33,22 @@ class Map:
               'y': y_coords,
               'IL': incidence_list}
 
+    """docstring for ."""
+    def __init__(self, points, extractor, title):
+        self.extractor = extractor
+        self.width = 20
+        self.height = 10
+        self.fig, self.ax = plt.subplots(nrows = 1, ncols = 1, figsize=(self.width,self.height))
+
+        self.set_points(points)
+
         self.nodes = 0
         self.edges = []
         self.congestededges = []
         self.congestvertices = []
         self.timestamp = []
         self.iscbar = 0
+        self.coarsity = 'fine'
 
         #axcolor = 'lightgoldenrodyellow'
         axcolor = 'w'
@@ -56,7 +60,7 @@ class Map:
         self.range_start = date(2019,1,1)
         self.range_end = date(2019+self.constructionduration, 1, 1)
         self.ax_daytime = plt.axes([0.01, 0.5, 0.06, 0.15], facecolor=axcolor)
-        self.radio = RadioButtons(self.ax_daytime, ('day', 'night'), active=0)
+        self.radio = RadioButtons(self.ax_daytime, ('fine', 'coarse'), active=0)
         self.resetax = plt.axes([0.75, 0.03, 0.06, 0.03])
         self.button = Button(self.resetax, 'Compute', color=axcolor, hovercolor='0.975')
 
@@ -75,9 +79,9 @@ class Map:
         #imext_y = [1050000,1300000]
         self.ax.imshow(self.im, extent = imext)
 
-    def plotgraph(self,):
+    def plotgraph(self):
         ops = self.ops
-        self.nodes = self.ax.scatter(self.ops['x'], ops['y'], s=2, c = 'k', alpha = 0.5)
+        self.nodes = self.ax.scatter(ops['x'], ops['y'], s=2, c = 'k', alpha = 0.5)
         plt.show(block=False)
 
     def plotedges(self):
@@ -106,8 +110,8 @@ class Map:
             #print("starting point idx", startingpoint, IL)
         plt.show(block=False)
 
-    def plotcongestions(self, ccgs):
-        points = self.points
+    def plotcongestions(self, points, ccgs):
+        #points = self.points
 
         #extract all congestion values for color map
         conj = []
@@ -141,6 +145,9 @@ class Map:
 
         idx = 0
         for ccg in ccgs:
+            if ccg.smaller_op not in points \
+                    or ccg.greater_op not in points:
+                continue
             smaller_op = points[ccg.smaller_op].gps
             greater_op = points[ccg.greater_op].gps
             x = [smaller_op[0], greater_op[0]]
@@ -273,6 +280,15 @@ class Map:
 
 
     def activatebuttons(self):
+        def setcoarsity(coarsity):
+            self.coarsity = coarsity
+            self.deletegraph()
+            points, vcg, ccg = self.extractor.get_congestions_list(date(2020, 1, 1), date(2050, 1, 1), self.coarsity)
+            self.set_points(points)
+            self.plotgraph()
+            self.plotedges()
+            self.computecongestion()
+            
         def dateupdate(sliderval):
             #print(self.timestamp)
             if len(self.timestamp):
@@ -295,13 +311,13 @@ class Map:
             print("computing ccg")
             range_start = self.range_start
             range_end = self.range_end
-            vcg, ccg = self.extractor.get_congestions_list(range_start, range_end)
+            points, vcg, ccg = self.extractor.get_congestions_list(range_start, range_end, self.coarsity)
             if(len(self.congestededges)):
                 self.deletecongestionedges()
             if(len(self.congestvertices)):
                 self.deletecongestionvertices()
             if(len(ccg)):
-                self.plotcongestions(ccg)
+                self.plotcongestions(points, ccg)
             if(len(vcg)):
                 self.plotvertexcongestions(vcg)
             else:
@@ -310,6 +326,7 @@ class Map:
         self.button.on_clicked(computecongestion)
         self.sl_date.on_changed(dateupdate)
         self.sl_window.on_changed(windowupdate)
+        self.radio.on_clicked(setcoarsity)
 
 
     def deletegraph(self):
